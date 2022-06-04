@@ -1,0 +1,18 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Meigee_Glam::top_level"
+             title="Meigee"
+             module="Meigee_Glam"
+             sortOrder="9999"
+             resource="Magento_Backend::system"
+            />
+		<add id="Meigee_Glam::second_level"
+             title="Glam"
+             module="Meigee_Glam"
+             sortOrder="1"
+             resource="Meigee_Glam::system"
+             parent="Meigee_Glam::top_level"
+			 action="adminhtml/system_config/edit/section/glam_general"
+            />
+    </menu>
+</config>

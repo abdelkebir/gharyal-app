@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+	<type name="Aalogics\Tcs\Logger\Handler">
+		<arguments>
+			<argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+		</arguments>
+	</type>
+	<type name="Aalogics\Tcs\Logger\Logger">
+		<arguments>
+			<argument name="name" xsi:type="string">Tcs</argument>
+			<argument name="handlers" xsi:type="array">
+				<item name="system" xsi:type="object">Aalogics\Tcs\Logger\Handler</item>
+			</argument> 
+		</arguments>
+	</type>
+	<type name="Aalogics\Tcs\Ui\Component\MassAction\ChangeCostCenter">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="urlPath" xsi:type="string">aatcs/order/massShip</item>
+                <item name="paramName" xsi:type="string">costcenter</item>
+                <item name="confirm" xsi:type="array">
+                    <item name="title" xsi:type="string" translatable="true">Ship using TCS</item>
+                    <item name="message" xsi:type="string" translatable="true">Are you sure you want to ship selected items using TCS?</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

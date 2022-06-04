@@ -1,0 +1,3517 @@
+.firecheckout > iframe[style*="height: 0px"] {
+  display: block;
+}
+.firecheckout .column.main {
+  width: auto;
+}
+.firecheckout .column.main table > thead {
+  border: 0;
+}
+.firecheckout .column.main table > tbody > tr:nth-child(odd),
+.firecheckout .column.main table > tbody > tr:nth-child(even) {
+  background-color: transparent;
+}
+.firecheckout #checkout .opc-wrapper .form-login {
+  margin-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  border-color: #f4f4f4;
+}
+.firecheckout #checkout .opc-wrapper .form-login .fieldset {
+  clear: left;
+  margin-bottom: 0;
+}
+.firecheckout #checkout .opc-wrapper .form-shipping-address {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.firecheckout #checkout .opc-wrapper .step-content {
+  margin: 0;
+}
+.firecheckout #checkout .opc-wrapper .step-content > * + .form-shipping-address {
+  margin-top: 25px;
+}
+.firecheckout .opc-estimated-wrapper {
+  margin-top: 0;
+}
+.firecheckout:not(.fc-multistep) #shipping-method-buttons-container {
+  display: none !important;
+}
+.firecheckout .no-quotes-block {
+  margin-bottom: 20px;
+}
+.firecheckout #checkout,
+.firecheckout #checkout .opc-wrapper {
+  margin: 0;
+}
+.firecheckout .nolist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .firecheckout #checkout .opc-wrapper {
+    padding: 0;
+  }
+  .firecheckout #checkout .opc-wrapper .opc {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+  .firecheckout #checkout .opc-wrapper .table-checkout-shipping-method {
+    min-width: 0;
+    width: 100%;
+  }
+  .firecheckout #checkout .opc-wrapper .table-checkout-shipping-method .row {
+    cursor: default;
+  }
+}
+@media (max-width: 639px) {
+  .firecheckout #checkout .opc-wrapper .form-login,
+  .firecheckout #checkout .opc-wrapper .form-shipping-address,
+  .firecheckout #checkout .opc-wrapper .methods-shipping {
+    background: transparent;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .firecheckout #checkout .opc-wrapper .form-login {
+    margin-top: 0;
+    padding: 0;
+  }
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-method .methods-shipping {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+@-webkit-keyframes firecheckout-shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(1px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(1px, 0, 0);
+  }
+}
+@keyframes firecheckout-shake {
+  10%,
+  90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    -webkit-transform: translate3d(1px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+  }
+  40%,
+  60% {
+    -webkit-transform: translate3d(1px, 0, 0);
+  }
+}
+.firecheckout-shake {
+  animation: firecheckout-shake 0.82s cubic-bezier(0.36, 0.07000000000000001, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+@-webkit-keyframes firecheckout-spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes firecheckout-spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.fc-col-12 {
+  width: 100% !important;
+}
+.fc-col-11 {
+  width: 91.66666667% !important;
+}
+.fc-col-10 {
+  width: 83.33333333% !important;
+}
+.fc-col-9 {
+  width: 75% !important;
+}
+.fc-col-8 {
+  width: 66.66666667% !important;
+}
+.fc-col-7 {
+  width: 58.33333333% !important;
+}
+.fc-col-6 {
+  width: 50% !important;
+}
+.fc-col-5 {
+  width: 41.66666667% !important;
+}
+.fc-col-4 {
+  width: 33.33333333% !important;
+}
+.fc-col-3 {
+  width: 25% !important;
+}
+.fc-col-2 {
+  width: 16.66666667% !important;
+}
+.fc-col-1 {
+  width: 8.33333333% !important;
+}
+.fc-col-0 {
+  width: 0% !important;
+}
+.fc-col-newline {
+  clear: left;
+}
+.fc-size-l .fc-size-l\:fc-col-12 {
+  width: 100% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-11 {
+  width: 91.66666667% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-10 {
+  width: 83.33333333% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-9 {
+  width: 75% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-8 {
+  width: 66.66666667% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-7 {
+  width: 58.33333333% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-6 {
+  width: 50% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-5 {
+  width: 41.66666667% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-4 {
+  width: 33.33333333% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-3 {
+  width: 25% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-2 {
+  width: 16.66666667% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-1 {
+  width: 8.33333333% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-0 {
+  width: 0% !important;
+}
+.fc-size-l .fc-size-l\:fc-col-newline {
+  clear: left;
+}
+.fc-size-m .fc-size-m\:fc-col-12 {
+  width: 100% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-11 {
+  width: 91.66666667% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-10 {
+  width: 83.33333333% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-9 {
+  width: 75% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-8 {
+  width: 66.66666667% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-7 {
+  width: 58.33333333% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-6 {
+  width: 50% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-5 {
+  width: 41.66666667% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-4 {
+  width: 33.33333333% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-3 {
+  width: 25% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-2 {
+  width: 16.66666667% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-1 {
+  width: 8.33333333% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-0 {
+  width: 0% !important;
+}
+.fc-size-m .fc-size-m\:fc-col-newline {
+  clear: left;
+}
+.fc-size-s .fc-size-s\:fc-col-12 {
+  width: 100% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-11 {
+  width: 91.66666667% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-10 {
+  width: 83.33333333% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-9 {
+  width: 75% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-8 {
+  width: 66.66666667% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-7 {
+  width: 58.33333333% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-6 {
+  width: 50% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-5 {
+  width: 41.66666667% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-4 {
+  width: 33.33333333% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-3 {
+  width: 25% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-2 {
+  width: 16.66666667% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-1 {
+  width: 8.33333333% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-0 {
+  width: 0% !important;
+}
+.fc-size-s .fc-size-s\:fc-col-newline {
+  clear: left;
+}
+.fc-size-xs .fc-size-xs\:fc-col-12 {
+  width: 100% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-11 {
+  width: 91.66666667% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-10 {
+  width: 83.33333333% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-9 {
+  width: 75% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-8 {
+  width: 66.66666667% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-7 {
+  width: 58.33333333% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-6 {
+  width: 50% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-5 {
+  width: 41.66666667% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-4 {
+  width: 33.33333333% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-3 {
+  width: 25% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-2 {
+  width: 16.66666667% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-1 {
+  width: 8.33333333% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-0 {
+  width: 0% !important;
+}
+.fc-size-xs .fc-size-xs\:fc-col-newline {
+  clear: left;
+}
+.fc-hidden {
+  display: none !important;
+}
+@media (min-width: 639px) {
+  .fc-flex {
+    display: flex;
+  }
+  .fc-flex-center {
+    justify-content: center;
+  }
+}
+.fc-product-list.cols-5 .products-grid .product-item {
+  width: 20% !important;
+  margin: 0 !important;
+}
+.fc-product-list.cols-4 .products-grid .product-item {
+  width: 25% !important;
+  margin: 0 !important;
+}
+.fc-product-list.cols-3 .products-grid .product-item {
+  width: 33.33333333% !important;
+  margin: 0 !important;
+}
+.fc-product-list.cols-2 .products-grid .product-item {
+  width: 50% !important;
+  margin: 0 !important;
+}
+.fc-product-list.cols-1 .products-grid .product-item {
+  width: 100% !important;
+  margin: 0 !important;
+}
+.firecheckout .firecheckout-header {
+  text-align: center;
+}
+.firecheckout .firecheckout-header .header {
+  padding: 20px 20px 0;
+  position: static;
+}
+.firecheckout .firecheckout-header .header .logo {
+  float: none;
+  margin: 0;
+}
+.firecheckout .firecheckout-header .header .logo img {
+  display: inline;
+}
+.firecheckout:not(.page-layout-checkout) .page-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+}
+.firecheckout:not(.page-layout-checkout) .page-title-wrapper > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.firecheckout:not(.page-layout-checkout) .page-title-wrapper h1 {
+  margin: 20px auto 20px 0;
+}
+.firecheckout:not(.page-layout-checkout) .page-title-wrapper > * + * {
+  margin: 0 10px;
+}
+.firecheckout.firecheckout-layout-empty .page-main,
+.firecheckout.firecheckout-layout-minimal .page-main {
+  padding-top: 10px;
+}
+.firecheckout.firecheckout-layout-empty .page-main,
+.firecheckout.firecheckout-layout-minimal .page-main,
+.firecheckout.firecheckout-layout-empty .header.content,
+.firecheckout.firecheckout-layout-minimal .header.content {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.firecheckout.firecheckout-col1-set.firecheckout-layout-empty .page-main,
+.firecheckout.firecheckout-col1-set.firecheckout-layout-minimal .page-main,
+.firecheckout.firecheckout-col1-set.firecheckout-layout-empty .header.content,
+.firecheckout.firecheckout-col1-set.firecheckout-layout-minimal .header.content {
+  max-width: 980px;
+}
+.firecheckout .continue-shopping {
+  display: none;
+}
+.firecheckout-layout-empty .continue-shopping {
+  display: block;
+}
+@media (max-width: 639px) {
+  .firecheckout.firecheckout-layout-empty .page-title-wrapper {
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .firecheckout.firecheckout-layout-empty .page-title-wrapper h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .firecheckout.firecheckout-quote-virtual.firecheckout-layout-empty .page-main,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-layout-minimal .page-main,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-layout-empty .header.content,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-layout-minimal .header.content {
+    max-width: 980px;
+  }
+  .firecheckout-layout-full .nav-sections {
+    display: block;
+  }
+}
+.firecheckout #checkout .opc-wrapper .opc > li,
+.firecheckout #checkout .opc-sidebar {
+  box-sizing: border-box;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 0;
+  box-shadow: none;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep #checkout .opc-wrapper .opc {
+  box-sizing: border-box;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep #checkout .opc-wrapper .opc > li {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.firecheckout #checkout {
+  counter-reset: firecheckout-section-counter;
+}
+.firecheckout #checkout .opc-wrapper .step-title,
+.firecheckout #checkout .opc-block-summary > .title,
+.firecheckout #checkout .opc-sidebar .step-title {
+  display: flex;
+  align-items: center;
+  border: 0;
+  margin: 0;
+  padding: 0 0 10px;
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+.firecheckout #checkout .opc-wrapper .step-title:before,
+.firecheckout #checkout .opc-block-summary > .title:before,
+.firecheckout #checkout .opc-sidebar .step-title:before {
+  box-sizing: content-box;
+  flex-shrink: 0;
+  text-align: center;
+  background: #000000;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  margin: 0 7px 0 0;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+  border: false;
+  counter-increment: firecheckout-section-counter;
+  content: counter(firecheckout-section-counter);
+}
+.firecheckout-col1-set.firecheckout #checkout .opc-wrapper .step-title:before,
+.firecheckout-col1-set.firecheckout #checkout .opc-block-summary > .title:before,
+.firecheckout-col1-set.firecheckout #checkout .opc-sidebar .step-title:before,
+.firecheckout-quote-virtual.firecheckout #checkout .opc-wrapper .step-title:before,
+.firecheckout-quote-virtual.firecheckout #checkout .opc-block-summary > .title:before,
+.firecheckout-quote-virtual.firecheckout #checkout .opc-sidebar .step-title:before {
+  display: none;
+}
+.firecheckout #checkout .fc-heading,
+.firecheckout #checkout .fc-subtitle,
+.firecheckout #checkout .opc-sidebar .opc-block-summary .step-title {
+  color: #444444;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  padding: 0;
+}
+.firecheckout #checkout .fc-heading:before,
+.firecheckout #checkout .fc-subtitle:before,
+.firecheckout #checkout .opc-sidebar .opc-block-summary .step-title:before {
+  display: none;
+}
+.firecheckout #checkout .opc-wrapper .opc > li,
+.firecheckout #checkout .opc-sidebar {
+  margin: 0 0 10px;
+  position: relative;
+  z-index: auto;
+}
+.firecheckout #checkout .opc-sidebar {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .firecheckout #checkout .opc-wrapper .opc > li,
+  .firecheckout #checkout .opc-sidebar {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+  .firecheckout #checkout .opc-sidebar {
+    float: right;
+    margin-right: 0;
+  }
+  .firecheckout #checkout .opc-wrapper {
+    float: left;
+    width: 66%;
+  }
+  .firecheckout #checkout .opc-wrapper:before {
+    display: none;
+  }
+  .firecheckout #checkout .opc-wrapper .form-login,
+  .firecheckout #checkout .opc-wrapper .form-shipping-address {
+    max-width: none;
+  }
+  .firecheckout.firecheckout-col1-set #checkout .opc-wrapper .opc > li {
+    float: none;
+    margin-right: 0;
+    width: auto;
+  }
+  .firecheckout.firecheckout-col1-set #checkout .opc-wrapper .opc > li:last-child {
+    margin: 0;
+  }
+  .firecheckout.firecheckout-col1-set #checkout .opc-wrapper {
+    padding: 0 10px 0 0;
+    width: 63%;
+    float: left;
+  }
+  .firecheckout.firecheckout-col1-set #checkout .opc-sidebar {
+    width: 37%;
+  }
+  .firecheckout.firecheckout-col1-set #checkout .opc-sidebar .minicart-items-wrapper {
+    max-height: 300px;
+  }
+  .firecheckout.firecheckout-col2-set #checkout .opc-wrapper .opc > li,
+  .firecheckout.firecheckout-col2-set #checkout .opc-sidebar {
+    margin-right: 0;
+    width: 60%;
+    float: right;
+  }
+  .firecheckout.firecheckout-col2-set #checkout .opc-wrapper {
+    float: none;
+    width: auto;
+  }
+  .firecheckout.firecheckout-col2-set #checkout .opc-wrapper .opc > li.checkout-shipping-address {
+    float: left;
+    width: calc(40% - 10px);
+    margin-right: 10px;
+  }
+  .firecheckout.firecheckout-col2-set #checkout .opc-sidebar {
+    clear: right;
+  }
+  .firecheckout.firecheckout-col2-set.alt #checkout .opc-wrapper .opc > li,
+  .firecheckout.firecheckout-col2-set.alt #checkout .opc-sidebar {
+    width: 66.66666667%;
+  }
+  .firecheckout.firecheckout-col2-set.alt #checkout .opc-wrapper .opc > li.checkout-shipping-address {
+    width: calc(33.33333333% - 10px);
+  }
+  .firecheckout.firecheckout-col2-set.alt #checkout .opc-wrapper .opc > li.checkout-shipping-method {
+    float: left;
+    margin-right: 10px;
+    width: calc(33.33333333% - 10px);
+  }
+  .firecheckout.firecheckout-col2-set.alt #checkout .opc-wrapper .opc > li.checkout-payment-method {
+    margin-right: 0;
+    width: 33.33333333%;
+  }
+  .firecheckout.firecheckout-col3-set #checkout .opc-wrapper {
+    width: 70%;
+  }
+  .firecheckout.firecheckout-col3-set #checkout .opc-wrapper .opc > li {
+    float: right;
+    width: calc(50% - 10px);
+  }
+  .firecheckout.firecheckout-col3-set #checkout .opc-wrapper .opc > li.checkout-shipping-address {
+    float: left;
+  }
+  .firecheckout.firecheckout-col3-set #checkout .opc-wrapper .opc > li.checkout-payment-method {
+    clear: right;
+  }
+  .firecheckout.firecheckout-col3-set #checkout .opc-sidebar {
+    width: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .firecheckout #checkout .opc-wrapper .opc > li {
+    margin: 0 15px 15px 0;
+  }
+  .firecheckout.firecheckout-col1-set #checkout .opc-wrapper {
+    padding: 0 15px 0 0;
+  }
+  .firecheckout.firecheckout-col2-set #checkout .opc-wrapper .opc > li.checkout-shipping-address {
+    width: calc(40% - 15px);
+    margin-right: 15px;
+  }
+  .firecheckout.firecheckout-col2-set.alt #checkout .opc-wrapper .opc > li.checkout-shipping-address {
+    width: calc(33.33333333% - 15px);
+  }
+  .firecheckout.firecheckout-col2-set.alt #checkout .opc-wrapper .opc > li.checkout-shipping-method {
+    margin-right: 15px;
+    width: calc(33.33333333% - 15px);
+  }
+  .firecheckout.firecheckout-col3-set #checkout .opc-wrapper .opc > li {
+    width: calc(50% - 15px);
+  }
+}
+@media (min-width: 768px) {
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col2-set #checkout .opc-wrapper .opc > li,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col3-set #checkout .opc-wrapper .opc > li {
+    float: none;
+    margin-right: 0;
+    width: auto;
+  }
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col2-set #checkout .opc-wrapper .opc > li.checkout-payment-method,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col3-set #checkout .opc-wrapper .opc > li.checkout-payment-method {
+    width: auto;
+  }
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col2-set #checkout .opc-wrapper .opc > li:last-child,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col3-set #checkout .opc-wrapper .opc > li:last-child {
+    margin: 0;
+  }
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col2-set #checkout .opc-wrapper,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col3-set #checkout .opc-wrapper {
+    padding: 0 10px 0 0;
+    width: 63%;
+    float: left;
+  }
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col2-set #checkout .opc-sidebar,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col3-set #checkout .opc-sidebar {
+    position: sticky !important;
+    top: 15px;
+    width: 37%;
+  }
+}
+@media (min-width: 1024px) {
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col2-set #checkout .opc-wrapper,
+  .firecheckout.firecheckout-quote-virtual.firecheckout-col3-set #checkout .opc-wrapper {
+    padding: 0 15px 0 0;
+  }
+}
+.firecheckout.firecheckout-col1-set #checkout .opc-sidebar {
+  position: sticky !important;
+  top: 15px;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep #checkout .authentication-wrapper {
+  float: right;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep .opc-wrapper {
+  clear: both;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep .continue-shopping {
+  display: none;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep.fc-hide-shipping-methods.fc-single-shipping-method #checkout .opc-wrapper .checkout-shipping-method {
+  display: block;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep.fc-hide-shipping-methods.fc-single-shipping-method #checkout .opc-wrapper .checkout-shipping-method .step-title,
+.firecheckout.firecheckout-col1-set.fc-multistep.fc-hide-shipping-methods.fc-single-shipping-method #checkout .opc-wrapper .checkout-shipping-method .no-quotes-block,
+.firecheckout.firecheckout-col1-set.fc-multistep.fc-hide-shipping-methods.fc-single-shipping-method #checkout .opc-wrapper .checkout-shipping-method .shipping-policy-block,
+.firecheckout.firecheckout-col1-set.fc-multistep.fc-hide-shipping-methods.fc-single-shipping-method #checkout .opc-wrapper .checkout-shipping-method #checkout-shipping-method-load {
+  display: none;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep.fc-hide-shipping-methods.fc-single-shipping-method #checkout .opc-wrapper .checkout-shipping-method .actions-toolbar {
+  margin: 0 !important;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep.fc-hide-shipping-methods.fc-single-shipping-method #checkout .opc-wrapper .checkout-shipping-method .actions-toolbar .action {
+  margin: 0;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep #checkout .opc-wrapper .checkout-shipping-address {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep #checkout .opc-wrapper .checkout-shipping-address + .checkout-shipping-method {
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+.firecheckout.firecheckout-col1-set.fc-multistep .opc-sidebar {
+  display: none;
+}
+.fc-step-payment.firecheckout.firecheckout-col1-set.fc-multistep .opc-sidebar {
+  display: block;
+}
+@media (min-width: 768px) {
+  .firecheckout.firecheckout-col1-set.fc-multistep #shipping-method-buttons-container {
+    margin-top: 30px;
+  }
+  .firecheckout.firecheckout-col1-set.fc-multistep .agreements-clone,
+  .firecheckout.firecheckout-col1-set.fc-multistep .place-order {
+    display: none;
+  }
+  .fc-step-payment.firecheckout.firecheckout-col1-set.fc-multistep .agreements-clone,
+  .fc-step-payment.firecheckout.firecheckout-col1-set.fc-multistep .place-order {
+    display: block;
+  }
+  .firecheckout.firecheckout-col1-set.fc-multistep .opc-sidebar {
+    display: block;
+  }
+  .firecheckout.firecheckout-col1-set.fc-multistep .fc-placeOrder-container .place-order {
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+.firecheckout #checkout .fieldset,
+.firecheckout .modal-custom .fieldset,
+.firecheckout .modal-popup .fieldset {
+  background: none;
+}
+.firecheckout #checkout div.field .control,
+.firecheckout .modal-custom div.field .control,
+.firecheckout .modal-popup div.field .control,
+.firecheckout #checkout .fieldset div.field .control,
+.firecheckout .modal-custom .fieldset div.field .control,
+.firecheckout .modal-popup .fieldset div.field .control {
+  position: relative;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"]),
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"]),
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"]),
+.firecheckout #checkout select,
+.firecheckout .modal-custom select,
+.firecheckout .modal-popup select,
+.firecheckout #checkout textarea,
+.firecheckout .modal-custom textarea,
+.firecheckout .modal-popup textarea {
+  height: auto;
+  width: 100%;
+  max-width: none;
+  padding-top: 0.68em;
+  padding-bottom: 0.68em;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  height: 42px;
+  border-radius: 0;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):focus,
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):focus,
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):focus,
+.firecheckout #checkout select:focus,
+.firecheckout .modal-custom select:focus,
+.firecheckout .modal-popup select:focus,
+.firecheckout #checkout textarea:focus,
+.firecheckout .modal-custom textarea:focus,
+.firecheckout .modal-popup textarea:focus {
+  box-shadow: none;
+  border-color: #c2c2c2;
+  background-color: #fafafa;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):-webkit-autofill,
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):-webkit-autofill,
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):-webkit-autofill,
+.firecheckout #checkout select:-webkit-autofill,
+.firecheckout .modal-custom select:-webkit-autofill,
+.firecheckout .modal-popup select:-webkit-autofill,
+.firecheckout #checkout textarea:-webkit-autofill,
+.firecheckout .modal-custom textarea:-webkit-autofill,
+.firecheckout .modal-popup textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #ffffe4 inset !important;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-webkit-input-placeholder,
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-webkit-input-placeholder,
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-webkit-input-placeholder,
+.firecheckout #checkout select::-webkit-input-placeholder,
+.firecheckout .modal-custom select::-webkit-input-placeholder,
+.firecheckout .modal-popup select::-webkit-input-placeholder,
+.firecheckout #checkout textarea::-webkit-input-placeholder,
+.firecheckout .modal-custom textarea::-webkit-input-placeholder,
+.firecheckout .modal-popup textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-moz-placeholder,
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-moz-placeholder,
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-moz-placeholder,
+.firecheckout #checkout select::-moz-placeholder,
+.firecheckout .modal-custom select::-moz-placeholder,
+.firecheckout .modal-popup select::-moz-placeholder,
+.firecheckout #checkout textarea::-moz-placeholder,
+.firecheckout .modal-custom textarea::-moz-placeholder,
+.firecheckout .modal-popup textarea::-moz-placeholder {
+  color: #999999;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):-ms-input-placeholder,
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):-ms-input-placeholder,
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"]):-ms-input-placeholder,
+.firecheckout #checkout select:-ms-input-placeholder,
+.firecheckout .modal-custom select:-ms-input-placeholder,
+.firecheckout .modal-popup select:-ms-input-placeholder,
+.firecheckout #checkout textarea:-ms-input-placeholder,
+.firecheckout .modal-custom textarea:-ms-input-placeholder,
+.firecheckout .modal-popup textarea:-ms-input-placeholder {
+  color: #999999;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-ms-input-placeholder,
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-ms-input-placeholder,
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::-ms-input-placeholder,
+.firecheckout #checkout select::-ms-input-placeholder,
+.firecheckout .modal-custom select::-ms-input-placeholder,
+.firecheckout .modal-popup select::-ms-input-placeholder,
+.firecheckout #checkout textarea::-ms-input-placeholder,
+.firecheckout .modal-custom textarea::-ms-input-placeholder,
+.firecheckout .modal-popup textarea::-ms-input-placeholder {
+  color: #999999;
+}
+.firecheckout #checkout input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::placeholder,
+.firecheckout .modal-custom input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::placeholder,
+.firecheckout .modal-popup input:not([type="checkbox"]):not([type="radio"]):not([type="image"])::placeholder,
+.firecheckout #checkout select::placeholder,
+.firecheckout .modal-custom select::placeholder,
+.firecheckout .modal-popup select::placeholder,
+.firecheckout #checkout textarea::placeholder,
+.firecheckout .modal-custom textarea::placeholder,
+.firecheckout .modal-popup textarea::placeholder {
+  color: #999999;
+}
+.firecheckout #checkout textarea,
+.firecheckout .modal-custom textarea,
+.firecheckout .modal-popup textarea {
+  height: auto;
+}
+.firecheckout #checkout div.mage-error,
+.firecheckout .modal-custom div.mage-error,
+.firecheckout .modal-popup div.mage-error,
+.firecheckout #checkout div.field-error,
+.firecheckout .modal-custom div.field-error,
+.firecheckout .modal-popup div.field-error {
+  position: static;
+  margin-top: 2px;
+  font-size: .85em;
+}
+.firecheckout #checkout .field-note,
+.firecheckout .modal-custom .field-note,
+.firecheckout .modal-popup .field-note,
+.firecheckout #checkout .note,
+.firecheckout .modal-custom .note,
+.firecheckout .modal-popup .note {
+  color: #999999;
+  font-size: .85em;
+}
+.firecheckout #checkout fieldset.field legend,
+.firecheckout .modal-custom fieldset.field legend,
+.firecheckout .modal-popup fieldset.field legend {
+  display: none;
+}
+.firecheckout #checkout fieldset.field .field > label,
+.firecheckout .modal-custom fieldset.field .field > label,
+.firecheckout .modal-popup fieldset.field .field > label,
+.firecheckout #checkout fieldset.field .field.additional > label,
+.firecheckout .modal-custom fieldset.field .field.additional > label,
+.firecheckout .modal-popup fieldset.field .field.additional > label {
+  clip: auto;
+  height: auto;
+  width: auto;
+  position: static;
+  overflow: visible;
+}
+.firecheckout:not(.fc-form-horizontal) .fc-field-choice > label {
+  display: none !important;
+}
+.firecheckout .fc-newline {
+  display: none;
+}
+.firecheckout .fc-size-l .fc-size-l\:fc-newline,
+.firecheckout .fc-size-m .fc-size-m\:fc-newline,
+.firecheckout .fc-size-s .fc-size-s\:fc-newline,
+.firecheckout .fc-size-xs .fc-size-xs\:fc-newline {
+  display: block;
+}
+.firecheckout .payment-method-content div.field {
+  padding: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+.firecheckout .payment-method-content div.field div.field {
+  padding-left: 0;
+  padding-right: 0;
+}
+.firecheckout .payment-method-content div.field .additional {
+  margin-top: 8px;
+}
+.firecheckout .payment-method-content div.field.choice:before {
+  display: none;
+}
+.firecheckout .payment-method-content div.field.choice > .label {
+  float: none;
+}
+.firecheckout .payment-method-content div.field > .label {
+  float: left;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-weight: normal;
+  white-space: normal;
+}
+.firecheckout .payment-method-content div.field > .label::after {
+  margin: 0;
+}
+.firecheckout .payment-method-content div.field > .control {
+  float: none;
+  clear: both;
+  width: auto;
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.firecheckout .payment-method-content div.field > .control._with-tooltip input,
+.firecheckout .payment-method-content div.field > .control._with-tooltip textarea,
+.firecheckout .payment-method-content div.field > .control._with-tooltip select {
+  width: 100%;
+  margin: 0;
+}
+.firecheckout .payment-method-content div.field.required > .label::after,
+.firecheckout .payment-method-content div.field._required > .label::after {
+  position: static;
+  content: ' *';
+  color: #e02b27;
+  font-size: 1.4rem;
+  margin: 0 0 0 2px;
+}
+.firecheckout .form-shipping-address .fieldset .field,
+.firecheckout .payment-method .fieldset .field,
+.firecheckout #checkout .form-login .fieldset .field,
+.firecheckout #maincontent .block-authentication .fieldset .field,
+.firecheckout #checkout .checkout-shipping-address .fieldset .field,
+.firecheckout #checkout .checkout-billing-address .fieldset .field {
+  margin: 0;
+  padding: 0;
+}
+.firecheckout .form-shipping-address .fieldset,
+.firecheckout .payment-method .fieldset,
+.firecheckout #checkout .form-login .fieldset,
+.firecheckout #maincontent .block-authentication .fieldset,
+.firecheckout #checkout .checkout-shipping-address .fieldset,
+.firecheckout #checkout .checkout-billing-address .fieldset,
+.firecheckout .form-shipping-address fieldset .control,
+.firecheckout .payment-method fieldset .control,
+.firecheckout #checkout .form-login fieldset .control,
+.firecheckout #maincontent .block-authentication fieldset .control,
+.firecheckout #checkout .checkout-shipping-address fieldset .control,
+.firecheckout #checkout .checkout-billing-address fieldset .control {
+  letter-spacing: -0.4em;
+}
+.firecheckout .form-shipping-address .fieldset > *,
+.firecheckout .payment-method .fieldset > *,
+.firecheckout #checkout .form-login .fieldset > *,
+.firecheckout #maincontent .block-authentication .fieldset > *,
+.firecheckout #checkout .checkout-shipping-address .fieldset > *,
+.firecheckout #checkout .checkout-billing-address .fieldset > *,
+.firecheckout .form-shipping-address fieldset .control > *,
+.firecheckout .payment-method fieldset .control > *,
+.firecheckout #checkout .form-login fieldset .control > *,
+.firecheckout #maincontent .block-authentication fieldset .control > *,
+.firecheckout #checkout .checkout-shipping-address fieldset .control > *,
+.firecheckout #checkout .checkout-billing-address fieldset .control > * {
+  letter-spacing: normal;
+}
+.firecheckout .form-shipping-address .fieldset,
+.firecheckout .payment-method .fieldset,
+.firecheckout #checkout .form-login .fieldset,
+.firecheckout #maincontent .block-authentication .fieldset,
+.firecheckout #checkout .checkout-shipping-address .fieldset,
+.firecheckout #checkout .checkout-billing-address .fieldset {
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.firecheckout .form-shipping-address .fieldset .fieldset,
+.firecheckout .payment-method .fieldset .fieldset,
+.firecheckout #checkout .form-login .fieldset .fieldset,
+.firecheckout #maincontent .block-authentication .fieldset .fieldset,
+.firecheckout #checkout .checkout-shipping-address .fieldset .fieldset,
+.firecheckout #checkout .checkout-billing-address .fieldset .fieldset {
+  margin-left: 0;
+  margin-right: 0;
+}
+.firecheckout .form-shipping-address .actions-toolbar,
+.firecheckout .payment-method .actions-toolbar,
+.firecheckout #checkout .form-login .actions-toolbar,
+.firecheckout #maincontent .block-authentication .actions-toolbar,
+.firecheckout #checkout .checkout-shipping-address .actions-toolbar,
+.firecheckout #checkout .checkout-billing-address .actions-toolbar {
+  padding: 0 4px;
+}
+.firecheckout .form-shipping-address .fieldset div.field,
+.firecheckout .payment-method .fieldset div.field,
+.firecheckout #checkout .form-login .fieldset div.field,
+.firecheckout #maincontent .block-authentication .fieldset div.field,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field,
+.firecheckout .form-shipping-address .fieldset.address > div.field,
+.firecheckout .payment-method .fieldset.address > div.field,
+.firecheckout #checkout .form-login .fieldset.address > div.field,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field {
+  padding: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+.firecheckout .form-shipping-address .fieldset div.field div.field,
+.firecheckout .payment-method .fieldset div.field div.field,
+.firecheckout #checkout .form-login .fieldset div.field div.field,
+.firecheckout #maincontent .block-authentication .fieldset div.field div.field,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field div.field,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field div.field,
+.firecheckout .form-shipping-address .fieldset.address > div.field div.field,
+.firecheckout .payment-method .fieldset.address > div.field div.field,
+.firecheckout #checkout .form-login .fieldset.address > div.field div.field,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field div.field,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field div.field,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field div.field {
+  padding-left: 0;
+  padding-right: 0;
+}
+.firecheckout .form-shipping-address .fieldset div.field .additional,
+.firecheckout .payment-method .fieldset div.field .additional,
+.firecheckout #checkout .form-login .fieldset div.field .additional,
+.firecheckout #maincontent .block-authentication .fieldset div.field .additional,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field .additional,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field .additional,
+.firecheckout .form-shipping-address .fieldset.address > div.field .additional,
+.firecheckout .payment-method .fieldset.address > div.field .additional,
+.firecheckout #checkout .form-login .fieldset.address > div.field .additional,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field .additional,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field .additional,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field .additional {
+  margin-top: 8px;
+}
+.firecheckout .form-shipping-address .fieldset div.field.choice:before,
+.firecheckout .payment-method .fieldset div.field.choice:before,
+.firecheckout #checkout .form-login .fieldset div.field.choice:before,
+.firecheckout #maincontent .block-authentication .fieldset div.field.choice:before,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field.choice:before,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field.choice:before,
+.firecheckout .form-shipping-address .fieldset.address > div.field.choice:before,
+.firecheckout .payment-method .fieldset.address > div.field.choice:before,
+.firecheckout #checkout .form-login .fieldset.address > div.field.choice:before,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field.choice:before,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field.choice:before,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field.choice:before {
+  display: none;
+}
+.firecheckout .form-shipping-address .fieldset div.field.choice > .label,
+.firecheckout .payment-method .fieldset div.field.choice > .label,
+.firecheckout #checkout .form-login .fieldset div.field.choice > .label,
+.firecheckout #maincontent .block-authentication .fieldset div.field.choice > .label,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field.choice > .label,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field.choice > .label,
+.firecheckout .form-shipping-address .fieldset.address > div.field.choice > .label,
+.firecheckout .payment-method .fieldset.address > div.field.choice > .label,
+.firecheckout #checkout .form-login .fieldset.address > div.field.choice > .label,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field.choice > .label,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field.choice > .label,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field.choice > .label {
+  float: none;
+}
+.firecheckout .form-shipping-address .fieldset div.field > .label,
+.firecheckout .payment-method .fieldset div.field > .label,
+.firecheckout #checkout .form-login .fieldset div.field > .label,
+.firecheckout #maincontent .block-authentication .fieldset div.field > .label,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field > .label,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field > .label,
+.firecheckout .form-shipping-address .fieldset.address > div.field > .label,
+.firecheckout .payment-method .fieldset.address > div.field > .label,
+.firecheckout #checkout .form-login .fieldset.address > div.field > .label,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field > .label,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field > .label,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field > .label {
+  float: left;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-weight: normal;
+  white-space: normal;
+}
+.firecheckout .form-shipping-address .fieldset div.field > .label::after,
+.firecheckout .payment-method .fieldset div.field > .label::after,
+.firecheckout #checkout .form-login .fieldset div.field > .label::after,
+.firecheckout #maincontent .block-authentication .fieldset div.field > .label::after,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field > .label::after,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field > .label::after,
+.firecheckout .form-shipping-address .fieldset.address > div.field > .label::after,
+.firecheckout .payment-method .fieldset.address > div.field > .label::after,
+.firecheckout #checkout .form-login .fieldset.address > div.field > .label::after,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field > .label::after,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field > .label::after,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field > .label::after {
+  margin: 0;
+}
+.firecheckout .form-shipping-address .fieldset div.field > .control,
+.firecheckout .payment-method .fieldset div.field > .control,
+.firecheckout #checkout .form-login .fieldset div.field > .control,
+.firecheckout #maincontent .block-authentication .fieldset div.field > .control,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field > .control,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field > .control,
+.firecheckout .form-shipping-address .fieldset.address > div.field > .control,
+.firecheckout .payment-method .fieldset.address > div.field > .control,
+.firecheckout #checkout .form-login .fieldset.address > div.field > .control,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field > .control,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field > .control,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field > .control {
+  float: none;
+  clear: both;
+  width: auto;
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.firecheckout .form-shipping-address .fieldset div.field > .control._with-tooltip input,
+.firecheckout .payment-method .fieldset div.field > .control._with-tooltip input,
+.firecheckout #checkout .form-login .fieldset div.field > .control._with-tooltip input,
+.firecheckout #maincontent .block-authentication .fieldset div.field > .control._with-tooltip input,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field > .control._with-tooltip input,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field > .control._with-tooltip input,
+.firecheckout .form-shipping-address .fieldset.address > div.field > .control._with-tooltip input,
+.firecheckout .payment-method .fieldset.address > div.field > .control._with-tooltip input,
+.firecheckout #checkout .form-login .fieldset.address > div.field > .control._with-tooltip input,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field > .control._with-tooltip input,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field > .control._with-tooltip input,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field > .control._with-tooltip input,
+.firecheckout .form-shipping-address .fieldset div.field > .control._with-tooltip textarea,
+.firecheckout .payment-method .fieldset div.field > .control._with-tooltip textarea,
+.firecheckout #checkout .form-login .fieldset div.field > .control._with-tooltip textarea,
+.firecheckout #maincontent .block-authentication .fieldset div.field > .control._with-tooltip textarea,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field > .control._with-tooltip textarea,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field > .control._with-tooltip textarea,
+.firecheckout .form-shipping-address .fieldset.address > div.field > .control._with-tooltip textarea,
+.firecheckout .payment-method .fieldset.address > div.field > .control._with-tooltip textarea,
+.firecheckout #checkout .form-login .fieldset.address > div.field > .control._with-tooltip textarea,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field > .control._with-tooltip textarea,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field > .control._with-tooltip textarea,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field > .control._with-tooltip textarea,
+.firecheckout .form-shipping-address .fieldset div.field > .control._with-tooltip select,
+.firecheckout .payment-method .fieldset div.field > .control._with-tooltip select,
+.firecheckout #checkout .form-login .fieldset div.field > .control._with-tooltip select,
+.firecheckout #maincontent .block-authentication .fieldset div.field > .control._with-tooltip select,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field > .control._with-tooltip select,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field > .control._with-tooltip select,
+.firecheckout .form-shipping-address .fieldset.address > div.field > .control._with-tooltip select,
+.firecheckout .payment-method .fieldset.address > div.field > .control._with-tooltip select,
+.firecheckout #checkout .form-login .fieldset.address > div.field > .control._with-tooltip select,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field > .control._with-tooltip select,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field > .control._with-tooltip select,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field > .control._with-tooltip select {
+  width: 100%;
+  margin: 0;
+}
+.firecheckout .form-shipping-address .fieldset div.field.required > .label::after,
+.firecheckout .payment-method .fieldset div.field.required > .label::after,
+.firecheckout #checkout .form-login .fieldset div.field.required > .label::after,
+.firecheckout #maincontent .block-authentication .fieldset div.field.required > .label::after,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field.required > .label::after,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field.required > .label::after,
+.firecheckout .form-shipping-address .fieldset.address > div.field.required > .label::after,
+.firecheckout .payment-method .fieldset.address > div.field.required > .label::after,
+.firecheckout #checkout .form-login .fieldset.address > div.field.required > .label::after,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field.required > .label::after,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field.required > .label::after,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field.required > .label::after,
+.firecheckout .form-shipping-address .fieldset div.field._required > .label::after,
+.firecheckout .payment-method .fieldset div.field._required > .label::after,
+.firecheckout #checkout .form-login .fieldset div.field._required > .label::after,
+.firecheckout #maincontent .block-authentication .fieldset div.field._required > .label::after,
+.firecheckout #checkout .checkout-shipping-address .fieldset div.field._required > .label::after,
+.firecheckout #checkout .checkout-billing-address .fieldset div.field._required > .label::after,
+.firecheckout .form-shipping-address .fieldset.address > div.field._required > .label::after,
+.firecheckout .payment-method .fieldset.address > div.field._required > .label::after,
+.firecheckout #checkout .form-login .fieldset.address > div.field._required > .label::after,
+.firecheckout #maincontent .block-authentication .fieldset.address > div.field._required > .label::after,
+.firecheckout #checkout .checkout-shipping-address .fieldset.address > div.field._required > .label::after,
+.firecheckout #checkout .checkout-billing-address .fieldset.address > div.field._required > .label::after {
+  position: static;
+  content: ' *';
+  color: #e02b27;
+  font-size: 1.4rem;
+  margin: 0 0 0 2px;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field legend.label,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field legend.label,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field legend.label,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field legend.label,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field legend.label {
+  display: none;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field .additional,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field .additional,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field .additional,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field .additional,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field .additional {
+  margin-top: 0;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice),
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice),
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice),
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice),
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice) {
+  position: relative;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice) > .label,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice) > .label,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice) > .label,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice) > .label,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice) > .label {
+  pointer-events: none;
+  position: absolute !important;
+  left: 12px;
+  top: 10px;
+  z-index: 3;
+  padding: 0 !important;
+  margin: 0;
+  clip: auto;
+  width: auto;
+  height: auto;
+  max-width: 85%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #999999;
+  font-size: 11px;
+  line-height: normal;
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice) > .label::after,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice) > .label::after,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice) > .label::after,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice) > .label::after,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice) > .label::after {
+  font-size: 11px;
+  color: currentColor;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice) input,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice) input,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice) input,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice) input,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice) input,
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice) select,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice) select,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice) select,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice) select,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice) select,
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice) textarea,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice) textarea,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice) textarea,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice) textarea,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice) textarea {
+  transition: all 100ms ease-in-out;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice).fc-dirty > .label,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice).fc-dirty > .label,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice).fc-dirty > .label,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice).fc-dirty > .label,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice).fc-dirty > .label {
+  top: 8px;
+  opacity: 1;
+}
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice).fc-dirty input,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice).fc-dirty input,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice).fc-dirty input,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice).fc-dirty input,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice).fc-dirty input,
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice).fc-dirty select,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice).fc-dirty select,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice).fc-dirty select,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice).fc-dirty select,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice).fc-dirty select,
+.firecheckout.fc-form-hide-labels .form-shipping-address .fieldset div.field:not(.choice).fc-dirty textarea,
+.firecheckout.fc-form-hide-labels #checkout .form-login .fieldset div.field:not(.choice).fc-dirty textarea,
+.firecheckout.fc-form-hide-labels #maincontent .block-authentication .fieldset div.field:not(.choice).fc-dirty textarea,
+.firecheckout.fc-form-hide-labels #checkout .checkout-shipping-address .fieldset div.field:not(.choice).fc-dirty textarea,
+.firecheckout.fc-form-hide-labels #checkout .checkout-billing-address .fieldset div.field:not(.choice).fc-dirty textarea {
+  padding-top: 1em;
+  padding-bottom: 0.36em;
+}
+.firecheckout.fc-form-compact .form-shipping-address .fieldset,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address .fieldset,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address .fieldset,
+.firecheckout.fc-form-compact .form-shipping-address fieldset .control,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address fieldset .control,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address fieldset .control {
+  letter-spacing: -0.4em;
+  float: none;
+  width: auto;
+}
+.firecheckout.fc-form-compact .form-shipping-address .fieldset > *,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address .fieldset > *,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address .fieldset > *,
+.firecheckout.fc-form-compact .form-shipping-address fieldset .control > *,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address fieldset .control > *,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address fieldset .control > * {
+  letter-spacing: normal;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset div.field,
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset div.field,
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset div.field,
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset div.field,
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset div.field {
+  width: 100%;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset div.field > .label,
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset div.field > .label,
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset div.field > .label,
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset div.field > .label,
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset div.field > .label {
+  width: 35%;
+  margin: 9px 0 0;
+  padding: 0 9px 0 0;
+  text-align: right;
+  word-wrap: break-word;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset div.field > .control,
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset div.field > .control,
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset div.field > .control,
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset div.field > .control,
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset div.field > .control {
+  display: inline-block;
+  width: 65%;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset div.field > .control:not(:empty),
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset div.field > .control:not(:empty),
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset div.field > .control:not(:empty),
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset div.field > .control:not(:empty),
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset div.field > .control:not(:empty) {
+  min-height: 42px;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset div.field > .label + .control > .choice,
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset div.field > .label + .control > .choice,
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset div.field > .label + .control > .choice,
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset div.field > .label + .control > .choice,
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset div.field > .label + .control > .choice {
+  margin: 4px 0 0;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset div.field > .label + .control > .choice > .label,
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset div.field > .label + .control > .choice > .label,
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset div.field > .label + .control > .choice > .label,
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset div.field > .label + .control > .choice > .label,
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset div.field > .label + .control > .choice > .label {
+  display: none;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset div.field::after,
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset div.field::after,
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset div.field::after,
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset div.field::after,
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset div.field::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.firecheckout.fc-form-horizontal .form-shipping-address .fieldset > .actions-toolbar,
+.firecheckout.fc-form-horizontal #checkout .form-login .fieldset > .actions-toolbar,
+.firecheckout.fc-form-horizontal #maincontent .block-authentication .fieldset > .actions-toolbar,
+.firecheckout.fc-form-horizontal #checkout .checkout-shipping-address:not(.fc-size-xs) .fieldset > .actions-toolbar,
+.firecheckout.fc-form-horizontal #checkout .checkout-payment-method:not(.fc-size-xs) .checkout-billing-address .fieldset > .actions-toolbar {
+  margin-left: 35%;
+}
+.firecheckout.fc-form-compact .form-shipping-address .fieldset#customer-email-fieldset .field,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address .fieldset#customer-email-fieldset .field,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address .fieldset#customer-email-fieldset .field {
+  width: 100%;
+}
+.firecheckout.fc-form-compact .form-shipping-address .fieldset div.field,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address .fieldset div.field,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address .fieldset div.field {
+  width: 50%;
+  float: none;
+  vertical-align: top;
+}
+.firecheckout.fc-form-compact .form-shipping-address .fieldset div.field.choice,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address .fieldset div.field.choice,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address .fieldset div.field.choice,
+.firecheckout.fc-form-compact .form-shipping-address .fieldset div.field.field-select-billing,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address .fieldset div.field.field-select-billing,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address .fieldset div.field.field-select-billing {
+  width: 100% !important;
+  display: block !important;
+}
+.firecheckout.fc-form-compact .form-shipping-address .fieldset .street div.field,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address .fieldset .street div.field,
+.firecheckout.fc-form-compact #checkout .checkout-billing-address .fieldset .street div.field {
+  width: 100%;
+}
+.firecheckout.fc-form-compact .form-shipping-address.fc-size-xs .fieldset div.field,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address.fc-size-xs .fieldset div.field,
+.firecheckout.fc-form-compact #checkout .checkout-payment-method.fc-size-xs .checkout-billing-address .fieldset div.field {
+  width: 100%;
+}
+.firecheckout.fc-form-compact .form-shipping-address.fc-size-xs .fieldset .street div.field,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address.fc-size-xs .fieldset .street div.field,
+.firecheckout.fc-form-compact #checkout .checkout-payment-method.fc-size-xs .checkout-billing-address .fieldset .street div.field {
+  width: 100%;
+}
+.firecheckout.fc-form-compact .form-shipping-address.fc-size-l .fieldset div.field,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address.fc-size-l .fieldset div.field,
+.firecheckout.fc-form-compact #checkout .checkout-payment-method.fc-size-l .checkout-billing-address .fieldset div.field {
+  width: 33.33333333%;
+}
+.firecheckout.fc-form-compact .form-shipping-address.fc-size-l .fieldset .street div.field,
+.firecheckout.fc-form-compact #checkout .checkout-shipping-address.fc-size-l .fieldset .street div.field,
+.firecheckout.fc-form-compact #checkout .checkout-payment-method.fc-size-l .checkout-billing-address .fieldset .street div.field {
+  width: 100%;
+}
+.firecheckout .form-shipping-address input[type="checkbox"],
+.firecheckout #checkout input[type="checkbox"],
+.firecheckout .form-shipping-address input[type="radio"],
+.firecheckout #checkout input[type="radio"] {
+  opacity: 1;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  z-index: 1;
+  /* Move it above the label in case if label has wrong 'for' */
+  margin: 0 5px 0 0;
+  padding: 0 !important;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 0 #e6e6e6 inset;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
+  outline: 0;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  cursor: pointer;
+  vertical-align: middle !important;
+  transform: none !important;
+}
+.firecheckout .form-shipping-address input[type="checkbox"] + label,
+.firecheckout #checkout input[type="checkbox"] + label,
+.firecheckout .form-shipping-address input[type="radio"] + label,
+.firecheckout #checkout input[type="radio"] + label {
+  display: inline;
+  vertical-align: middle !important;
+  line-height: 24px;
+}
+.firecheckout .form-shipping-address input[type="checkbox"] + label::before,
+.firecheckout #checkout input[type="checkbox"] + label::before,
+.firecheckout .form-shipping-address input[type="radio"] + label::before,
+.firecheckout #checkout input[type="radio"] + label::before {
+  display: none;
+}
+.firecheckout:not(.fc-form-horizontal).firecheckout .form-shipping-address input[type="checkbox"] + label + .field-note,
+.firecheckout:not(.fc-form-horizontal).firecheckout #checkout input[type="checkbox"] + label + .field-note,
+.firecheckout:not(.fc-form-horizontal).firecheckout .form-shipping-address input[type="radio"] + label + .field-note,
+.firecheckout:not(.fc-form-horizontal).firecheckout #checkout input[type="radio"] + label + .field-note,
+.firecheckout:not(.fc-form-horizontal).firecheckout .form-shipping-address input[type="checkbox"] + label + .mage-error,
+.firecheckout:not(.fc-form-horizontal).firecheckout #checkout input[type="checkbox"] + label + .mage-error,
+.firecheckout:not(.fc-form-horizontal).firecheckout .form-shipping-address input[type="radio"] + label + .mage-error,
+.firecheckout:not(.fc-form-horizontal).firecheckout #checkout input[type="radio"] + label + .mage-error,
+.firecheckout:not(.fc-form-horizontal).firecheckout .form-shipping-address input[type="checkbox"] + label + .field-error,
+.firecheckout:not(.fc-form-horizontal).firecheckout #checkout input[type="checkbox"] + label + .field-error,
+.firecheckout:not(.fc-form-horizontal).firecheckout .form-shipping-address input[type="radio"] + label + .field-error,
+.firecheckout:not(.fc-form-horizontal).firecheckout #checkout input[type="radio"] + label + .field-error {
+  margin-left: 27px;
+}
+.fc-form-horizontal.firecheckout .form-shipping-address input[type="checkbox"] + label + .field-note,
+.fc-form-horizontal.firecheckout #checkout input[type="checkbox"] + label + .field-note,
+.fc-form-horizontal.firecheckout .form-shipping-address input[type="radio"] + label + .field-note,
+.fc-form-horizontal.firecheckout #checkout input[type="radio"] + label + .field-note,
+.fc-form-horizontal.firecheckout .form-shipping-address input[type="checkbox"] + label + .mage-error,
+.fc-form-horizontal.firecheckout #checkout input[type="checkbox"] + label + .mage-error,
+.fc-form-horizontal.firecheckout .form-shipping-address input[type="radio"] + label + .mage-error,
+.fc-form-horizontal.firecheckout #checkout input[type="radio"] + label + .mage-error,
+.fc-form-horizontal.firecheckout .form-shipping-address input[type="checkbox"] + label + .field-error,
+.fc-form-horizontal.firecheckout #checkout input[type="checkbox"] + label + .field-error,
+.fc-form-horizontal.firecheckout .form-shipping-address input[type="radio"] + label + .field-error,
+.fc-form-horizontal.firecheckout #checkout input[type="radio"] + label + .field-error {
+  margin-top: 3px;
+}
+.firecheckout .form-shipping-address input[type="checkbox"]::after,
+.firecheckout #checkout input[type="checkbox"]::after,
+.firecheckout .form-shipping-address input[type="radio"]::after,
+.firecheckout #checkout input[type="radio"]::after {
+  content: '';
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 0;
+  -webkit-transition: all 0.2s ease-in-out 0.1s;
+  transition: all 0.2s ease-in-out 0.1s;
+  transform: scale(0.2);
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  margin-top: -9px;
+}
+.firecheckout .form-shipping-address input[type="checkbox"]:checked,
+.firecheckout #checkout input[type="checkbox"]:checked,
+.firecheckout .form-shipping-address input[type="radio"]:checked,
+.firecheckout #checkout input[type="radio"]:checked {
+  box-shadow: 0 0 0 10px #a6a6a6 inset;
+  border: none;
+}
+.firecheckout .form-shipping-address input[type="checkbox"]:checked:focus,
+.firecheckout #checkout input[type="checkbox"]:checked:focus,
+.firecheckout .form-shipping-address input[type="radio"]:checked:focus,
+.firecheckout #checkout input[type="radio"]:checked:focus {
+  box-shadow: 0 0 0 10px #919191 inset;
+}
+.firecheckout .form-shipping-address input[type="checkbox"]:checked::after,
+.firecheckout #checkout input[type="checkbox"]:checked::after,
+.firecheckout .form-shipping-address input[type="radio"]:checked::after,
+.firecheckout #checkout input[type="radio"]:checked::after {
+  transform: scale(1);
+  opacity: 1;
+}
+.firecheckout .form-shipping-address input[type="checkbox"]:focus,
+.firecheckout #checkout input[type="checkbox"]:focus,
+.firecheckout .form-shipping-address input[type="radio"]:focus,
+.firecheckout #checkout input[type="radio"]:focus {
+  border-color: #a6a6a6;
+  outline: 0;
+}
+.firecheckout .form-shipping-address input[type="checkbox"]::after,
+.firecheckout #checkout input[type="checkbox"]::after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAQAAAA9vDUIAAAAdklEQVQ4y7XR0QmAIBCAYXOTxmiRfAtnaJ0gcLT2MP5eQjoJvQvy1f8DvXPun8OEt+SBTFITAhlASUoOEG35xvA1Z2a05AsnR03aOSBJ4+3s5aKQ5lfxJEm6k6nIqhikIKjm/kJ6a6pIf6uCaPIH0eY3iYZccy6u+Rcjm6L8iwAAAABJRU5ErkJggg==');
+  background-size: 12px 10px;
+}
+.firecheckout .form-shipping-address input[type="radio"],
+.firecheckout #checkout input[type="radio"] {
+  border-radius: 50%;
+}
+.firecheckout .form-shipping-address input[type="radio"]::after,
+.firecheckout #checkout input[type="radio"]::after {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4yLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBkPSJNMjU2LDQ2NGMxMTQuOSwwLDIwOC05My4xLDIwOC0yMDhjMC0xMTQuOS05My4xLTIwOC0yMDgtMjA4QzE0MS4xLDQ4LDQ4LDE0MS4xLDQ4LDI1NkM0OCwzNzAuOSwxNDEuMSw0NjQsMjU2LDQ2NHoiIHN0eWxlPSJmaWxsOiNmZmYiLz4NCjwvc3ZnPg0K');
+  background-size: 8px 8px;
+}
+.firecheckout #checkout .field select,
+.firecheckout .modal-custom .field select,
+.firecheckout .modal-popup .field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDMwIDYwIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzMzMyIgZD0iTTE1LjY3NiAzMy4wMzdsNS4xMDItNS4xMDMtLjcwNy0xLjA4Ni00LjQ5IDQuNDkyLTQuNDktNC40OTItLjcwMiAxLjA4NiA1LjEwMiA1LjEwMy4wNzUuMTE1LjAyLS4wMi4wMi4wMnoiLz48L3N2Zz4=');
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  padding-right: 25px;
+  background-position: 100% 45%;
+}
+.firecheckout #checkout .field select::-ms-expand,
+.firecheckout .modal-custom .field select::-ms-expand,
+.firecheckout .modal-popup .field select::-ms-expand {
+  display: none;
+}
+.firecheckout #checkout .field ._with-tooltip select,
+.firecheckout .modal-custom .field ._with-tooltip select,
+.firecheckout .modal-popup .field ._with-tooltip select {
+  background-position: calc(100% - 20px) 45%;
+  padding-right: 45px;
+}
+.firecheckout #checkout .field .field-tooltip,
+.firecheckout .modal-custom .field .field-tooltip,
+.firecheckout .modal-popup .field .field-tooltip {
+  margin: 0 !important;
+  top: 6px !important;
+  right: 7px;
+  left: auto;
+}
+.firecheckout #checkout .field .field-tooltip .field-tooltip-action:before,
+.firecheckout .modal-custom .field .field-tooltip .field-tooltip-action:before,
+.firecheckout .modal-popup .field .field-tooltip .field-tooltip-action:before {
+  font-size: 21px;
+}
+.fc-form-tooltips.firecheckout #checkout .field,
+.fc-form-tooltips.firecheckout .modal-custom .field,
+.fc-form-tooltips.firecheckout .modal-popup .field {
+  position: relative;
+}
+.fc-form-tooltips.firecheckout #checkout .field._error select,
+.fc-form-tooltips.firecheckout .modal-custom .field._error select,
+.fc-form-tooltips.firecheckout .modal-popup .field._error select,
+.fc-form-tooltips.firecheckout #checkout .field._warn select,
+.fc-form-tooltips.firecheckout .modal-custom .field._warn select,
+.fc-form-tooltips.firecheckout .modal-popup .field._warn select,
+.fc-form-tooltips.firecheckout #checkout .field ._with-tooltip select,
+.fc-form-tooltips.firecheckout .modal-custom .field ._with-tooltip select,
+.fc-form-tooltips.firecheckout .modal-popup .field ._with-tooltip select {
+  background-position: calc(100% - 20px) 45%;
+  padding-right: 45px;
+}
+.fc-form-tooltips.firecheckout #checkout .field select.mage-error,
+.fc-form-tooltips.firecheckout .modal-custom .field select.mage-error,
+.fc-form-tooltips.firecheckout .modal-popup .field select.mage-error {
+  background-position: calc(100% - 20px) 45%;
+  padding-right: 45px;
+}
+.fc-form-tooltips.firecheckout #checkout .field._error ._with-tooltip select,
+.fc-form-tooltips.firecheckout .modal-custom .field._error ._with-tooltip select,
+.fc-form-tooltips.firecheckout .modal-popup .field._error ._with-tooltip select,
+.fc-form-tooltips.firecheckout #checkout .field._warn ._with-tooltip select,
+.fc-form-tooltips.firecheckout .modal-custom .field._warn ._with-tooltip select,
+.fc-form-tooltips.firecheckout .modal-popup .field._warn ._with-tooltip select {
+  background-position: calc(100% - 38px) 45%;
+  padding-right: 62px;
+}
+.fc-form-tooltips.firecheckout #checkout .field .field-tooltip,
+.fc-form-tooltips.firecheckout .modal-custom .field .field-tooltip,
+.fc-form-tooltips.firecheckout .modal-popup .field .field-tooltip {
+  margin: 0 !important;
+  top: 13px !important;
+  right: 7px;
+}
+.fc-form-tooltips.firecheckout #checkout .field .field-tooltip .field-tooltip-action:before,
+.fc-form-tooltips.firecheckout .modal-custom .field .field-tooltip .field-tooltip-action:before,
+.fc-form-tooltips.firecheckout .modal-popup .field .field-tooltip .field-tooltip-action:before {
+  vertical-align: top;
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaS1pbmZvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJub25lIiBzdHJva2U9IiM1NTUiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2Utd2lkdGg9IjEiPgogICAgPHBhdGggZD0iTTE2IDE0IEwxNiAyMyBNMTYgOCBMMTYgMTAiIC8+CiAgICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNCIgLz4KPC9zdmc+');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.fc-form-tooltips.firecheckout #checkout .field.choice .field-tooltip,
+.fc-form-tooltips.firecheckout .modal-custom .field.choice .field-tooltip,
+.fc-form-tooltips.firecheckout .modal-popup .field.choice .field-tooltip {
+  position: relative;
+  top: 3px !important;
+  right: 3px;
+}
+.fc-form-tooltips.firecheckout #checkout .field ._with-tooltip input,
+.fc-form-tooltips.firecheckout .modal-custom .field ._with-tooltip input,
+.fc-form-tooltips.firecheckout .modal-popup .field ._with-tooltip input {
+  padding-right: 27px;
+}
+.fc-form-tooltips.firecheckout #checkout .field div.warning,
+.fc-form-tooltips.firecheckout .modal-custom .field div.warning,
+.fc-form-tooltips.firecheckout .modal-popup .field div.warning,
+.fc-form-tooltips.firecheckout #checkout .field div.mage-error,
+.fc-form-tooltips.firecheckout .modal-custom .field div.mage-error,
+.fc-form-tooltips.firecheckout .modal-popup .field div.mage-error,
+.fc-form-tooltips.firecheckout #checkout .field div.field-error,
+.fc-form-tooltips.firecheckout .modal-custom .field div.field-error,
+.fc-form-tooltips.firecheckout .modal-popup .field div.field-error {
+  margin: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  right: 7px;
+  width: 17px;
+  height: 17px;
+  text-indent: -9999px;
+}
+.fc-form-tooltips.firecheckout #checkout .field div.warning::before,
+.fc-form-tooltips.firecheckout .modal-custom .field div.warning::before,
+.fc-form-tooltips.firecheckout .modal-popup .field div.warning::before,
+.fc-form-tooltips.firecheckout #checkout .field div.mage-error::before,
+.fc-form-tooltips.firecheckout .modal-custom .field div.mage-error::before,
+.fc-form-tooltips.firecheckout .modal-popup .field div.mage-error::before,
+.fc-form-tooltips.firecheckout #checkout .field div.field-error::before,
+.fc-form-tooltips.firecheckout .modal-custom .field div.field-error::before,
+.fc-form-tooltips.firecheckout .modal-popup .field div.field-error::before {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 17px;
+  height: 17px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaS1hbGVydCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTgwNTAwIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLXdpZHRoPSIxIj4KICAgIDxwYXRoIGQ9Ik0xNiAzIEwzMCAyOSAyIDI5IFogTTE2IDExIEwxNiAxOSBNMTYgMjMgTDE2IDI1IiAvPgo8L3N2Zz4=');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.fc-form-tooltips.firecheckout #checkout .field div.warning span,
+.fc-form-tooltips.firecheckout .modal-custom .field div.warning span,
+.fc-form-tooltips.firecheckout .modal-popup .field div.warning span,
+.fc-form-tooltips.firecheckout #checkout .field div.mage-error span,
+.fc-form-tooltips.firecheckout .modal-custom .field div.mage-error span,
+.fc-form-tooltips.firecheckout .modal-popup .field div.mage-error span,
+.fc-form-tooltips.firecheckout #checkout .field div.field-error span,
+.fc-form-tooltips.firecheckout .modal-custom .field div.field-error span,
+.fc-form-tooltips.firecheckout .modal-popup .field div.field-error span {
+  display: none;
+}
+.fc-form-tooltips.firecheckout #checkout .field.choice div.warning,
+.fc-form-tooltips.firecheckout .modal-custom .field.choice div.warning,
+.fc-form-tooltips.firecheckout .modal-popup .field.choice div.warning,
+.fc-form-tooltips.firecheckout #checkout .field.choice div.mage-error,
+.fc-form-tooltips.firecheckout .modal-custom .field.choice div.mage-error,
+.fc-form-tooltips.firecheckout .modal-popup .field.choice div.mage-error,
+.fc-form-tooltips.firecheckout #checkout .field.choice div.field-error,
+.fc-form-tooltips.firecheckout .modal-custom .field.choice div.field-error,
+.fc-form-tooltips.firecheckout .modal-popup .field.choice div.field-error {
+  top: 5px;
+  background: #ffffff;
+}
+.fc-form-tooltips.firecheckout #checkout .field div.warning::before,
+.fc-form-tooltips.firecheckout .modal-custom .field div.warning::before,
+.fc-form-tooltips.firecheckout .modal-popup .field div.warning::before {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaS1hbGVydCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZhYzAwIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLXdpZHRoPSIxIj4KICAgIDxwYXRoIGQ9Ik0xNiAzIEwzMCAyOSAyIDI5IFogTTE2IDExIEwxNiAxOSBNMTYgMjMgTDE2IDI1IiAvPgo8L3N2Zz4=');
+}
+.fc-form-tooltips.firecheckout #checkout .field._error._warn div.warning,
+.fc-form-tooltips.firecheckout .modal-custom .field._error._warn div.warning,
+.fc-form-tooltips.firecheckout .modal-popup .field._error._warn div.warning {
+  display: none;
+}
+.fc-form-tooltips.firecheckout #checkout .field ._with-tooltip div.warning,
+.fc-form-tooltips.firecheckout .modal-custom .field ._with-tooltip div.warning,
+.fc-form-tooltips.firecheckout .modal-popup .field ._with-tooltip div.warning,
+.fc-form-tooltips.firecheckout #checkout .field ._with-tooltip div.mage-error,
+.fc-form-tooltips.firecheckout .modal-custom .field ._with-tooltip div.mage-error,
+.fc-form-tooltips.firecheckout .modal-popup .field ._with-tooltip div.mage-error,
+.fc-form-tooltips.firecheckout #checkout .field ._with-tooltip div.field-error,
+.fc-form-tooltips.firecheckout .modal-custom .field ._with-tooltip div.field-error,
+.fc-form-tooltips.firecheckout .modal-popup .field ._with-tooltip div.field-error {
+  right: 27px;
+  left: auto;
+}
+.fc-form-tooltips.firecheckout #checkout .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.warning,
+.fc-form-tooltips.firecheckout .modal-custom .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.warning,
+.fc-form-tooltips.firecheckout .modal-popup .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.warning,
+.fc-form-tooltips.firecheckout #checkout .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.mage-error,
+.fc-form-tooltips.firecheckout .modal-custom .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.mage-error,
+.fc-form-tooltips.firecheckout .modal-popup .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.mage-error,
+.fc-form-tooltips.firecheckout #checkout .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.field-error,
+.fc-form-tooltips.firecheckout .modal-custom .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.field-error,
+.fc-form-tooltips.firecheckout .modal-popup .field ._has-datepicker ~ .ui-datepicker-trigger ~ div.field-error {
+  right: 32px;
+  left: auto;
+}
+.fc-form-tooltips.firecheckout #checkout .field._error input,
+.fc-form-tooltips.firecheckout .modal-custom .field._error input,
+.fc-form-tooltips.firecheckout .modal-popup .field._error input,
+.fc-form-tooltips.firecheckout #checkout .field._warn input,
+.fc-form-tooltips.firecheckout .modal-custom .field._warn input,
+.fc-form-tooltips.firecheckout .modal-popup .field._warn input {
+  padding-right: 27px;
+}
+.fc-form-tooltips.firecheckout #checkout .field._error ._with-tooltip input,
+.fc-form-tooltips.firecheckout .modal-custom .field._error ._with-tooltip input,
+.fc-form-tooltips.firecheckout .modal-popup .field._error ._with-tooltip input,
+.fc-form-tooltips.firecheckout #checkout .field._warn ._with-tooltip input,
+.fc-form-tooltips.firecheckout .modal-custom .field._warn ._with-tooltip input,
+.fc-form-tooltips.firecheckout .modal-popup .field._warn ._with-tooltip input {
+  padding-right: 47px;
+}
+.fc-form-tooltips.firecheckout #checkout .field._error input._has-datepicker,
+.fc-form-tooltips.firecheckout .modal-custom .field._error input._has-datepicker,
+.fc-form-tooltips.firecheckout .modal-popup .field._error input._has-datepicker,
+.fc-form-tooltips.firecheckout #checkout .field._warn input._has-datepicker,
+.fc-form-tooltips.firecheckout .modal-custom .field._warn input._has-datepicker,
+.fc-form-tooltips.firecheckout .modal-popup .field._warn input._has-datepicker {
+  padding-right: 47px;
+}
+.firecheckout #maincontent .page-title-wrapper .authentication-wrapper {
+  margin: 0;
+}
+.firecheckout #maincontent .authentication-wrapper {
+  position: static !important;
+  z-index: auto;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  float: none;
+  margin: 0 0 15px;
+  width: auto;
+  max-width: none;
+  text-align: right;
+}
+.firecheckout #maincontent .authentication-wrapper aside.authentication-dropdown {
+  overflow: auto;
+}
+.firecheckout #maincontent .authentication-wrapper aside.authentication-dropdown .modal-inner-wrap {
+  max-width: 450px;
+  max-height: none;
+}
+.firecheckout #maincontent .authentication-wrapper .dropdown-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+.firecheckout #maincontent .authentication-wrapper ._show ~ .dropdown-overlay {
+  opacity: 1;
+}
+.firecheckout #maincontent .authentication-wrapper [data-role="modal"],
+.firecheckout #maincontent .checkout-container .authentication-wrapper [data-role="modal"] {
+  z-index: 10000 !important;
+}
+.firecheckout #maincontent .authentication-wrapper [data-role="modal"] ~ .dropdown-overlay,
+.firecheckout #maincontent .checkout-container .authentication-wrapper [data-role="modal"] ~ .dropdown-overlay {
+  z-index: 9999 !important;
+}
+.firecheckout #checkout .opc-wrapper .shipping-address-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 15px;
+}
+@media (min-width: 768px) {
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control {
+    position: relative;
+  }
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: 25px;
+    pointer-events: none;
+  }
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control::after {
+    bottom: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.01), #ffffff);
+  }
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control .shipping-address-items {
+    margin-right: -6px;
+    padding-right: 15px;
+    max-height: 600px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control .shipping-address-items::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control .shipping-address-items::-webkit-scrollbar-track {
+    background-color: #e6e6e6;
+    border-radius: 10px;
+  }
+  .firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control .shipping-address-items::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3;
+    border-radius: 10px;
+  }
+  .firecheckout-col1-set.firecheckout #checkout .opc-wrapper .checkout-shipping-address .addresses .control .shipping-address-items {
+    max-height: none;
+  }
+}
+.firecheckout #checkout .opc-wrapper .shipping-address-item.selected-item:after {
+  right: 0;
+  left: auto;
+}
+.firecheckout #checkout .opc-wrapper .shipping-address-item:not(.selected-item) {
+  border-color: transparent;
+}
+.firecheckout #checkout .opc-wrapper .shipping-address-item:before {
+  display: none;
+}
+.firecheckout #checkout .opc-wrapper .shipping-address-item button,
+.firecheckout #checkout .opc-wrapper .shipping-address-item button + button {
+  margin: 10px 0 0;
+}
+.firecheckout #checkout .opc-wrapper .fc-size-l .shipping-address-item,
+.firecheckout #checkout .opc-wrapper .fc-size-m .shipping-address-item {
+  width: 50%;
+  padding: 15px;
+}
+.firecheckout #checkout .opc-wrapper .fc-size-s .shipping-address-item,
+.firecheckout #checkout .opc-wrapper .fc-size-xs .shipping-address-item {
+  width: 100%;
+}
+.firecheckout #checkout .opc-wrapper .selected-item .action-select-shipping-item {
+  display: none;
+}
+@media (min-width: 640px) {
+  .firecheckout #checkout .opc-wrapper .shipping-address-item {
+    position: relative;
+    padding-bottom: 55px;
+  }
+  .firecheckout #checkout .opc-wrapper .action-select-shipping-item {
+    line-height: 18px;
+    float: none;
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button {
+  display: none;
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active {
+  display: block;
+  margin: 5px 0 15px;
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active ~ .addresses .shipping-address-items {
+  display: flex;
+  flex-direction: row;
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active ~ .addresses .shipping-address-items .selected-item {
+  order: -1;
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active ~ .addresses .shipping-address-item {
+  display: none;
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active ~ .addresses .shipping-address-item.selected-item {
+  display: block;
+  padding-bottom: 22px;
+}
+@media (min-width: 768px) {
+  .firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active ~ .addresses .control .shipping-address-items {
+    max-height: 500px;
+  }
+  .firecheckout-col1-set.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active ~ .addresses .control .shipping-address-items {
+    max-height: none;
+  }
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active ~ .action-show-popup {
+  display: none;
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active.fc-expanded ~ .addresses .shipping-address-item {
+  display: block;
+}
+.firecheckout #checkout .opc-wrapper .fc-compact-address-button.fc-active.fc-expanded ~ .action-show-popup {
+  display: block;
+}
+.firecheckout #checkout-shipping-method-load {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.firecheckout #onepage-checkout-shipping-method-additional-load {
+  margin: 0;
+}
+.firecheckout #onepage-checkout-shipping-method-additional-load > div {
+  margin: 10px 0 15px;
+}
+.firecheckout #onepage-checkout-shipping-method-additional-load > div:last-child {
+  margin-bottom: 0;
+}
+.firecheckout .checkout-shipping-method .checkout-shipping-method {
+  margin: 0;
+}
+.firecheckout .table-checkout-shipping-method thead th {
+  display: none;
+}
+.firecheckout .table-checkout-shipping-method tbody tr {
+  padding: 0;
+  flex-direction: row;
+}
+.firecheckout .table-checkout-shipping-method tbody tr:first-child td {
+  border: 0;
+}
+.firecheckout .table-checkout-shipping-method tbody td {
+  border: 0;
+  padding: 10px;
+  text-align: left;
+}
+.firecheckout .table-checkout-shipping-method tbody td:first-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+.firecheckout.fc-hide-shipping-methods.fc-single-shipping-method .checkout-shipping-method {
+  display: none;
+}
+.firecheckout .shipping-policy-block {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  cursor: pointer;
+}
+.firecheckout .shipping-policy-block .field-tooltip-action:before {
+  display: inline-block !important;
+  vertical-align: top;
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iaS1pbmZvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJub25lIiBzdHJva2U9IiM1NTUiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2Utd2lkdGg9IjEiPgogICAgPHBhdGggZD0iTTE2IDE0IEwxNiAyMyBNMTYgOCBMMTYgMTAiIC8+CiAgICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNCIgLz4KPC9zdmc+');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.firecheckout .shipping-policy-block .field-tooltip-action span {
+  display: none;
+}
+.firecheckout .opc-block-shipping-information {
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+.firecheckout #opc-sidebar > .opc-block-shipping-information {
+  display: none;
+}
+.firecheckout .opc-sidebar .opc-block-shipping-information {
+  margin: 0 0 15px;
+}
+.firecheckout .opc-sidebar .shipping-information {
+  display: flex;
+  margin: 5px -3px 0;
+}
+.firecheckout .opc-sidebar .shipping-information .ship-to,
+.firecheckout .opc-sidebar .shipping-information .ship-via {
+  margin: 0;
+  width: 50%;
+  padding: 0 5px;
+}
+.firecheckout .opc-sidebar .shipping-information .shipping-information-title {
+  padding: 0;
+  margin: 0 0 2px;
+  border: 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+.firecheckout .opc-sidebar .shipping-information .shipping-information-title .action {
+  position: static;
+  font-size: 11px;
+  vertical-align: baseline;
+  text-transform: none;
+}
+.firecheckout .opc-sidebar .shipping-information .shipping-information-title .action:before {
+  display: none;
+}
+.firecheckout .opc-sidebar .shipping-information .shipping-information-title .action span {
+  position: static;
+  margin: 0;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+}
+.firecheckout .opc-sidebar .shipping-information .shipping-information-content {
+  line-height: 15px;
+  font-size: 11px;
+}
+.fc-hide-shipping-methods.fc-single-shipping-method.firecheckout .opc-sidebar .shipping-information .ship-via .shipping-information-title .action.action-edit {
+  display: none;
+}
+.firecheckout .payment-method p:empty {
+  display: none;
+}
+.firecheckout .payment-option,
+.firecheckout .checkout-payment-method .payment-option {
+  margin: 0 0 10px 0;
+}
+.firecheckout .payment-option-title,
+.firecheckout .checkout-payment-method .payment-option-title {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border: 0;
+}
+.firecheckout .payment-option-content,
+.firecheckout .checkout-payment-method .payment-option-content {
+  padding: 10px 0 0;
+  max-width: none;
+}
+.firecheckout .payment-option-content [data-collapsible="true"],
+.firecheckout .checkout-payment-method .payment-option-content [data-collapsible="true"] {
+  margin-top: 5px;
+}
+.firecheckout .payment-option-content [data-collapsible="true"]:first-child,
+.firecheckout .checkout-payment-method .payment-option-content [data-collapsible="true"]:first-child {
+  margin-top: -5px;
+}
+.firecheckout .payment-option-content [data-collapsible="true"] [data-role="content"],
+.firecheckout .checkout-payment-method .payment-option-content [data-collapsible="true"] [data-role="content"] {
+  margin-bottom: 10px;
+}
+.firecheckout .checkout-payment-method .opc-payment {
+  margin-bottom: 15px;
+}
+.firecheckout .checkout-payment-method .fieldset > legend:first-child {
+  display: none;
+}
+.firecheckout .checkout-payment-method .fieldset > legend:first-child + br {
+  display: none;
+}
+.firecheckout .checkout-payment-method .payment-methods {
+  margin: 0;
+}
+.firecheckout .checkout-payment-method .payment-method-title {
+  padding: 10px 0;
+}
+.firecheckout .checkout-payment-method .payment-method + .payment-method .payment-method-title {
+  border: 0;
+}
+.firecheckout .checkout-payment-method .payment-method .payment-method-note {
+  margin: 0 0 10px;
+}
+.firecheckout .checkout-payment-method .payment-method .fieldset {
+  margin: 0;
+}
+.firecheckout .checkout-payment-method .payment-method-content {
+  padding: 0 0 0 25px;
+}
+.firecheckout .checkout-payment-method .payment-method-content .form {
+  margin-bottom: 15px;
+}
+.firecheckout .checkout-payment-method .ccard {
+  max-width: 250px;
+}
+.firecheckout .checkout-payment-method .ccard.fieldset > .field .fields.group.group-2 .field {
+  width: 50% !important;
+  float: left;
+  margin-right: 8px;
+}
+.firecheckout .checkout-payment-method .ccard.fieldset > .field .fields.group.group-2 .field + .field {
+  margin: 0;
+  width: calc(49% - (4px * 2)) !important;
+}
+.firecheckout .checkout-payment-method .ccard .credit-card-types {
+  margin: 0;
+}
+.firecheckout .checkout-payment-method .ccard .credit-card-types img {
+  vertical-align: top;
+}
+.firecheckout .checkout-payment-method .ccard .number .input-text {
+  width: 100%;
+}
+.firecheckout .checkout-payment-method .ccard .number .input-text.mage-error ~ .type {
+  right: 27px;
+}
+.firecheckout .checkout-payment-method .ccard .number .type {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: absolute !important;
+  top: 5px;
+  right: 7px;
+}
+.firecheckout .checkout-payment-method .ccard .number .type li {
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.firecheckout .checkout-payment-method .ccard .number .type li._active {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  padding: 0 2px;
+  display: inline-block;
+  overflow: hidden;
+}
+.firecheckout .checkout-payment-method .ccard .month .select {
+  width: 100%;
+}
+.firecheckout .checkout-payment-method .ccard .year .select {
+  width: 100%;
+}
+.firecheckout .checkout-payment-method .ccard .cvv > .control {
+  width: 50% !important;
+  padding: 0;
+}
+.firecheckout .checkout-payment-method .ccard .cvv .input-text {
+  width: 100%;
+  margin: 0;
+}
+.firecheckout .checkout-payment-method #po_number {
+  margin-bottom: 0;
+}
+.firecheckout.fc-single-payment-method .checkout-payment-method .payment-method-content {
+  padding: 10px 0 10px 0;
+}
+.firecheckout #checkout .payment-method .payment-method-content > .actions-toolbar .action.checkout {
+  display: none;
+}
+.firecheckout .checkout-billing-address .billing-address-details {
+  box-sizing: border-box;
+  padding: 0 0 0 28px;
+  background: transparent;
+  line-height: 27px;
+}
+.firecheckout .checkout-billing-address .billing-address-details:empty {
+  display: none;
+}
+.firecheckout .checkout-billing-address .billing-address-details .action-edit-address {
+  margin: 8px 0 0 0;
+}
+.firecheckout .checkout-billing-address .actions-toolbar {
+  margin-top: 5px;
+}
+.firecheckout .checkout-billing-address .actions-toolbar .primary {
+  float: right;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.firecheckout .checkout-billing-address .actions-toolbar .primary .action {
+  flex-grow: 0;
+  width: auto;
+  margin: 0;
+}
+.firecheckout .checkout-billing-address .actions-toolbar .primary .action + .action {
+  margin: 0 10px;
+}
+.firecheckout .checkout-billing-address .actions-toolbar .primary .action-cancel {
+  order: -1;
+}
+.firecheckout .checkout-payment-method .payment-method .checkout-billing-address {
+  margin: 0 0 10px;
+}
+.firecheckout .billing-address-same-as-shipping-block,
+.firecheckout .checkout-payment-method .billing-address-same-as-shipping-block,
+.firecheckout .checkout-payment-method .payment-method .fieldset .billing-address-same-as-shipping-block {
+  margin: 0 0 10px;
+  padding: 0;
+}
+.firecheckout .billing-address-form,
+.firecheckout .checkout-payment-method .billing-address-form,
+.firecheckout .checkout-payment-method .payment-method .fieldset .billing-address-form {
+  max-width: none;
+}
+.firecheckout.equal-billing-shipping .billing-address-details {
+  display: none;
+}
+.firecheckout.firecheckout-quote-virtual .checkout-billing-address > .fieldset {
+  margin-top: -10px;
+}
+.firecheckout.firecheckout-quote-virtual .payment-method-content .billing-address-details {
+  padding: 0 0 0 18px;
+}
+.firecheckout .step-content + .checkout-billing-address {
+  margin-top: 15px;
+}
+.firecheckout .checkout-shipping-address .checkout-billing-address {
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) and (max-width: 1150px) {
+  .firecheckout:not(.firecheckout-quote-virtual) .checkout-billing-address > .fieldset {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+.firecheckout.fc-form-tooltips #checkout .opc-sidebar:not(.fc-size-xs) .discount-code .form-discount,
+.firecheckout.fc-form-tooltips #checkout .checkout-payment-method:not(.fc-size-xs) .discount-code .form-discount {
+  display: flex;
+}
+.firecheckout.fc-form-tooltips #checkout .opc-sidebar:not(.fc-size-xs) .discount-code .form-discount .field label,
+.firecheckout.fc-form-tooltips #checkout .checkout-payment-method:not(.fc-size-xs) .discount-code .form-discount .field label {
+  display: none;
+}
+.firecheckout.fc-form-tooltips #checkout .opc-sidebar:not(.fc-size-xs) .discount-code .payment-option-inner,
+.firecheckout.fc-form-tooltips #checkout .checkout-payment-method:not(.fc-size-xs) .discount-code .payment-option-inner {
+  flex-grow: 1;
+  margin: 0;
+}
+.firecheckout.fc-form-tooltips #checkout .opc-sidebar:not(.fc-size-xs) .discount-code .actions-toolbar,
+.firecheckout.fc-form-tooltips #checkout .checkout-payment-method:not(.fc-size-xs) .discount-code .actions-toolbar {
+  z-index: 1;
+  flex-shrink: 0;
+  width: auto;
+  margin: 0;
+}
+.firecheckout.fc-form-tooltips #checkout .opc-sidebar:not(.fc-size-xs) .discount-code .actions-toolbar > div,
+.firecheckout.fc-form-tooltips #checkout .checkout-payment-method:not(.fc-size-xs) .discount-code .actions-toolbar > div {
+  height: 100%;
+}
+.firecheckout.fc-form-tooltips #checkout .opc-sidebar:not(.fc-size-xs) .discount-code .actions-toolbar .action,
+.firecheckout.fc-form-tooltips #checkout .checkout-payment-method:not(.fc-size-xs) .discount-code .actions-toolbar .action {
+  height: 100%;
+  margin: 0 5px;
+}
+.firecheckout .checkout-agreement {
+  white-space: nowrap;
+}
+.firecheckout .checkout-agreements-block .checkout-agreements.fieldset .checkout-agreement.field {
+  display: flex;
+  padding-right: 20px;
+}
+.firecheckout .checkout-agreements-block .checkout-agreements.fieldset .checkout-agreement.field input[type="checkbox"] {
+  margin-top: 1px !important;
+}
+.firecheckout .checkout-agreements-block .checkout-agreements.fieldset .checkout-agreement.field input[type="checkbox"] + label {
+  white-space: nowrap;
+  line-height: inherit !important;
+}
+.firecheckout .checkout-agreements-block .checkout-agreements.fieldset .checkout-agreement.field input[type="checkbox"] + label::after {
+  position: absolute;
+  margin-left: 4px;
+}
+.firecheckout .checkout-agreement .action {
+  white-space: normal;
+  text-align: left;
+  text-transform: none;
+}
+.firecheckout .checkout-agreement + .checkout-agreement {
+  margin-top: 2px;
+}
+.fc-agreements-moved.firecheckout .opc-payment .checkout-agreements-block {
+  display: none;
+}
+.firecheckout .opc-block-summary .checkout-agreements .checkout-agreement.field {
+  padding-left: 0;
+  padding-right: 0;
+}
+.firecheckout .opc-sidebar {
+  position: static;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  visibility: visible;
+  opacity: 1;
+  transition: none;
+  transform: none;
+  overflow: visible;
+}
+.firecheckout .opc-sidebar .modal-inner-wrap {
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  height: auto;
+  min-height: 0;
+  width: auto;
+  min-width: 0;
+  transition: none;
+  transform: none;
+  overflow: visible;
+}
+.firecheckout .opc-sidebar .modal-header {
+  display: none !important;
+}
+.firecheckout .opc-sidebar .opc-block-summary {
+  padding: 0;
+  margin: 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+.firecheckout #checkout .modal-content {
+  margin: 0;
+  padding: 0;
+}
+.firecheckout .opc-block-summary .product-image-wrapper img {
+  vertical-align: top;
+}
+.firecheckout .opc-block-summary .fieldset {
+  margin: 0 0 15px;
+}
+.firecheckout .opc-block-summary .fieldset > .field {
+  margin: 0 0 15px;
+}
+.firecheckout .items-in-cart.block {
+  margin-bottom: 0;
+}
+.firecheckout .items-in-cart {
+  margin-bottom: 0;
+}
+.firecheckout .items-in-cart > .title {
+  border: 0;
+}
+.firecheckout .items-in-cart > .title strong {
+  color: #444444;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0;
+}
+.firecheckout .items-in-cart > .title:before {
+  display: none;
+}
+.firecheckout .items-in-cart > .title:after {
+  content: '';
+  transform: rotate(45deg);
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 0 0 5px;
+  position: relative;
+  top: -3px;
+  right: auto;
+  background: transparent;
+}
+.firecheckout .items-in-cart > .title[aria-expanded="true"]:after {
+  transform: rotate(225deg);
+  top: 2px;
+}
+.firecheckout .items-in-cart > .minicart-items {
+  position: relative;
+}
+.firecheckout .items-in-cart > .minicart-items::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 25px;
+  pointer-events: none;
+}
+.firecheckout .items-in-cart > .minicart-items::after {
+  bottom: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.01), #ffffff);
+}
+.firecheckout .minicart-items-wrapper.overflowed {
+  -webkit-overflow-scrolling: touch;
+  max-height: 50vh;
+  padding-top: 0 !important;
+  overflow: auto;
+}
+.firecheckout .minicart-items-wrapper.overflowed::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.firecheckout .minicart-items-wrapper.overflowed::-webkit-scrollbar-track {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+}
+.firecheckout .minicart-items-wrapper.overflowed::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 10px;
+}
+.firecheckout .minicart-items-wrapper.overflowed,
+.firecheckout .opc-block-summary .minicart-items-wrapper.overflowed {
+  margin: 0 -6px 0 0;
+  padding: 0 6px 0 0;
+}
+.firecheckout #checkout .minicart-items .product-item {
+  padding: 10px 0;
+  margin: 0;
+  border-color: #f4f4f4;
+}
+.firecheckout .opc-block-summary .actions-toolbar .secondary {
+  border-top: 1px solid #f4f4f4;
+  padding: 15px 0;
+}
+.firecheckout .opc-block-summary .table-totals {
+  border-color: #f4f4f4;
+  background: none;
+  margin: 5px 0 10px;
+}
+.firecheckout .opc-block-summary .table-totals tbody tr:last-child td {
+  padding-bottom: 10px;
+}
+.firecheckout .opc-block-summary .table-totals .grand .mark,
+.firecheckout .opc-block-summary .table-totals .grand .amount {
+  border: 0;
+}
+.firecheckout .place-order {
+  margin-top: 10px;
+}
+.firecheckout .place-order .actions-toolbar {
+  display: block;
+  text-align: right;
+}
+.firecheckout .place-order .actions-toolbar .primary .action {
+  margin: 0;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .firecheckout .place-order .primary {
+    float: right;
+  }
+}
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy {
+  display: none;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding-top: 8px !important;
+}
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy .agreements-clone {
+  margin-top: -5px;
+}
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy .checkout-agreements-block {
+  margin-left: 5px;
+}
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy .table-totals {
+  margin-bottom: 15px;
+}
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy .grand.totals th.mark,
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy .grand.totals td.amount {
+  font-size: 1.2em;
+  padding-bottom: 4px;
+  padding-top: 6px;
+}
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy .grand.totals td.amount {
+  text-align: right;
+}
+.firecheckout.firecheckout-col1-set .fc-order-summary-copy .place-order {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 1024px) {
+  .firecheckout.firecheckout-col1-set .fc-order-summary-copy {
+    display: block;
+    margin-top: -7.5px !important;
+  }
+  .fc-multistep.firecheckout.firecheckout-col1-set .fc-order-summary-copy {
+    display: none;
+    margin-top: -15px !important;
+  }
+  .fc-multistep.firecheckout.firecheckout-col1-set .fc-order-summary-copy:before {
+    content: '';
+    display: block;
+    border-top: 1px solid #f4f4f4;
+    margin-bottom: 15px;
+  }
+  .fc-step-payment.fc-multistep.firecheckout.firecheckout-col1-set .fc-order-summary-copy {
+    display: block;
+  }
+  .firecheckout.firecheckout-col1-set.fc-order-below-payment .opc-block-summary .table-totals .grand.totals,
+  .firecheckout.firecheckout-col1-set.fc-order-below-payment .opc-block-summary .agreements-clone,
+  .firecheckout.firecheckout-col1-set.fc-order-below-payment .opc-block-summary .place-order {
+    display: none !important;
+  }
+}
+.firecheckout .column.main .widget.block {
+  margin: 10px 0 15px;
+}
+.firecheckout .opc-sidebar .additional-content .widget.block {
+  margin: 15px 0;
+}
+.firecheckout .opc-sidebar .additional-content .widget.block.firecheckout-content-below-place-order {
+  margin-bottom: 0;
+}
+.firecheckout-layout-full .column.main .widget.block.firecheckout-content-top {
+  margin-top: 0;
+}
+.firecheckout .modal-popup.fc-intro-modal + .modals-overlay {
+  background: #ffffff;
+}
+.firecheckout .modal-popup.fc-intro-modal .modal-inner-wrap {
+  margin-top: 7rem;
+}
+.fc-intro {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.fc-intro .section-title {
+  margin: 10px 0 25px;
+  text-align: center;
+  font-size: 1.9em;
+  font-weight: bold;
+}
+.fc-intro .section-title::before,
+.fc-intro .section-title::after {
+  display: none;
+}
+.fc-intro section {
+  clear: both;
+  margin: 0 0 35px;
+  padding: 0;
+}
+.fc-intro section:last-child {
+  margin-bottom: 0;
+}
+.fc-intro .block {
+  box-shadow: none;
+  padding: 0;
+  margin: 0 0 35px;
+}
+.fc-intro .block > .block-title {
+  margin: 0 0 13px;
+  font-size: 1em;
+  text-transform: uppercase;
+  background: none;
+}
+.fc-intro .block > .actions-toolbar {
+  margin-top: 15px;
+}
+.fc-intro .block.crosssell {
+  width: auto;
+  float: none;
+  padding: 0;
+}
+.fc-intro .block.crosssell .block-title {
+  display: none;
+}
+@media (min-width: 639px) {
+  .fc-intro .block {
+    padding: 25px 28px;
+  }
+  .fc-intro .block + .block {
+    padding-top: 0;
+  }
+}
+.firecheckout .checkout-shipping-address .action.primary,
+.firecheckout .checkout-billing-address .action.primary,
+.firecheckout .modal-footer .action.primary,
+.firecheckout .actions-toolbar .action.primary,
+.firecheckout .checkout-shipping-address button.action,
+.firecheckout .checkout-billing-address button.action,
+.firecheckout .modal-footer button.action,
+.firecheckout .actions-toolbar button.action {
+  border-style: solid;
+}
+.firecheckout .checkout-shipping-address .action.primary:hover,
+.firecheckout .checkout-billing-address .action.primary:hover,
+.firecheckout .modal-footer .action.primary:hover,
+.firecheckout .actions-toolbar .action.primary:hover,
+.firecheckout .checkout-shipping-address button.action:hover,
+.firecheckout .checkout-billing-address button.action:hover,
+.firecheckout .modal-footer button.action:hover,
+.firecheckout .actions-toolbar button.action:hover,
+.firecheckout .checkout-shipping-address .action.primary:focus,
+.firecheckout .checkout-billing-address .action.primary:focus,
+.firecheckout .modal-footer .action.primary:focus,
+.firecheckout .actions-toolbar .action.primary:focus,
+.firecheckout .checkout-shipping-address button.action:focus,
+.firecheckout .checkout-billing-address button.action:focus,
+.firecheckout .modal-footer button.action:focus,
+.firecheckout .actions-toolbar button.action:focus {
+  border-style: solid;
+}
+.firecheckout .checkout-shipping-address .action.primary + button,
+.firecheckout .checkout-billing-address .action.primary + button,
+.firecheckout .modal-footer .action.primary + button,
+.firecheckout .actions-toolbar .action.primary + button,
+.firecheckout .checkout-shipping-address button.action + button,
+.firecheckout .checkout-billing-address button.action + button,
+.firecheckout .modal-footer button.action + button,
+.firecheckout .actions-toolbar button.action + button {
+  margin: 0 10px;
+}
+.firecheckout .checkout-shipping-address .action.primary.action-cancel,
+.firecheckout .checkout-billing-address .action.primary.action-cancel,
+.firecheckout .modal-footer .action.primary.action-cancel,
+.firecheckout .actions-toolbar .action.primary.action-cancel,
+.firecheckout .checkout-shipping-address button.action.action-cancel,
+.firecheckout .checkout-billing-address button.action.action-cancel,
+.firecheckout .modal-footer button.action.action-cancel,
+.firecheckout .actions-toolbar button.action.action-cancel,
+.firecheckout .checkout-shipping-address .action.primary.action-secondary,
+.firecheckout .checkout-billing-address .action.primary.action-secondary,
+.firecheckout .modal-footer .action.primary.action-secondary,
+.firecheckout .actions-toolbar .action.primary.action-secondary,
+.firecheckout .checkout-shipping-address button.action.action-secondary,
+.firecheckout .checkout-billing-address button.action.action-secondary,
+.firecheckout .modal-footer button.action.action-secondary,
+.firecheckout .actions-toolbar button.action.action-secondary,
+.firecheckout .checkout-shipping-address .action.primary.action-dismiss,
+.firecheckout .checkout-billing-address .action.primary.action-dismiss,
+.firecheckout .modal-footer .action.primary.action-dismiss,
+.firecheckout .actions-toolbar .action.primary.action-dismiss,
+.firecheckout .checkout-shipping-address button.action.action-dismiss,
+.firecheckout .checkout-billing-address button.action.action-dismiss,
+.firecheckout .modal-footer button.action.action-dismiss,
+.firecheckout .actions-toolbar button.action.action-dismiss {
+  border-style: solid;
+}
+.firecheckout .checkout-shipping-address .action.primary.action-cancel:hover,
+.firecheckout .checkout-billing-address .action.primary.action-cancel:hover,
+.firecheckout .modal-footer .action.primary.action-cancel:hover,
+.firecheckout .actions-toolbar .action.primary.action-cancel:hover,
+.firecheckout .checkout-shipping-address button.action.action-cancel:hover,
+.firecheckout .checkout-billing-address button.action.action-cancel:hover,
+.firecheckout .modal-footer button.action.action-cancel:hover,
+.firecheckout .actions-toolbar button.action.action-cancel:hover,
+.firecheckout .checkout-shipping-address .action.primary.action-secondary:hover,
+.firecheckout .checkout-billing-address .action.primary.action-secondary:hover,
+.firecheckout .modal-footer .action.primary.action-secondary:hover,
+.firecheckout .actions-toolbar .action.primary.action-secondary:hover,
+.firecheckout .checkout-shipping-address button.action.action-secondary:hover,
+.firecheckout .checkout-billing-address button.action.action-secondary:hover,
+.firecheckout .modal-footer button.action.action-secondary:hover,
+.firecheckout .actions-toolbar button.action.action-secondary:hover,
+.firecheckout .checkout-shipping-address .action.primary.action-dismiss:hover,
+.firecheckout .checkout-billing-address .action.primary.action-dismiss:hover,
+.firecheckout .modal-footer .action.primary.action-dismiss:hover,
+.firecheckout .actions-toolbar .action.primary.action-dismiss:hover,
+.firecheckout .checkout-shipping-address button.action.action-dismiss:hover,
+.firecheckout .checkout-billing-address button.action.action-dismiss:hover,
+.firecheckout .modal-footer button.action.action-dismiss:hover,
+.firecheckout .actions-toolbar button.action.action-dismiss:hover,
+.firecheckout .checkout-shipping-address .action.primary.action-cancel:focus,
+.firecheckout .checkout-billing-address .action.primary.action-cancel:focus,
+.firecheckout .modal-footer .action.primary.action-cancel:focus,
+.firecheckout .actions-toolbar .action.primary.action-cancel:focus,
+.firecheckout .checkout-shipping-address button.action.action-cancel:focus,
+.firecheckout .checkout-billing-address button.action.action-cancel:focus,
+.firecheckout .modal-footer button.action.action-cancel:focus,
+.firecheckout .actions-toolbar button.action.action-cancel:focus,
+.firecheckout .checkout-shipping-address .action.primary.action-secondary:focus,
+.firecheckout .checkout-billing-address .action.primary.action-secondary:focus,
+.firecheckout .modal-footer .action.primary.action-secondary:focus,
+.firecheckout .actions-toolbar .action.primary.action-secondary:focus,
+.firecheckout .checkout-shipping-address button.action.action-secondary:focus,
+.firecheckout .checkout-billing-address button.action.action-secondary:focus,
+.firecheckout .modal-footer button.action.action-secondary:focus,
+.firecheckout .actions-toolbar button.action.action-secondary:focus,
+.firecheckout .checkout-shipping-address .action.primary.action-dismiss:focus,
+.firecheckout .checkout-billing-address .action.primary.action-dismiss:focus,
+.firecheckout .modal-footer .action.primary.action-dismiss:focus,
+.firecheckout .actions-toolbar .action.primary.action-dismiss:focus,
+.firecheckout .checkout-shipping-address button.action.action-dismiss:focus,
+.firecheckout .checkout-billing-address button.action.action-dismiss:focus,
+.firecheckout .modal-footer button.action.action-dismiss:focus,
+.firecheckout .actions-toolbar button.action.action-dismiss:focus {
+  border-style: solid;
+}
+.firecheckout .checkout-shipping-address .action.primary.action-agree,
+.firecheckout .checkout-billing-address .action.primary.action-agree,
+.firecheckout .modal-footer .action.primary.action-agree,
+.firecheckout .actions-toolbar .action.primary.action-agree,
+.firecheckout .checkout-shipping-address button.action.action-agree,
+.firecheckout .checkout-billing-address button.action.action-agree,
+.firecheckout .modal-footer button.action.action-agree,
+.firecheckout .actions-toolbar button.action.action-agree,
+.firecheckout .checkout-shipping-address .action.primary.action-update,
+.firecheckout .checkout-billing-address .action.primary.action-update,
+.firecheckout .modal-footer .action.primary.action-update,
+.firecheckout .actions-toolbar .action.primary.action-update,
+.firecheckout .checkout-shipping-address button.action.action-update,
+.firecheckout .checkout-billing-address button.action.action-update,
+.firecheckout .modal-footer button.action.action-update,
+.firecheckout .actions-toolbar button.action.action-update,
+.firecheckout .checkout-shipping-address .action.primary.action-login,
+.firecheckout .checkout-billing-address .action.primary.action-login,
+.firecheckout .modal-footer .action.primary.action-login,
+.firecheckout .actions-toolbar .action.primary.action-login,
+.firecheckout .checkout-shipping-address button.action.action-login,
+.firecheckout .checkout-billing-address button.action.action-login,
+.firecheckout .modal-footer button.action.action-login,
+.firecheckout .actions-toolbar button.action.action-login,
+.firecheckout .checkout-shipping-address .action.primary.action[data-role="opc-continue"],
+.firecheckout .checkout-billing-address .action.primary.action[data-role="opc-continue"],
+.firecheckout .modal-footer .action.primary.action[data-role="opc-continue"],
+.firecheckout .actions-toolbar .action.primary.action[data-role="opc-continue"],
+.firecheckout .checkout-shipping-address button.action.action[data-role="opc-continue"],
+.firecheckout .checkout-billing-address button.action.action[data-role="opc-continue"],
+.firecheckout .modal-footer button.action.action[data-role="opc-continue"],
+.firecheckout .actions-toolbar button.action.action[data-role="opc-continue"] {
+  border-style: solid;
+}
+.firecheckout .checkout-shipping-address .action.primary.action-agree:hover,
+.firecheckout .checkout-billing-address .action.primary.action-agree:hover,
+.firecheckout .modal-footer .action.primary.action-agree:hover,
+.firecheckout .actions-toolbar .action.primary.action-agree:hover,
+.firecheckout .checkout-shipping-address button.action.action-agree:hover,
+.firecheckout .checkout-billing-address button.action.action-agree:hover,
+.firecheckout .modal-footer button.action.action-agree:hover,
+.firecheckout .actions-toolbar button.action.action-agree:hover,
+.firecheckout .checkout-shipping-address .action.primary.action-update:hover,
+.firecheckout .checkout-billing-address .action.primary.action-update:hover,
+.firecheckout .modal-footer .action.primary.action-update:hover,
+.firecheckout .actions-toolbar .action.primary.action-update:hover,
+.firecheckout .checkout-shipping-address button.action.action-update:hover,
+.firecheckout .checkout-billing-address button.action.action-update:hover,
+.firecheckout .modal-footer button.action.action-update:hover,
+.firecheckout .actions-toolbar button.action.action-update:hover,
+.firecheckout .checkout-shipping-address .action.primary.action-login:hover,
+.firecheckout .checkout-billing-address .action.primary.action-login:hover,
+.firecheckout .modal-footer .action.primary.action-login:hover,
+.firecheckout .actions-toolbar .action.primary.action-login:hover,
+.firecheckout .checkout-shipping-address button.action.action-login:hover,
+.firecheckout .checkout-billing-address button.action.action-login:hover,
+.firecheckout .modal-footer button.action.action-login:hover,
+.firecheckout .actions-toolbar button.action.action-login:hover,
+.firecheckout .checkout-shipping-address .action.primary.action[data-role="opc-continue"]:hover,
+.firecheckout .checkout-billing-address .action.primary.action[data-role="opc-continue"]:hover,
+.firecheckout .modal-footer .action.primary.action[data-role="opc-continue"]:hover,
+.firecheckout .actions-toolbar .action.primary.action[data-role="opc-continue"]:hover,
+.firecheckout .checkout-shipping-address button.action.action[data-role="opc-continue"]:hover,
+.firecheckout .checkout-billing-address button.action.action[data-role="opc-continue"]:hover,
+.firecheckout .modal-footer button.action.action[data-role="opc-continue"]:hover,
+.firecheckout .actions-toolbar button.action.action[data-role="opc-continue"]:hover,
+.firecheckout .checkout-shipping-address .action.primary.action-agree:focus,
+.firecheckout .checkout-billing-address .action.primary.action-agree:focus,
+.firecheckout .modal-footer .action.primary.action-agree:focus,
+.firecheckout .actions-toolbar .action.primary.action-agree:focus,
+.firecheckout .checkout-shipping-address button.action.action-agree:focus,
+.firecheckout .checkout-billing-address button.action.action-agree:focus,
+.firecheckout .modal-footer button.action.action-agree:focus,
+.firecheckout .actions-toolbar button.action.action-agree:focus,
+.firecheckout .checkout-shipping-address .action.primary.action-update:focus,
+.firecheckout .checkout-billing-address .action.primary.action-update:focus,
+.firecheckout .modal-footer .action.primary.action-update:focus,
+.firecheckout .actions-toolbar .action.primary.action-update:focus,
+.firecheckout .checkout-shipping-address button.action.action-update:focus,
+.firecheckout .checkout-billing-address button.action.action-update:focus,
+.firecheckout .modal-footer button.action.action-update:focus,
+.firecheckout .actions-toolbar button.action.action-update:focus,
+.firecheckout .checkout-shipping-address .action.primary.action-login:focus,
+.firecheckout .checkout-billing-address .action.primary.action-login:focus,
+.firecheckout .modal-footer .action.primary.action-login:focus,
+.firecheckout .actions-toolbar .action.primary.action-login:focus,
+.firecheckout .checkout-shipping-address button.action.action-login:focus,
+.firecheckout .checkout-billing-address button.action.action-login:focus,
+.firecheckout .modal-footer button.action.action-login:focus,
+.firecheckout .actions-toolbar button.action.action-login:focus,
+.firecheckout .checkout-shipping-address .action.primary.action[data-role="opc-continue"]:focus,
+.firecheckout .checkout-billing-address .action.primary.action[data-role="opc-continue"]:focus,
+.firecheckout .modal-footer .action.primary.action[data-role="opc-continue"]:focus,
+.firecheckout .actions-toolbar .action.primary.action[data-role="opc-continue"]:focus,
+.firecheckout .checkout-shipping-address button.action.action[data-role="opc-continue"]:focus,
+.firecheckout .checkout-billing-address button.action.action[data-role="opc-continue"]:focus,
+.firecheckout .modal-footer button.action.action[data-role="opc-continue"]:focus,
+.firecheckout .actions-toolbar button.action.action[data-role="opc-continue"]:focus {
+  border-style: solid;
+}
+.firecheckout .place-order .actions-toolbar .primary .action {
+  border-style: solid;
+}
+.firecheckout .place-order .actions-toolbar .primary .action:hover,
+.firecheckout .place-order .actions-toolbar .primary .action:focus {
+  border-style: solid;
+}
+.firecheckout #checkout [data-collapsible="true"] {
+  border: 0;
+  margin-bottom: 5px;
+}
+.firecheckout #checkout [data-collapsible="true"]._active {
+  margin-bottom: 15px;
+}
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"],
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] {
+  margin-bottom: 0;
+}
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"]:before,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"]:before,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"]:after,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"]:after {
+  display: none;
+}
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"],
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"],
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > span,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > span,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > strong,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > strong,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] .action-toggle,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] .action-toggle {
+  color: #444444;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 0;
+  cursor: pointer;
+}
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"]:before,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"]:before,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > span:before,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > span:before,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > strong:before,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > strong:before,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] .action-toggle:before,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] .action-toggle:before {
+  display: none;
+}
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > span,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > span,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > strong,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > strong,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] .action-toggle,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] .action-toggle {
+  display: flex;
+  align-items: center;
+}
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > span:after,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > span:after,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > strong:after,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > strong:after,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] .action-toggle:after,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] .action-toggle:after {
+  content: '';
+  transform: rotate(45deg);
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 0 0 5px;
+  position: relative;
+  top: -3px;
+  right: auto;
+  background: transparent;
+}
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > span > * + *,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > span > * + *,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] > strong > * + *,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] > strong > * + *,
+.firecheckout #checkout [data-collapsible="true"] > [role="tab"] .action-toggle > * + *,
+.firecheckout #checkout [data-collapsible="true"] > .title[data-role="title"] .action-toggle > * + * {
+  margin-left: 3px;
+}
+.firecheckout #checkout [data-collapsible="true"]._active > .title[data-role="title"] > span:after,
+.firecheckout #checkout [data-collapsible="true"] [role="tab"][aria-expanded="true"] > span:after,
+.firecheckout #checkout [data-collapsible="true"]._active > .title[data-role="title"] > strong:after,
+.firecheckout #checkout [data-collapsible="true"] [role="tab"][aria-expanded="true"] > strong:after,
+.firecheckout #checkout [data-collapsible="true"]._active > .title[data-role="title"] .action-toggle:after,
+.firecheckout #checkout [data-collapsible="true"] [role="tab"][aria-expanded="true"] .action-toggle:after {
+  transform: rotate(225deg);
+  top: 2px;
+}
+.firecheckout #checkout [data-collapsible="true"] [role="tabpanel"],
+.firecheckout #checkout [data-collapsible="true"] [data-role="content"] {
+  margin-top: 5px;
+  padding: 5px 0 0;
+}
+.firecheckout .modal-popup.modal-slide._inner-scroll._show,
+.firecheckout .modal-custom:not(.opc-sidebar).modal-slide._inner-scroll._show {
+  overflow-y: visible;
+}
+.firecheckout .modal-popup.modal-slide._inner-scroll .modal-inner-wrap,
+.firecheckout .modal-custom:not(.opc-sidebar).modal-slide._inner-scroll .modal-inner-wrap {
+  min-height: 0;
+}
+.firecheckout .modal-popup.modal-slide._inner-scroll .modal-inner-wrap[class],
+.firecheckout .modal-custom:not(.opc-sidebar).modal-slide._inner-scroll .modal-inner-wrap[class] {
+  background: #ffffff;
+}
+.firecheckout .modal-unclosable .action-close {
+  display: none;
+}
+.firecheckout .modal-popup .step-title,
+.firecheckout .modal-custom:not(.opc-sidebar) .step-title {
+  font-size: 25px;
+}
+.firecheckout._has-modal > .loading-mask,
+.firecheckout._has-modal-custom > .loading-mask {
+  z-index: 10005 !important;
+}
+.firecheckout._has-modal .loading-mask:not(.fc-mask),
+.firecheckout._has-modal-custom .loading-mask:not(.fc-mask) {
+  opacity: 0;
+  pointer-events: none;
+}
+.firecheckout._has-modal._has-auth-shown .loading-mask:not(.fc-mask),
+.firecheckout._has-modal-custom._has-auth-shown .loading-mask:not(.fc-mask) {
+  opacity: 1;
+  pointer-events: all;
+}
+.firecheckout .modal-popup,
+.firecheckout .modal-custom:not(.opc-sidebar) {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s .3s,
+                            opacity .3s ease;
+  transition: visibility 0s .3s,
+                    opacity .3s ease;
+  border: 0;
+  width: 100%;
+  max-width: none;
+  box-shadow: none;
+  background: transparent;
+  text-align: left;
+  transform: none;
+}
+.firecheckout .modal-popup .modal-title,
+.firecheckout .modal-custom:not(.opc-sidebar) .modal-title {
+  border-color: #f4f4f4;
+}
+.firecheckout .modal-popup .modal-inner-wrap,
+.firecheckout .modal-custom:not(.opc-sidebar) .modal-inner-wrap {
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 800px;
+  min-height: 0;
+  max-height: calc(90% - 6rem);
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform-origin: 50% 50% 0;
+  opacity: 0;
+  transition: all 0.2s;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+.firecheckout .modal-popup .modal-inner-wrap .modal-content,
+.firecheckout .modal-custom:not(.opc-sidebar) .modal-inner-wrap .modal-content {
+  -webkit-overflow-scrolling: touch;
+}
+.firecheckout .modal-popup .modal-inner-wrap .modal-content::-webkit-scrollbar,
+.firecheckout .modal-custom:not(.opc-sidebar) .modal-inner-wrap .modal-content::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.firecheckout .modal-popup .modal-inner-wrap .modal-content::-webkit-scrollbar-track,
+.firecheckout .modal-custom:not(.opc-sidebar) .modal-inner-wrap .modal-content::-webkit-scrollbar-track {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+}
+.firecheckout .modal-popup .modal-inner-wrap .modal-content::-webkit-scrollbar-thumb,
+.firecheckout .modal-custom:not(.opc-sidebar) .modal-inner-wrap .modal-content::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 10px;
+}
+.firecheckout .modal-popup ~ .modals-overlay,
+.firecheckout .modal-custom:not(.opc-sidebar) ~ .modals-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+.firecheckout .modal-popup._show,
+.firecheckout .modal-custom:not(.opc-sidebar)._show {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+.firecheckout .modal-popup._show .modal-inner-wrap,
+.firecheckout .modal-custom:not(.opc-sidebar)._show .modal-inner-wrap {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+  transform: translateY(0);
+}
+.firecheckout .modal-popup._show ~ .modals-overlay,
+.firecheckout .modal-custom:not(.opc-sidebar)._show ~ .modals-overlay {
+  opacity: 1;
+}
+.firecheckout .modal-popup.modal-slide .modal-footer,
+.firecheckout .modal-custom:not(.opc-sidebar).modal-slide .modal-footer,
+.firecheckout .modal-popup .modal-footer,
+.firecheckout .modal-custom:not(.opc-sidebar) .modal-footer {
+  border-color: #f4f4f4;
+}
+.firecheckout .modal-inner-wrap .action-close {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+.firecheckout .modal-inner-wrap .action-close::before,
+.firecheckout .modal-inner-wrap .action-close::after {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 10px;
+  height: 20px;
+  width: 2px;
+  margin: 0;
+  background-color: #333;
+}
+.firecheckout .modal-inner-wrap .action-close::before {
+  transform: rotate(45deg);
+}
+.firecheckout .modal-inner-wrap .action-close::after {
+  transform: rotate(-45deg);
+}
+@media (min-width: 768px) {
+  .firecheckout._has-modal {
+    overflow: auto;
+  }
+  .firecheckout .modal-popup .modal-footer .action + .action,
+  .firecheckout .modal-custom:not(.opc-sidebar) .modal-footer .action + .action {
+    margin: 4px 10px;
+  }
+  .firecheckout.checkout-index-index .modal-popup .modal-inner-wrap,
+  .firecheckout.checkout-index-index .modal-custom:not(.opc-sidebar) .modal-inner-wrap {
+    left: 0;
+    margin: 5rem auto;
+    width: 75%;
+    max-height: calc(90% - 10rem);
+  }
+}
+.firecheckout .field-tooltip .field-tooltip-content {
+  color: inherit;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  width: 200px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+}
+.firecheckout .field-tooltip .field-tooltip-content:before {
+  border-right-color: #ffffff;
+}
+.firecheckout .field-tooltip .field-tooltip-content:after {
+  border-right-color: #ffffff;
+}
+.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content {
+  width: 450px;
+}
+.rtl.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content {
+  right: -10px;
+  left: auto;
+}
+.rtl.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content:before,
+.rtl.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content:after {
+  right: 10px;
+  left: auto;
+}
+.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content:before,
+.firecheckout .modal-popup .field-tooltip .field-tooltip-content:before,
+.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content:after,
+.firecheckout .modal-popup .field-tooltip .field-tooltip-content:after {
+  border-right-color: transparent;
+}
+.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content:before,
+.firecheckout .modal-popup .field-tooltip .field-tooltip-content:before {
+  border-bottom-color: #ffffff;
+}
+.firecheckout .shipping-policy-block.field-tooltip .field-tooltip-content:after,
+.firecheckout .modal-popup .field-tooltip .field-tooltip-content:after {
+  border-bottom-color: #ffffff;
+}
+@media (max-width: 768px) {
+  .firecheckout .field-tooltip .field-tooltip-content {
+    right: -10px;
+    left: auto;
+    top: 40px;
+  }
+  .firecheckout .field-tooltip .field-tooltip-content:before,
+  .firecheckout .field-tooltip .field-tooltip-content:after {
+    border-right-color: transparent;
+    margin-top: -21px;
+    right: 10px;
+    left: auto;
+    top: 0;
+  }
+  .firecheckout .field-tooltip .field-tooltip-content:before {
+    border-bottom-color: #ffffff;
+  }
+  .firecheckout .field-tooltip .field-tooltip-content:after {
+    border-bottom-color: #ffffff;
+  }
+}
+@media (max-width: 639px) {
+  .shipping-policy-block.field-tooltip .field-tooltip-content {
+    max-width: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .firecheckout .field-tooltip .field-tooltip-content {
+    width: 150px;
+  }
+  .shipping-policy-block.field-tooltip .field-tooltip-content {
+    max-width: 320px;
+  }
+}
+@media (max-width: 360px) {
+  .shipping-policy-block.field-tooltip .field-tooltip-content {
+    max-width: 270px;
+  }
+}
+.firecheckout .opc-progress-bar {
+  display: block;
+  margin: 0 0 15px !important;
+}
+.firecheckout .opc-progress-bar li {
+  display: inline-block;
+  width: auto;
+  font-size: 13px;
+  line-height: 22px;
+  color: #aaaaaa;
+  border: 0;
+  text-transform: none;
+  padding: 0;
+  height: auto;
+  margin: 0;
+}
+.firecheckout .opc-progress-bar li::before {
+  display: none;
+}
+.firecheckout .opc-progress-bar li::after {
+  content: '›';
+  color: #aaaaaa;
+  margin: 0 5px 0 2px;
+  position: static;
+  border: 0;
+  height: auto;
+}
+.firecheckout .opc-progress-bar li:last-child::after {
+  display: none !important;
+}
+.firecheckout .opc-progress-bar li span {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  text-align: left;
+  color: #666666;
+}
+.firecheckout .opc-progress-bar li span::before,
+.firecheckout .opc-progress-bar li span::after {
+  display: none;
+}
+.firecheckout .opc-progress-bar li._active {
+  background: transparent;
+  border: none;
+}
+.firecheckout .opc-progress-bar li._active::after {
+  display: inline;
+}
+.firecheckout .opc-progress-bar li._active span {
+  color: #333333;
+  font-weight: bold;
+}
+.firecheckout .opc-progress-bar li._complete {
+  cursor: pointer;
+}
+.firecheckout .opc-progress-bar li._complete:hover span {
+  text-decoration: underline;
+}
+.firecheckout .opc-progress-bar li._complete span {
+  color: #006bb4;
+}
+.firecheckout .loading-mask .loader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: none;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  animation: none;
+}
+.firecheckout .loading-mask .loader img {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+.firecheckout .loading-mask .loader::before {
+  display: none;
+}
+.firecheckout .loading-mask .loader::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  -webkit-animation: firecheckout-spin 0.7s linear infinite;
+  animation: firecheckout-spin 0.7s linear infinite;
+  border: 3px solid #dddddd;
+  border-top: 3px solid #42a5f5;
+  border-radius: 50%;
+  cursor: wait;
+}
+.firecheckout #checkout .opc-block-summary .details-qty .qty-wrapper {
+  border-color: #cccccc;
+  border-width: 1px;
+}
+.firecheckout #checkout .opc-block-summary .details-qty .qty-wrapper .qty-toggler {
+  border-color: #cccccc;
+  border-left-width: 1px;
+}
+.firecheckout #checkout .swissup-delivery-date {
+  max-width: none;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+.firecheckout #checkout .swissup-delivery-date div.field {
+  padding: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+.firecheckout #checkout .swissup-delivery-date div.field div.field {
+  padding-left: 0;
+  padding-right: 0;
+}
+.firecheckout #checkout .swissup-delivery-date div.field .additional {
+  margin-top: 8px;
+}
+.firecheckout #checkout .swissup-delivery-date div.field.choice:before {
+  display: none;
+}
+.firecheckout #checkout .swissup-delivery-date div.field.choice > .label {
+  float: none;
+}
+.firecheckout #checkout .swissup-delivery-date div.field > .label {
+  float: left;
+  width: auto;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+  box-sizing: border-box;
+  font-weight: normal;
+  white-space: normal;
+}
+.firecheckout #checkout .swissup-delivery-date div.field > .label::after {
+  margin: 0;
+}
+.firecheckout #checkout .swissup-delivery-date div.field > .control {
+  float: none;
+  clear: both;
+  width: auto;
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.firecheckout #checkout .swissup-delivery-date div.field > .control._with-tooltip input,
+.firecheckout #checkout .swissup-delivery-date div.field > .control._with-tooltip textarea,
+.firecheckout #checkout .swissup-delivery-date div.field > .control._with-tooltip select {
+  width: 100%;
+  margin: 0;
+}
+.firecheckout #checkout .swissup-delivery-date div.field.required > .label::after,
+.firecheckout #checkout .swissup-delivery-date div.field._required > .label::after {
+  position: static;
+  content: ' *';
+  color: #e02b27;
+  font-size: 1.4rem;
+  margin: 0 0 0 2px;
+}
+.firecheckout #checkout .fc-size-xs .swissup-delivery-date {
+  flex-wrap: wrap;
+}
+.firecheckout #checkout .fc-size-xs .swissup-delivery-date > .field {
+  width: 100%;
+}
+.firecheckout #checkout .payment-method .payment-method-content #load-dropin-form-button {
+  display: inline-block;
+}
+.firecheckout #checkout .payment-method .payment-method-content #submit-container > .actions-toolbar .action.checkout {
+  display: none !important;
+}
+.firecheckout .payment-method-braintree .hosted-control {
+  height: auto;
+  max-width: none;
+  padding-top: 0.68em;
+  padding-bottom: 0.68em;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  height: 42px;
+  border-radius: 0;
+  width: 100%;
+}
+.firecheckout .payment-method-braintree .hosted-control:focus {
+  box-shadow: none;
+  border-color: #c2c2c2;
+  background-color: #fafafa;
+}
+.firecheckout .payment-method-braintree .hosted-control:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #ffffe4 inset !important;
+}
+.firecheckout .payment-method-braintree .hosted-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.firecheckout .payment-method-braintree .hosted-control::-moz-placeholder {
+  color: #999999;
+}
+.firecheckout .payment-method-braintree .hosted-control:-ms-input-placeholder {
+  color: #999999;
+}
+.firecheckout .payment-method-braintree .hosted-control::-ms-input-placeholder {
+  color: #999999;
+}
+.firecheckout .payment-method-braintree .hosted-control::placeholder {
+  color: #999999;
+}
+.firecheckout .payment-method-braintree .hosted-control.hosted-cid {
+  width: 100%;
+}
+.firecheckout .payment-method-braintree .hosted-control:focus {
+  background-color: #fff;
+}
+.firecheckout .payment-method-braintree .hosted-date-wrap .hosted-control.hosted-date {
+  width: 50%;
+  margin-right: 8px;
+}
+.firecheckout .payment-method-braintree .hosted-date-wrap .hosted-control.hosted-date:after {
+  display: none;
+}
+.firecheckout .payment-method-braintree .hosted-date-wrap .hosted-control.hosted-date + .hosted-date {
+  margin: 0;
+  width: calc(49% - (4px * 2));
+}
+.firecheckout .tippy-popper {
+  max-width: 240px;
+}
+.firecheckout .tippy-tooltip {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.firecheckout .tippy-tooltip[data-size=small] {
+  font-size: 1.1rem;
+}
+.firecheckout .tippy-tooltip[data-size=regular] {
+  font-size: 1.3rem;
+}
+.firecheckout .tippy-tooltip[data-size=large] {
+  font-size: 1.5rem;
+}
+.firecheckout .tippy-tooltip.error-theme {
+  background-color: #cf0400;
+}
+.firecheckout .tippy-tooltip.error-theme .tippy-backdrop {
+  background-color: #cf0400;
+}
+.firecheckout .tippy-tooltip.error-theme .tippy-roundarrow {
+  fill: #cf0400;
+}
+.firecheckout .tippy-tooltip.error-theme[data-animatefill] {
+  background-color: transparent;
+}
+.firecheckout .tippy-tooltip.warning-theme {
+  background-color: #c39100;
+}
+.firecheckout .tippy-tooltip.warning-theme .tippy-backdrop {
+  background-color: #c39100;
+}
+.firecheckout .tippy-tooltip.warning-theme .tippy-roundarrow {
+  fill: #c39100;
+}
+.firecheckout .tippy-tooltip.warning-theme[data-animatefill] {
+  background-color: transparent;
+}
+.firecheckout .tippy-tooltip.content-theme {
+  text-align: initial;
+  color: #333;
+  background-color: #ffffff;
+}
+.firecheckout .tippy-tooltip.content-theme .tippy-backdrop {
+  background-color: #ffffff;
+}
+.firecheckout .tippy-tooltip.content-theme .tippy-roundarrow {
+  fill: #ffffff;
+}
+.firecheckout .tippy-tooltip.content-theme[data-animatefill] {
+  background-color: transparent;
+}
+.firecheckout .tippy-popper[x-placement^=top] .tippy-tooltip.error-theme .tippy-arrow {
+  border-top-color: #cf0400;
+}
+.firecheckout .tippy-popper[x-placement^=top] .tippy-tooltip.warning-theme .tippy-arrow {
+  border-top-color: #c39100;
+}
+.firecheckout .tippy-popper[x-placement^=top] .tippy-tooltip.content-theme .tippy-arrow {
+  border-top-color: #ffffff;
+}
+.firecheckout .tippy-popper[x-placement^=bottom] .tippy-tooltip.error-theme .tippy-arrow {
+  border-bottom-color: #cf0400;
+}
+.firecheckout .tippy-popper[x-placement^=bottom] .tippy-tooltip.warning-theme .tippy-arrow {
+  border-bottom-color: #c39100;
+}
+.firecheckout .tippy-popper[x-placement^=bottom] .tippy-tooltip.content-theme .tippy-arrow {
+  border-bottom-color: #ffffff;
+}

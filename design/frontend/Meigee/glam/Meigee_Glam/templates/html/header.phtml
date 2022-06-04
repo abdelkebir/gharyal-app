@@ -1,0 +1,394 @@
+<?php
+$meigee_helper = $this->helper('\Meigee\Glam\Helper\GlamGeneral');
+$home_page_header_transparency = $this->getConfig('glam_general/glam_header/home_page_header_transparency');
+?>
+<?php 
+/* Header1 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_default')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-1">
+		<div class="top-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4 col-sm-1 col-md-4 col-lg-5">
+						<!-- <?php // echo $this->getChildHtml("header.welcome"); ?> -->
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 text-center">
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("logo"); ?>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-7 col-md-6 col-lg-5 right-block text-right">
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header2 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_olivia')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-2<?php if ($home_page_header_transparency) : echo ' transparent-header'; endif;?>">
+		<div class="top-block">
+			<div class="container">
+				<div class="row menu-wrapper-row">
+					<div class="col-xs-4 col-sm-1 col-md-4 col-lg-5 menu-wrapper-block">
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 text-center">
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header2.logo"); ?>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-7 col-md-6 col-lg-5 right-block text-right">
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header3 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_sophia')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-3">
+		<div class="top-block">
+			<div class="container">
+				<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+					<?php echo $this->getChildHtml("header3.logo"); ?>
+				</div>
+			</div>
+		</div>
+		<div class="middle-block">
+			<div class="container">
+				<div class="row menu-werapper-row">
+					<div class="col-xs-4 col-sm-4 col-sm-pull-0 col-md-4 col-lg-4 left-block">
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+					</div>
+					<div class="hidden-xs hidden-sm col-md-4 col-lg-4 menu-wrapper-block">
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+					</div>
+					<div class="col-xs-12 col-sm-8 col-md-4 col-lg-4 right-block text-right">
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header4 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_ava')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-4">
+		<div class="top-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-5 text-left">
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-2 text-center">
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header4.logo"); ?>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-5 right-block text-right">
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="middle-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header5 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_isabella')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-5">
+		<div class="top-block">
+			<div class="container">
+				<div class="row menu-wrapper-row">
+					<div class="col-xs-8 col-sm-6 col-md-3 text-left">
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header5.logo"); ?>
+						</div>
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-9 right-block text-right menu-wrapper-block">
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header6 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_mia')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-6">
+		<div class="top-block">
+			<div class="container">
+				<div class="row menu-wrapper-row">
+					<div class="col-xs-8 col-sm-4 col-md-2 col-lg-2 text-left">
+						<!-- <?php // echo $this->getChildHtml("header.welcome"); ?> -->
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header6.logo"); ?>
+						</div>
+					</div>
+					<div class="hidden-xs hidden-sm col-md-4 col-lg-5 menu-wrapper-block">
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+					</div>
+					<div class="col-xs-12 col-sm-8 col-md-6 col-lg-5 right-block text-right">
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header7 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_emily')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-7">
+		<div class="top-block">
+			<div class="container">
+				<div class="row menu-wrapper-row">
+					<div class="col-xs-4 col-sm-3 col-md-4 col-lg-5 menu-wrapper-block text-left">
+						<!-- <?php // echo $this->getChildHtml("header.welcome"); ?> -->
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+					</div>
+					<div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header7.logo"); ?>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-5 text-right">
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header8 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_abigail')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-8">
+		<div class="top-block">
+			<div class="container">
+				<div class="row menu-wrapper-row">
+					<div class="col-xs-8 col-sm-6 col-md-6 menu-wrapper-block text-left">
+						<!-- <?php // echo $this->getChildHtml("header.welcome"); ?> -->
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header8.logo"); ?>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 right-block text-right">
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header9 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_harper')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-9">
+		<div class="top-block">
+			<div class="container">
+				<div class="row">
+					<div class="personal-service text-right"><span class="icon"><i class="fa fa-phone"></i></span> <a href="tel:"+922135878454">+92 21 35878454</a> (today until 17.00 PKT)</div>
+				</div>
+				<div class="row">
+				<div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 text-left">
+						<!-- <?php // echo $this->getChildHtml("header.welcome"); ?> -->
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header9.logo"); ?>
+						</div>						
+					</div>
+					<div class="col-xs-4 col-sm-1 col-md-4 col-lg-5"></div><!--moved tag-->
+					<div class="col-xs-12 col-sm-7 col-md-6 col-lg-5 right-block text-right">
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+					</div>
+				</div>
+				<div class="row g-row2"> 
+				<div class="toggle-nav clearfix col-md-12 text-left">
+				<?php echo $this->getChildHtml("catalog.topnav"); ?>
+				</div>
+			<!--	<div id="TagLine" class="col-md-5 text-right">
+				<span class="tag-line">Luxury Today, Legacy Tomorrow.</span>
+				</div>-->
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>
+
+<?php 
+/* Header10 */
+if($meigee_helper->getCustomThemeOptionCnf('glam_skins', 'skinheader_charlotte')){ ?>
+<div class="header-wrapper">
+	<header class="page-header header-10<?php if ($home_page_header_transparency) : echo ' transparent-header'; endif;?>">
+		<div class="top-block">
+			<div class="container">
+				<div class="row menu-wrapper-row">
+					<div class="col-xs-8 col-sm-3 col-md-2">
+						<!-- <?php // echo $this->getChildHtml("header.welcome"); ?> -->
+						<?php echo $this->getChildHtml("mobile.menu.btn"); ?>
+						<div class="panel header"><a class="action skip contentarea" href="#contentarea"><span>Skip to Content</span></a>
+							<?php echo $this->getChildHtml("header10.logo"); ?>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-9 col-md-10 right-block text-right menu-wrapper-block">
+						<?php echo $this->getChildHtml("glam.header.social.links"); ?>
+						<?php echo $this->getChildHtml("options.wrapper"); ?>
+						<?php echo $this->getChildHtml("topSearch"); ?>
+						<?php echo $this->getChildHtml("minicart"); ?>
+						<div class="toggle-nav clearfix"><?php echo $this->getChildHtml("catalog.topnav"); ?> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-wrapper">
+			<div class="container">
+				<?php echo $this->getChildHtml("meigee_mobile_header"); ?>
+			</div>
+		</div>
+		<?php echo $this->getChildHtml("bgslider"); ?>
+	</header>
+	<?php echo $this->getChildHtml("meigee_sticky_header"); ?>
+</div>
+<?php } ?>

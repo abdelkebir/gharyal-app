@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Godogi_Installment::installement" 
+            title="Installment" 
+            module="Godogi_Installment" 
+            parent="Magento_Catalog::catalog" 
+            sortOrder="40" 
+            resource="Godogi_Installment::installement"/>
+        <add id="Godogi_Installment::config" 
+            title="Configuration" 
+            sortOrder="10" 
+            module="Godogi_Installment" 
+            parent="Godogi_Installment::installement" 
+            action="adminhtml/system_config/edit/section/godogi_installment" 
+            dependsOnModule="Magento_Catalog" 
+            resource="Godogi_Installment::config"/>
+        <add id="Godogi_Installment::requests" 
+            title="Requests"
+            sortOrder="20"
+            module="Godogi_Installment"
+            parent="Godogi_Installment::installement"
+            action="installement/requests/"
+            dependsOnModule="Magento_Catalog"
+            resource="Godogi_Installment::requests"/>
+    </menu>
+</config>

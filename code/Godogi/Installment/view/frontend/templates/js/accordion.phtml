@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    require([
+        'jquery',
+        'domReady!'
+    ], function ($) {
+        $(".gharyal-toggle-title").click(function(event){
+            event.preventDefault();
+            let currentElm = $(this);
+            let parent = currentElm.closest('.gharyal-toggle-item');
+            parent.toggleClass('active');
+        });
+    });
+</script>

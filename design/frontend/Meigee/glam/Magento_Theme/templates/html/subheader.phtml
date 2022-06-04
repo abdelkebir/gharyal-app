@@ -1,0 +1,37 @@
+<?php
+	$meigee_helper = $this->helper('\Meigee\Glam\Helper\GlamGeneral');
+	$contentWidth = $meigee_helper->getCustomThemeOptionCnf('glam_layout', 'container_width');
+	$sticky_opacity = $meigee_helper->getCustomThemeOptionCnf('glam_header', 'sticky_header_opacity');
+	$custom_skin = $meigee_helper->getCustomThemeOptionCnf('glam_skins', 'site_skin');
+	if($this->helper('Meigee\Glam\Helper\FrontHelper')->getConfig('dev/css/minify_files')){
+		$custom_skin = str_replace(".css", ".min.css", $custom_skin);
+		$custom_skin_font = substr($custom_skin, 0, -8);
+	}else{
+		$custom_skin_font = substr($custom_skin, 0, -4);
+	}
+?>
+<link href='//fonts.googleapis.com/css?family=Space+Mono:400,400i,700|Overpass:300,400,700' rel='stylesheet' type='text/css'>
+<?php if($custom_skin_font == 'olivia') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'sophia') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'ava') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'isabella') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'mia') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'emily') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'abigail') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'harper') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } else if($custom_skin_font == 'charlotte') { ?>
+	<link href="<?php echo ($this->getViewFileUrl('css/skins').'/'.$custom_skin); ?>" rel="stylesheet" type="text/css" />
+<?php } ?>
+<style type="text/css">
+	body.boxed-layout .container,
+	body .container {max-width: <?php echo $contentWidth; ?>px; width: 100%;}
+	#sticky-header {opacity: <?php echo $sticky_opacity/100; ?>;}
+</style>

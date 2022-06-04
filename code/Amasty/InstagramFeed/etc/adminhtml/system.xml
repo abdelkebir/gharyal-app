@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="aminstagramfeed" translate="label" type="text" sortOrder="91406" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Amasty_InstagramFeed::config</resource>
+            <class>separator-top</class>
+            <label>Instagram Feed</label>
+            <tab>amasty</tab>
+            <group id="amasty_information" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Information</label>
+                <frontend_model>Amasty\InstagramFeed\Block\Adminhtml\System\Config\Information</frontend_model>
+            </group>
+
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="credentials" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Instagram Settings</label>
+                <depends>
+                    <field id="*/general/enabled">1</field>
+                </depends>
+
+                <field id="user_id" translate="label" type="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>User Id</label>
+                    <attribute type="disabled">1</attribute>
+                </field>
+
+                <field id="access_token_new" translate="label" type="obscure" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Access Token</label>
+                    <frontend_model>Amasty\InstagramFeed\Block\Adminhtml\System\Config\Disabled</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+
+                <field id="test_connect" translate="button_label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label/>
+                    <button_label>Generate Access Token</button_label>
+                    <frontend_model>Amasty\InstagramFeed\Block\Adminhtml\System\Config\AcessToken</frontend_model>
+                </field>
+
+                <field id="generate_images" translate="button_label comment" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label/>
+                    <button_label>Generate Images</button_label>
+                    <comment>By default posts get updated every hour by cron. You can use this button for manual update if necessary (the button is getting active in one hour after the last update).</comment>
+                    <frontend_model>Amasty\InstagramFeed\Block\Adminhtml\System\Config\GenerateImages</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

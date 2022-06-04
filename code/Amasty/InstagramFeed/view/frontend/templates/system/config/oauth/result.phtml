@@ -1,0 +1,36 @@
+<?php
+/** @var \Amasty\InstagramFeed\Block\Adminhtml\System\Config\Oauth\Result $block */
+?>
+<script>
+    window
+        .opener
+        .document
+        .getElementById('aminstagramfeed_credentials_test_connect')
+        .textContent = "<?= $block->escapeHtml($block->getButtonMessage()) ?>";
+
+    window
+        .opener
+        .document
+        .getElementById('row_aminstagramfeed_credentials_user_id')
+        .getElementsByClassName('control-value')[0]
+        .textContent = "<?= $block->escapeHtml($block->getUserId()) ?>";
+
+    window
+        .opener
+        .document
+        .getElementById('aminstagramfeed_credentials_access_token_new')
+        .value = "<?= $block->escapeHtml($block->getAccessToken()) ?>";
+
+    <?php if ($block->isTokenGenerated()): ?>
+        <?php if ($block->isGenerateImagesEnabled()): ?>
+        window
+            .opener
+            .document
+            .getElementById('aminstagramfeed_credentials_generate_images')
+            .removeAttribute('disabled');
+        <?php endif; ?>
+        window.opener.document.isTokenGenerated = true;
+    <?php endif; ?>
+
+    window.close();
+</script>

@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Review\Block\Product\Review $block */
+?>
+<div class="row product-reviews">
+	<div class="col-md-8 reviews-wrapper">
+		<div id="product-review-container" data-role="product-review"></div>
+	</div>
+	<div class="col-md-4 review-form-wrapper">
+		<?php echo $block->getChildHtml(); ?>
+	</div>
+</div>
+<script type="text/javascript">
+    require(['jquery'], function ($){
+        $.ajax({
+            url: "<?= $block->escapeJs($block->escapeUrl($block->getProductReviewUrl())) ?>",
+            cache: false
+        }).done(function(html){
+            $("#product-review-container").append(html);
+        });
+    });
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Review/js/process-reviews": {
+                "productReviewUrl": "<?= $block->escapeJs($block->escapeUrl($block->getProductReviewUrl())) ?>",
+                "reviewsTabSelector": "#tab-label-reviews"
+            }
+        }
+    }
+</script>

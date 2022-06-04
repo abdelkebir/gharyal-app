@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php
+/**
+ * Currency switcher
+ *
+ * @see \Magento\Directory\Block\Currency
+ */
+$meigee_helper = $this->helper('\Meigee\Glam\Helper\GlamGeneral');
+$icon_status = $meigee_helper->getCustomThemeOptionCnf('glam_topaccount', 'icon');
+$text_status = $meigee_helper->getCustomThemeOptionCnf('glam_topaccount', 'text');
+?>
+<?php if ($icon_status || $text_status) { ?>
+	<div class="options-wrapper">
+		<div class="options-block">
+			<span class="title">
+				<?php if ($icon_status) { ?>
+					<i class="meigee-account"></i>
+				<?php } ?>
+				<?php if ($text_status) { ?>
+					<span><?php /* @escapeNotVerified */ echo __('Account'); ?></span>
+				<?php } ?>
+			</span>
+		</div>
+		<div class="options-dropdown">
+			<?php echo $this->getChildHtml("store_language"); ?>
+			<?php echo $this->getChildHtml("currency"); ?>
+			<?php echo $this->getChildHtml('top.links.meigee'); ?>
+		</div>
+	</div>
+<?php } ?>

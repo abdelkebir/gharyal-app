@@ -1,0 +1,169 @@
+body a,
+.skincolor,
+.customer-welcome .customer-name,
+.header-wrapper .menu-wrapper .text-banners-block .large-banner,
+.text-banner .title.skincolor,
+.text-banner .title .skincolor,
+.text-banner .subtitle.skincolor,
+.text-banner .subtitle .skincolor,
+.text-banner .text.skincolor,
+.text-banner .text .skincolor,
+.text-banner .skincolor,
+ul.breadcrumb li a:hover,
+body .breadcrumbs > .items li a:hover,
+.toolbar .modes strong i,
+.products-list .actions-secondary a:hover,
+.product-info-main .title-wrapper .add-review:hover,
+.related .block-actions .action:hover,
+body .review-form-wrapper #review-form .review-legend strong,
+.reviews-wrapper .review-author strong,
+.reviews-actions a:hover,
+body .swatch-attribute .swatch-option:not(.disabled):hover,
+body .swatch-attribute.size .swatch-option.selected,
+body .swatch-attribute.manufacturer .swatch-option.selected,
+.authentication-wrapper .action-auth-toggle:hover,
+.sidebar .block li a.delete:hover,
+#shopping-cart-table tbody tr td.actions a:hover,
+.modal-open .modal.ekko-lightbox .modal-header .close:hover:before {color: #d81b60; #fff;}
+.skincolor-bg,
+body .header-wrapper .block-search .btn:after,
+.minicart-wrapper .title-cart .cart-indicator,
+.minicart-wrapper .title-cart .cart-full-indicator,
+.minicart-wrapper .title-cart .cart-full-indicator:after,
+.minicart-wrapper .title-cart .cart-full-indicator:before,
+.minicart-wrapper .actions div.secondary .btn:hover,
+.custom-price-wrapper,
+.text-banner .banner-price-wrapper,
+#home-slider .owl-nav div:hover,
+.menu-category-slider .owl-nav div:hover,
+.widget-slider .products-grid .owl-nav div:hover,
+#popup-block .block.newsletter .btn,
+.cms-no-route .page-not-found .btn:hover,
+.owl-nav i:hover,
+.ekko-lightbox-nav-overlay a i:hover,
+body .footer .subscribe-block .block.newsletter .btn:hover,
+body .footer .subscribe-block .block.newsletter .btn:focus,
+body .footer .subscribe-block .block.newsletter .btn:active {background-color: #d81b60; color: #fff;}
+body .btn,
+body button.action,
+.subscribe-block .form.subscribe button,
+.actions-toolbar a.primary,
+.sidebar .block.block-compare  .actions-toolbar .action,
+.sidebar .block.block-wishlist .actions-toolbar a.action.details,
+.sidebar .block.block-reorder  .actions-toolbar .secondary a.action.view,
+.sidebar .block.block-reorder  .actions-toolbar .primary button.action.tocart,
+.cart-container .cart.actions a.action.continue,
+body .weltpixel-quickview,
+button.action-primary,
+button.action-secondary,
+body.checkout-index-index button[type="submit"],
+.product-info-main #product-addtocart-button,
+.modal-popup button.action,
+body .btn-default.light:hover,
+body .btn-default.light:active,
+body .btn-default.light:focus,
+body .btn-default.light.hover,
+body .btn-default.light.active,
+body .btn-default.light.focus,
+body .btn-default.light.disabled:hover,
+body .btn-default.light[disabled]:hover,
+body .btn-default.light.disabled:hover,
+body .btn-default.light[disabled]:hover,
+body fieldset[disabled] .btn-default.light:hover,
+body .btn-default.light.disabled:focus,
+body .btn-default.light[disabled]:focus,
+body fieldset[disabled] .btn-default.light:focus,
+body .btn-default.light.disabled.focus,
+body .btn-default[disabled].light.focus,
+body fieldset[disabled] .btn-default.light.focus,
+.modal-popup button.action,
+body .weltpixel-quickview,
+.actions-toolbar a.primary,
+.sidebar .block.block-compare  .actions-toolbar .action,
+.sidebar .block.block-wishlist .actions-toolbar a.action.details,
+.sidebar .block.block-reorder  .actions-toolbar .secondary a.action.view,
+.cart-container .cart.actions a.action.continue,
+body .btn.btn-primary.type-2:hover,
+body .btn.btn-primary.type-2:active,
+body .btn.btn-primary.type-2:focus,
+body .btn.btn-primary.type-2.hover,
+body .btn.btn-primary.type-2.active,
+body .btn.btn-primary.type-2.focus,
+body .btn.btn-primary.type-2.disabled:hover,
+body .btn.btn-primary.type-2[disabled]:hover,
+body fieldset[disabled] .btn.btn-primary.type-2:hover,
+body .btn.btn-primary.type-2.disabled:focus,
+body .btn.btn-primary.type-2[disabled]:focus,
+body fieldset[disabled] .btn.btn-primary.type-2:focus,
+body .btn.btn-primary.type-2.disabled.focus,
+body .btn.btn-primary.type-2[disabled].focus,
+body fieldset[disabled] .btn.btn-primary.type-2.focus,
+.product-info-main #product-addtocart-button,
+body .btn.btn-primary:hover,
+body .btn.btn-primary:active,
+body .btn.btn-primary:focus,
+body .btn.btn-primary.hover,
+body .btn.btn-primary.active,
+body .btn.btn-primary.focus,
+body .btn.btn-primary.disabled:hover,
+body .btn.btn-primary[disabled]:hover,
+body fieldset[disabled] .btn.btn-primary:hover,
+body .btn.btn-primary.disabled:focus,
+body .btn.btn-primary[disabled]:focus,
+body fieldset[disabled] .btn.btn-primary:focus,
+body .btn.btn-primary.disabled.focus,
+body .btn.btn-primary[disabled].focus,
+body fieldset[disabled] .btn.btn-primary.focus,
+.sidebar .block.block-reorder  .actions-toolbar .primary button.action.tocart:hover,
+.sidebar .block.block-reorder  .actions-toolbar .primary button.action.tocart:focus,
+.sidebar .block.block-reorder  .actions-toolbar .primary button.action.tocart:active,
+.minicart-wrapper .actions div.primary .btn,
+body .subscribe-block .form.subscribe button,
+.products-list .actions-secondary a:hover i {
+  background-color: #d81b60;
+  border-color: #d81b60;
+  color: #fff;
+}
+
+/*Home slider*/
+#home-slider .owl-item .slide-container {top: 25%;}
+#home-slider .owl-item .slide-container.slide-skin-2 {left: 25%; top: 48%;}
+#home-slider .owl-nav div.owl-prev {left: 40px;}
+#home-slider .owl-nav div.owl-next {right: 40px;}
+/*Header 2*/
+body.wide-layout .page-header.header-2 .container {max-width: 1900px;}
+body.boxed-layout .page-header.header-2 .top-block .container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+@media only screen and (min-width: 1332px) {
+	body.cms-index-index .page-header.header-2 {position: absolute; top: 0; right: 0; left: 0; z-index: 9999;}
+    .wide-layout.cms-index-index .page-header.header-2:not(.transparent-header) .top-block {background-color: #fff;}
+    .wide-layout.cms-index-index .page-header.header-2.transparent-header .top-block,
+    .boxed-layout.cms-index-index .page-header.header-2.transparent-header .top-block .container {background-color: transparent !important;}
+}
+@media only screen and (min-width: 1008px) and (max-width: 1331px) {
+	#home-slider .owl-item .slide-container.slide-skin-2 {left: 15%; top: 18%;}
+	body.cms-index-index .page-header.header-2 {position: absolute; top: 0; right: 0; left: 0; z-index: 9999;}
+	.wide-layout.cms-index-index .page-header.header-2:not(.transparent-header) .top-block {background-color: #fff;}
+    .wide-layout.cms-index-index .page-header.header-2.transparent-header .top-block,
+    .boxed-layout.cms-index-index .page-header.header-2.transparent-header .top-block .container {background-color: transparent !important;}
+    body.wide-layout .page-header.header-2 .top-block,
+    body.boxed-layout .page-header.header-2 .top-block .containerlayout {padding-top: 30px;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1007px) {
+	#home-slider .owl-item .slide-container {top: 5%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {left: 15%; top: 4%;}
+	#home-slider .owl-nav div.owl-next {right: 10px;}
+	#home-slider .owl-nav div.owl-prev {left: 10px;}
+    body.wide-layout .page-header.header-2 .top-block,
+    body.boxed-layout .page-header.header-2 .top-block .container {padding-left: 10px; padding-right: 10px;}
+}
+@media only screen and (max-width: 767px) {
+	#home-slider .owl-item .slide-container {top: 15%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {top: 9%; left: 8%;}
+    body.wide-layout .page-header.header-2 .top-block {padding-left: 0; padding-right: 0;}
+    body.boxed-layout .page-header.header-2 .top-block .container {padding-left: 10px; padding-right: 10px;}
+}

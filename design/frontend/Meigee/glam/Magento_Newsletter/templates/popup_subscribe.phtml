@@ -1,0 +1,43 @@
+<?php
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="block newsletter">
+    <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-popup-validate-detail">
+            <div class="field newsletter">
+                <label class="label" for="newsletter-popup"><span><?= $block->escapeHtml(__('Subscribe to our newsletter and know first about all the promotions and discounts. Be always trendy.')) ?></span></label>
+                <div class="input-wrapper">
+                    <div class="input-group">
+                        <div class="input-group-btn left-icon">
+                            <i class="meigee-pen-signing-check"></i>
+                        </div>
+                        <input class="form-control" name="email" type="email" id="newsletter-popup"
+                                    placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
+                                    onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter your email address'"
+									data-mage-init='{"mage/trim-input":{}}'
+                                    data-validate="{required:true, 'validate-email':true}"/>
+
+                        <div class="input-group-btn">
+                            <button class="action subscribe btn btn-primary primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit" aria-label="Subscribe">
+                                <span><?= $block->escapeHtml(__('Subscribe')) ?></span><i class="meigee-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

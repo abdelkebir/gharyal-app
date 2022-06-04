@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+		<remove src="css/styles-l.css" />
+		<remove src="css/styles-m.css"/>
+        <remove src="css/animate.min.css" />
+		<remove src="css/styles.css" />
+		<remove src="css/bootstrap.css" />
+		<remove src="css/meigee.css" />
+		<remove src="css/grid_responsive.css" />
+		<remove src="css/ekko-lightbox.min.css" />
+        <remove src="css/custom.css" />
+    </head>
+</page>

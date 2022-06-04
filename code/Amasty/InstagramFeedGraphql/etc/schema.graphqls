@@ -1,0 +1,63 @@
+type Query {
+    getInstagramWidget (
+        widgetId: Int! @doc(description: "Widget ID")
+    ): InstagramWidgetOutput @resolver(class: "Amasty\\InstagramFeedGraphql\\Model\\Resolver\\Widget"),
+    getInstagramPosts (
+        page: Int!,
+        sortField: Int,
+        limit: Int = 20
+    ): [InstagramPost]
+    @resolver(class: "Amasty\\InstagramFeedGraphql\\Model\\Resolver\\Posts")
+    @doc(description: "Array of post data for the requested page and with the specified sorting."),
+    getSinglePostByPostUrl (
+        postUrl: String!
+    ): InstagramPost
+    @resolver(class: "Amasty\\InstagramFeedGraphql\\Model\\Resolver\\SinglePost")
+    @doc(description: "Post data for the requested single post.")
+}
+
+type InstagramWidgetOutput {
+    title: String @doc(description: "Title."),
+    feed_type: String @doc(description: "Widget Type."),
+    sort: String @doc(description: "Sort Posts By."),
+    posts_limit: String @doc(description: "Posts Limit."),
+    collage_size: String @doc(description: "Collage Size."),
+    columns_count: String @doc(description: "Number of Columns."),
+    post_url: String @doc(description: "Post URL."),
+    rows_count: String @doc(description: "Number of Rows."),
+    autoplay: String @doc(description: "Enable Autoplay."),
+    autoplay_delay: String @doc(description: "Autoplay Delay (milliseconds)."),
+    enable_load_more: String @doc(description: "Enable Load More."),
+    html_content: String @doc(description: "Single Post HTML Content."),
+    posts_per_page: String @doc(description: "Number of Posts per Page."),
+    post_size: String @doc(description: "Max Width."),
+    click: String @doc(description: "Mouse Click Action on Posts."),
+    show_description: String @doc(description: "Mouse On Hover Action on Posts."),
+    padding: String @doc(description: "Posts Padding, px."),
+    hide_caption: String @doc(description: "Hide Caption."),
+    max_width: String @doc(description: "Max Width.")
+}
+
+type InstagramPost {
+    post_id: String @doc(description: "Amasty Instagram Post Id."),
+    ig_id: String @doc(description: "Instagram Id Into Facebook."),
+    comments_count: String @doc(description: "Post Comments Count."),
+    like_count: String @doc(description: "Post Likes Count."),
+    media_url: String @doc(description: "Media Url."),
+    media_type: String @doc(description: "Media Type."),
+    permalink: String @doc(description: "Post Link."),
+    shortcode: String @doc(description: "Short Code."),
+    caption: String @doc(description: "Caption."),
+    timestamp: String @doc(description: "Post publication date."),
+    store_id: String @doc(description: "Store Id."),
+    product_data: InstagramPostProductData @doc(description: "Necessary product information.")
+}
+
+type InstagramPostProductData {
+    product_name: String @doc(description: "Product name."),
+    product_url: String @doc(description: "Product url.")
+}
+
+type StoreConfig {
+    aminstagramfeed_general_enabled: Boolean @doc(description: "Instagram feed status.")
+}

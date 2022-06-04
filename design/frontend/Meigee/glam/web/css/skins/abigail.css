@@ -1,0 +1,42 @@
+/*Header 8*/
+.wide-layout .page-header.header-8 .top-block,
+.boxed-layout .page-header.header-8 .top-block .container {padding-top: 9px; padding-bottom: 9px;}
+body.wide-layout .page-header.header-8 .container {max-width: 1900px;}
+.page-header.header-8 .navbar-default,
+.page-header.header-8 .navbar-default .navbar-collapse {vertical-align: middle;}
+.page-header.header-8 .panel {display: inline-block; padding-left: 10px; padding-top: 5px;}
+/*Home slider*/
+#home-slider .owl-item .slide-container {top: 68%; text-align: left; left: 18%;}
+#home-slider .owl-item .slide-container.slide-skin-2 {left: 18%; top: 68%;}
+#home-slider .owl-nav div {color: #fff;}
+#home-slider .owl-nav div.owl-prev {left: 20px;}
+#home-slider .owl-nav div.owl-next {right: 20px;}
+#home-slider .owl-item .title {margin-bottom: 12px; color: #fff;}
+#home-slider .owl-item .text {color: #fff;}
+
+@media only screen and (min-width: 1332px) {
+	/*Header 8*/
+    .page-header.header-8 .navbar-default,
+    .page-header.header-8 .navbar-default .navbar-collapse {display: inline-block !important;}
+    .wide-header .page-header.header-8 .top-block,
+    .boxed-header .page-header.header-8 .top-block .container {padding-left: 10px; padding-right: 10px;}
+}
+@media only screen and (min-width: 1008px) and (max-width: 1331px) {
+	.page-header.header-8 .navbar-default,
+    .page-header.header-8 .navbar-default .navbar-collapse {display: inline-block !important;}
+    .page-header.header-8 h2.logo {padding-left: 10px;}
+	#home-slider .owl-item .slide-container {top: 54%; left: 9%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {top: 54%; left: 9%;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1007px) {
+	.page-header.header-8 .panel {padding-bottom: 0;}
+	.page-header .action.nav-toggle {margin-top: 7px;}
+	#home-slider .owl-item .slide-container {top: 58%; left: 8%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {left: 8%; top: 58%;}
+}
+@media only screen and (max-width: 767px) {
+	.page-header.header-8 .panel {width: 50%; text-align: center;}
+    .page-header.header-8 .action.nav-toggle {width: calc(50% - 5px); text-align: left;}
+	#home-slider .owl-item .slide-container {top: 5%; text-align: right; left: 37%; right: 4%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {bottom: 5%; text-align: left; left: 5%; right: 31%; top: auto;}
+}

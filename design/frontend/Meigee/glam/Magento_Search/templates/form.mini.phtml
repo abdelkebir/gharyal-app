@@ -1,0 +1,70 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+$rand = rand(5, 1500);
+$meigee_helper = $this->helper('\Meigee\Glam\Helper\GlamGeneral');
+$icon_status = $meigee_helper->getCustomThemeOptionCnf('glam_topsearch', 'icon');
+$text_status = $meigee_helper->getCustomThemeOptionCnf('glam_topsearch', 'text');
+?>
+<?php if ($icon_status || $text_status) { ?>
+<div class="block block-search type-1">
+    <div class="block block-title"><strong><?php echo $block->escapeHtml(__('Search')); ?></strong></div>
+    <div class="search-button">
+        <?php if ($icon_status) { ?>
+    	   <i class="meigee-search" title="<?php echo __('Search'); ?>"></i>
+        <?php } ?>
+        <?php if ($text_status) { ?>
+            <span><?php echo __('Search'); ?></span>
+        <?php } ?>
+    </div>
+    <div class="indent">
+        <div class="inner">
+            <div class="block block-content">
+                <form class="form minisearch" id="search_mini_form_<?php echo $rand; ?>" action="<?php echo $block->escapeUrl($helper->getResultUrl()) ?>" method="get">
+        			<div class="input-group">
+        				<span class="input-group-btn search-icon"><i class="meigee-search"></i></span>
+        			    <input id="search_<?php echo $rand; ?>"
+        				   data-mage-init='{"quickSearch":{
+        						"formSelector":"#search_mini_form_<?php echo $rand; ?>",
+        						"url":"<?= $block->escapeUrl($helper->getSuggestUrl()) ?>",
+        						"destinationSelector":"#search_autocomplete_<?php echo $rand; ?>"}
+        				   }'
+        				   type="text"
+        				   name="<?php echo $block->escapeHtmlAttr($helper->getQueryParamName()) ?>"
+        				   value="<?php echo $block->escapeHtmlAttr($helper->getEscapedQueryText()) ?>"
+        				   placeholder="<?php echo $block->escapeHtmlAttr(__('Search entire store here...')); ?>"
+                           onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = 'Search entire store here...'"
+        				   class="form-control"
+        				   maxlength="<?php echo $block->escapeHtmlAttr($helper->getMaxQueryLength()); ?>"
+        				   role="combobox"
+        				   aria-haspopup="false"
+        				   aria-expanded="true"
+        				   aria-autocomplete="both"
+        				   autocomplete="off"
+                           aria-expanded="false" />
+        				<span class="input-group-btn">
+							<button type="submit"
+									title="<?php echo $block->escapeHtml(__('Search')) ?>"
+									class="action btn btn-default" aria-label="Search">
+								<span><span><?php echo $block->escapeHtml(__('Search')) ?></span><i class="meigee-search"></i></span>
+							</button>
+        				</span>
+        				<div id="search_autocomplete_<?php echo $rand; ?>" class="search-autocomplete"></div>
+        			</div>
+        			<?php echo $block->getChildHtml() ?>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } ?>

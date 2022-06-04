@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="empty"/>
+    <referenceContainer name="page.wrapper">
+      <block class="Meigee\Glam\Block\Template" name="meigee_header_checkout" template="Meigee_Glam::html/header_checkout.phtml" before="-">
+        <container name="under.logo" label="Under Header Logo" />
+        
+        <!-- Header 1 Logo -->
+        <block class="Meigee\Glam\Block\Frontend\CustomLogo" name="logo.checkout" as="logo.checkout" template="Magento_Theme::html/header/logo.phtml">
+          <arguments>
+            <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+            <argument name="logo_img_width" xsi:type="number">275</argument>
+            <argument name="logo_img_height" xsi:type="number">64</argument>
+          </arguments>
+        </block>
+        <!-- Header 2 Logo -->
+        <block class="Meigee\Glam\Block\Frontend\CustomLogo" name="header2.logo.checkout" as="header2.logo.checkout" template="Magento_Theme::html/header/logo.phtml">
+          <arguments>
+            <argument name="logo_file" xsi:type="string">images/glam_jewelry_logo.png</argument>
+            <argument name="logo_img_width" xsi:type="number">275</argument>
+            <argument name="logo_img_height" xsi:type="number">64</argument>
+          </arguments>
+        </block>
+        <!-- Header 3 Logo -->
+        <block class="Meigee\Glam\Block\Frontend\CustomLogo" name="header3.logo.checkout" as="header3.logo.checkout" template="Magento_Theme::html/header/logo.phtml">
+          <arguments>
+            <argument name="logo_file" xsi:type="string">images/glam_perfume_logo.png</argument>
+            <argument name="logo_img_width" xsi:type="number">275</argument>
+            <argument name="logo_img_height" xsi:type="number">64</argument>
+          </arguments>
+        </block>
+        <!-- Header 4 Logo -->
+        <block class="Meigee\Glam\Block\Frontend\CustomLogo" name="header4.logo.checkout" as="header4.logo.checkout" template="Magento_Theme::html/header/logo.phtml">
+          <arguments>
+            <argument name="logo_file" xsi:type="string">images/glam_cloth_logo.png</argument>
+            <argument name="logo_img_width" xsi:type="number">275</argument>
+            <argument name="logo_img_height" xsi:type="number">64</argument>
+          </arguments>
+        </block>
+        <!-- Header 5 Logo -->
+        <block class="Meigee\Glam\Block\Frontend\CustomLogo" name="header5.logo.checkout" as="header5.logo.checkout" template="Magento_Theme::html/header/logo.phtml">
+          <arguments>
+            <argument name="logo_file" xsi:type="string">images/glam_electronics_1_logo.png</argument>
+            <argument name="logo_img_width" xsi:type="number">275</argument>
+            <argument name="logo_img_height" xsi:type="number">64</argument>
+          </arguments>
+        </block>
+        <!-- Header 6 Logo -->
+        <block class="Meigee\Glam\Block\Frontend\CustomLogo" name="header6.logo.checkout" as="header6.logo.checkout" template="Magento_Theme::html/header/logo.phtml">
+          <arguments>
+            <argument name="logo_file" xsi:type="string">images/glam_electronics_2_logo.png</argument>
+            <argument name="logo_img_width" xsi:type="number">275</argument>
+            <argument name="logo_img_height" xsi:type="number">64</argument>
+          </arguments>
+        </block>  
+    </block>
+
+    </referenceContainer>
+    <referenceContainer name="page.main.title" remove="true" />
+	<referenceContainer name="sticky.header" remove="true" />
+    <referenceContainer name="logo" remove="true"/>
+	<referenceContainer name="meigee_header" remove="true" />
+</layout>

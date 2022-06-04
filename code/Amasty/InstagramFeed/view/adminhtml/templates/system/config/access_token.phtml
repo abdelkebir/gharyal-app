@@ -1,0 +1,22 @@
+<?php
+/** @var \Amasty\InstagramFeed\Block\Adminhtml\System\Config\AcessToken $block */
+?>
+<button id="<?= $block->getHtmlId() ?>"
+        type="button"
+        data-mage-init='{"Amasty_InstagramFeed/js/access_token":<?= /* @noEscape */ $block->getJsonConfig();?>}'>
+    <?= $block->escapeHtml($block->getButtonLabel()) ?>
+</button>
+
+<?php if (!$block->getIsConnectionSecure()): ?>
+    <script>
+        require([
+                'jquery',
+                'Magento_Ui/js/modal/alert',
+            ], function($, alert) {
+                alert({
+                    content: '<?= $block->escapeHtml(__('Your site is configured to use HTTP connection and Instagram API does not allow it. Please configure HTTPS connection for your site.')) ?>'
+                });
+            }
+        );
+    </script>
+<?php endif; ?>

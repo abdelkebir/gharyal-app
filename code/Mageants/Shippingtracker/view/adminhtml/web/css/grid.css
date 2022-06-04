@@ -1,0 +1,48 @@
+td.complete div:after {
+    background-image: url(../images/completed.png);
+   background-size: 100% 100%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+
+td.closed div:after{
+    background-image: url(../images/closed.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+
+td.processing div:after{
+    background-image: url(../images/processing.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+
+td.pending div:after{
+    background-image: url(../images/pending.png);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+.data-grid-cell-content {
+    display: inline-flex;
+    overflow: hidden;
+    width: 100%;
+}

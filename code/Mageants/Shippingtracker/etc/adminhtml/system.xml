@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageants" translate="label" sortOrder="10">
+            <label>Mageants</label>
+       </tab>
+        <section id="shippingtracker_section" translate="label" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Shipping Tracker</label>
+            <tab>mageants</tab>
+            <resource>Mageants_Shippingtracker::config</resource>
+            <group id="shippingtracker_general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+
+                    <field id="shippingtracker_enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Module Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>    
+
+                     <field id="shippingtracker_email" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Send Track Order link in Order Email</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>    
+
+                     <field id="shippingtracker_toplinks" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Display in Toplinks</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field> 
+                    <field id="shippingtracker_carrier_disable" translate="label" type="multiselect" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Disabled Default Tracking Carriers</label>
+                        <source_model>Mageants\Shippingtracker\Model\ShippingCarrier\Methods</source_model>
+                    </field>
+                    <field id="disabled_message" translate="label" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Show Message If Shipping Method Is Disabled</label>
+                        <comment>"shipping_method_title" is used for replacing shipping method name.</comment>
+                    </field> 
+            </group>
+            <group id="custom_shippingtracker_1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 1</label>
+                    <field id="custom_shippingtracker_enable_1" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_1" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_1/custom_shippingtracker_enable_1">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_1" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_1/custom_shippingtracker_enable_1">1</field>
+                        </depends>
+                    </field>    
+            </group>
+            <group id="custom_shippingtracker_2" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 2</label>
+                    <field id="custom_shippingtracker_enable_2" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_2" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_2/custom_shippingtracker_enable_2">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_2" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_2/custom_shippingtracker_enable_2">1</field>
+                        </depends>
+                    </field>     
+            </group>
+            <group id="custom_shippingtracker_3" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 3</label>
+
+                    <field id="custom_shippingtracker_enable_3" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_3" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_3/custom_shippingtracker_enable_3">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_3" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_3/custom_shippingtracker_enable_3">1</field>
+                        </depends>
+                    </field>      
+            </group>
+            <group id="custom_shippingtracker_4" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 4</label>
+
+                    <field id="custom_shippingtracker_enable_4" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_4" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_4/custom_shippingtracker_enable_4">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_4" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_4/custom_shippingtracker_enable_4">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_5" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 5</label>
+
+                    <field id="custom_shippingtracker_enable_5" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_5" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_5/custom_shippingtracker_enable_5">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_5" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_5/custom_shippingtracker_enable_5">1</field>
+                        </depends>
+                    </field>    
+            </group>
+            <group id="custom_shippingtracker_6" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 6</label>
+
+                    <field id="custom_shippingtracker_enable_6" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_6" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_6/custom_shippingtracker_enable_6">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_6" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_6/custom_shippingtracker_enable_6">1</field>
+                        </depends>
+                    </field>       
+            </group>
+            <group id="custom_shippingtracker_7" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 7</label>
+
+                    <field id="custom_shippingtracker_enable_7" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_7" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_7/custom_shippingtracker_enable_7">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_7" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_7/custom_shippingtracker_enable_7">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_8" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 8</label>
+
+                    <field id="custom_shippingtracker_enable_8" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_8" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_8/custom_shippingtracker_enable_8">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_8" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_8/custom_shippingtracker_enable_8">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_9" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 9</label>
+
+                    <field id="custom_shippingtracker_enable_9" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_9" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_9/custom_shippingtracker_enable_9">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_9" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_9/custom_shippingtracker_enable_9">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_10" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 10</label>
+
+                    <field id="custom_shippingtracker_enable_10" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_10" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_10/custom_shippingtracker_enable_10">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_10" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_10/custom_shippingtracker_enable_10">1</field>
+                        </depends>
+                    </field>       
+            </group>
+            <group id="custom_shippingtracker_11" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 11</label>
+
+                    <field id="custom_shippingtracker_enable_11" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_11" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_11/custom_shippingtracker_enable_11">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_11" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_11/custom_shippingtracker_enable_11">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_12" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 12</label>
+
+                    <field id="custom_shippingtracker_enable_12" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_12" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_12/custom_shippingtracker_enable_12">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_12" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_12/custom_shippingtracker_enable_12">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_13" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 13</label>
+
+                    <field id="custom_shippingtracker_enable_13" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_13" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_13/custom_shippingtracker_enable_13">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_13" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_13/custom_shippingtracker_enable_13">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_14" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 14</label>
+
+                    <field id="custom_shippingtracker_enable_14" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_14" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_14/custom_shippingtracker_enable_14">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_14" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_14/custom_shippingtracker_enable_14">1</field>
+                        </depends>
+                    </field>        
+            </group>
+            <group id="custom_shippingtracker_15" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom Shipping Tracker 15</label>
+
+                    <field id="custom_shippingtracker_enable_15" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>  
+                    <field id="custom_shippingtracker_title_15" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Method Title</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_15/custom_shippingtracker_enable_15">1</field>
+                        </depends>
+                    </field>
+                    <field id="custom_shippingtracker_url_15" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Url</label>
+                        <validate>required-entry</validate>
+                        <comment>
+                            <![CDATA[replace the TrackingNumber to {{tracking_code}},<br/> example:<br/><strong>"http://www.example.com?trackingNumber=#TRACKINGNUMBER#"</strong> To <br/><strong>"http://www.example.com?TrackingNumber={{tracking_code}}"</strong>]]>
+                        </comment>
+                        <depends>
+                            <field id="shippingtracker_section/custom_shippingtracker_15/custom_shippingtracker_enable_15">1</field>
+                        </depends>
+                    </field>        
+            </group>
+        </section>
+    </system>
+</config>

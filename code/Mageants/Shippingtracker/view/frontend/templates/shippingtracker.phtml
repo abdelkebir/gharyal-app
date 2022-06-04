@@ -1,0 +1,72 @@
+<?php
+/**
+  * @category   Mageants Shippingtracker
+  * @package    Mageants_Shippingtracker
+  * @copyright  Copyright (c) 2017 Mageants
+  * @author     Mageants Team <support@Mageants.com>
+  */
+?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$mediaURl =  $objectManager->get('Magento\Store\Model\StoreManagerInterface')
+                    ->getStore()
+                    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA)."tracking_loading/loading.gif";
+
+?>
+<div class="shiptracking-content">
+  <div class="block-content" aria-labelledby="block-customer-login-heading">
+  <img src="<?php echo $mediaURl ?>" class="tracking-loader" alt="tracking-loader" title="tracking-loader"/>
+  <div role="alert" class="messages show_if_carrier_disabled" style="display: none;">
+        <div class="message-error error message">
+            <span class="disabled_carrier"></span>
+        </div>
+  </div> 
+	<div class="block-title">Check Shipping Status</div>
+       <form data-mage-init='{"validation": {}}' action="javascript:void(0)" method="post" autocomplete="off" id="shipping-tracking" class="scaffold-form form">
+        <fieldset class="fieldset login" data-hasrequired="* Required Fields">
+        <div class="fieldset">
+            <div class="field text required">
+                <label class="label" for="orderid"><span>Order Number</span></label>
+                  <div class="control">
+                      <input name="orderid"  autocomplete="off" id="orderid" class="input-text" title="Order Number" data-validate="{required:true}" aria-required="true" type="text">
+                  </div>
+              </div>
+
+             <div class="field email required">
+                  <label class="label" for="email"><span>Email</span></label>
+                  <div class="control">
+                      <input name="email"  autocomplete="off" id="email" class="input-text" title="Email" data-validate="{required:true, 'validate-email':true}" aria-required="true" type="email">
+                    </div>
+              </div>        
+        </div>
+        <div class="actions-toolbar">
+              <div class="primary"><button type="submit" class="action primary" name="submit" id="submit"><span>Track Order</span></button></div>
+        </div>
+
+        </fieldset>
+    </form>
+    <div id="option_or"> <strong> OR </strong> </div>
+    <form data-mage-init='{"validation": {}}' action="javascript:void(0)" method="post" autocomplete="off" id="shipping-tracking-byid" class="scaffold-form form">
+        <fieldset class="fieldset login" data-hasrequired="* Required Fields">
+        <div class="fieldset">
+            <div class="field text required">
+              <label class="label" for="orderid"><span>Tracking Number</span></label>
+              <div class="control">
+                  <input name="trackingid"  autocomplete="off" id="trackingid" class="input-text" title="Tracking Number" data-validate="{required:true}" aria-required="true" type="text">
+              </div>
+            </div>     
+        </div>
+        <div class="actions-toolbar">
+              <div class="primary"><a target="_blank" id="track_link" href="#"><button type="submit" class="action primary" name="submit" id="submit_track"><span>Track Order</span></button></a></div>
+        </div>
+
+        </fieldset>
+    </form>
+    <div class="no-tracking-details" style="display: none;"><?php echo __('Tracking details isn\'t availaible'); ?></div>
+    <div class="tracking_info"></div>
+    </div>
+</div>
+<script type="text/javascript">
+  require(["shippingtracker"], function($) {
+  });
+</script>

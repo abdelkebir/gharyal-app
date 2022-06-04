@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<aatcs>
+			<tcs_cod>
+				<enable>0</enable>
+				<debug>1</debug>
+				<api_url>https://apis.tcscourier.com/uat/v1/</api_url>
+				<tracking_url><![CDATA[http://www.tcscouriers.com/pk/Tracking/Default.aspx?TrackBy=ReferenceNumberHome&trackNo=]]></tracking_url>
+			</tcs_cod>
+			<tcs_non_cod>
+				<enable>0</enable>
+				<api_url><![CDATA[http://webapp.tcscourier.com:8089/shipForMeBooking/bookingservice.asmx?WSDL]]></api_url>
+			</tcs_non_cod>
+		</aatcs>
+		 <carriers>
+            <aatcs>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Aalogics\Tcs\Model\Carrier\Tcs</model>
+                <name>TCS Shipping</name>
+                <price>0</price>
+                <title>TCS</title>
+                <type>I</type>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+            </aatcs>
+        </carriers>
+	</default>
+</config>

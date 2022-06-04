@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Catalog\Block\Product\View\Details $block */
+
+?>
+<?php if ($detailedInfoGroup = $block->getGroupSortedChildNames('detailed_info', 'getChildHtml')):?>
+	<div id="product-details-panel">
+		<?php $layout = $block->getLayout(); ?>
+		<?php $i=0;
+			foreach ($detailedInfoGroup as $name):
+				$i++;
+				$html = $layout->renderElement($name);
+				if (!trim($html)) {
+					continue;
+				}
+				$alias = $layout->getElementAlias($name);
+				$alias_new = str_replace('.', '_', $alias);
+				$label = $block->getChildData($alias, 'title');
+			?>
+			<div class="item">
+				<h4><?php /* @escapeNotVerified */ echo $label; ?></h4>
+				<div class="content"><?php echo $html; ?></div>
+			</div>
+		 <?php endforeach;?>
+    </div>
+<?php endif; ?>

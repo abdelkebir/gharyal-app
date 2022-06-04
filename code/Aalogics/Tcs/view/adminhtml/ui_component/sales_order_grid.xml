@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <listingToolbar name="listing_top">
+            <massaction name="listing_massaction">
+                <action name="tcs_ship">
+                    <!-- <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="type" xsi:type="string">tcs_ship</item>
+                            <item name="label" xsi:type="string" translate="true">TCS Ship</item>
+                        </item>
+                    </argument>
+                    <argument name="actions" xsi:type="configurableObject">
+                        <argument name="class" xsi:type="string">Aalogics\Tcs\Ui\Component\MassAction\ChangeCostCenter</argument>
+                        <argument name="data" xsi:type="array">
+                            <item name="urlPath" xsi:type="string">aatcs/order/massShip</item>
+                            <item name="paramName" xsi:type="string">costcenter</item>
+                            <item name="confirm" xsi:type="array">
+                                <item name="title" xsi:type="string" translate="true">Ship using TCS</item>
+                                <item name="message" xsi:type="string" translate="true">Are you sure you wan\'t to ship selected items using TCS?</item>
+                            </item>
+                        </argument>
+                    </argument> -->
+                    <settings>
+                        <type>tcs_ship</type>
+                        <label translate="true">TCS Ship</label>
+                        <actions class="Aalogics\Tcs\Ui\Component\MassAction\ChangeCostCenter"/>
+                    </settings>
+                </action>
+            </massaction>
+            <!-- <massaction name="listing_massaction">
+                <action name="tcs_ship">
+                    <argument name="data" xsi:type="array">
+                        <item name="config" xsi:type="array">
+                            <item name="type" xsi:type="string">tcs_ship</item>
+                            <item name="label" xsi:type="string" translate="true">TCS Ship</item>
+                            <item name="url" xsi:type="url" path="aatcs/order/massShip"/>
+                            <item name="confirm" xsi:type="array">
+                                <item name="title" xsi:type="string" translate="true">Ship using TCS</item>
+                                <item name="message" xsi:type="string" translate="true">Are you sure you wan\'t to ship selected items using TCS?</item>
+                            </item>
+                        </item>
+                    </argument>
+                </action>
+            </massaction> -->
+    </listingToolbar>
+</listing>

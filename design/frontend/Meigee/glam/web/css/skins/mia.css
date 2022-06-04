@@ -1,0 +1,65 @@
+/*Header 6*/
+body.wide-layout .page-header.header-6 .container {max-width: 1900px;}
+.page-header.header-6 ul.topmenu {text-align: right; width: 100%;}
+.page-header.header-6 .panel {text-align: left; display: inline-block;}
+.wide-layout .page-header.header-6 .top-block,
+.boxed-layout .page-header.header-6 .top-block .container {padding-top: 29px; padding-bottom: 29px;}
+
+/*Home slider*/
+#home-slider .owl-item .slide-container {top: 16%; right: 29%;}
+#home-slider .owl-item .slide-container.slide-skin-2 {text-align: center; right: 0; left: 46%; top: 47%;}
+#home-slider .owl-item .slide-container.slide-skin-2 .text,
+#home-slider .owl-item .slide-container.slide-skin-2 .title {color: #fff;}
+#home-slider .owl-nav div.owl-prev {left: 40px;}
+#home-slider .owl-nav div.owl-next {right: 40px;}
+#home-slider .owl-item .title {margin-bottom: 12px;}
+#home-slider .owl-item .slide-container-2 {position: absolute; right: 40px; left: auto; bottom: auto; top: 40px; z-index: 8; text-align: right;}
+#home-slider .owl-item .slide-container-2 .subtitle {color: rgba(0,0,0,0.8); font-style: italic; text-transform: none; font-family: 'Space Mono', sans-serif; letter-spacing: 0; font-size: 11px;}
+#home-slider .owl-item .slide-container-2 .text {color: rgba(0,0,0,0.5); font-size: 9px; line-height: 12px; margin-top: 10px;}
+#home-slider .owl-item .slide-container-2.slide-skin-2 {position: absolute; right: 40px; left: auto; bottom: 40px; top: auto;}
+#home-slider .owl-item .slide-container-2.slide-skin-2 .subtitle {color: #fff;}
+#home-slider .owl-item .slide-container-2.slide-skin-2 .text {color: #fff; margin-bottom: 0;}
+/*fullwidth banner*/
+.fullwidth-block .fullwidth-banner {background-image: url("../../images/glam_mia_banner_1.jpg"); min-height: 480px; background-size: cover; background-position: center center;}
+body .widget .widget-title,
+.widget-title {text-align: center; padding-left: 10px;}
+
+@media only screen and (min-width: 1332px) {
+	.wide-layout .page-header.header-6 .top-block {padding-left: 0; padding-right: 0;}
+	.page-header.header-6 .menu-wrapper-block {text-align: right;}
+	.page-header.header-6 .toggle-nav {display: inline-block; vertical-align: middle; float: none;}
+	.page-header.header-6 .panel {padding-left: 15px;}
+}
+@media only screen and (min-width: 1008px) and (max-width: 1331px) {
+	.page-header.header-6 .menu-wrapper-block {text-align: right;}
+	.page-header.header-6 .toggle-nav {display: inline-block; vertical-align: middle; float: none;}
+	.page-header.header-6 .panel {padding-left: 10px;}
+	#home-slider .owl-item .slide-container {left: 0; right: 40%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {left: 47%; top: 9%;}
+	.fullwidth-block .fullwidth-banner {min-height: 370px;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1007px) {
+	 .wide-layout .page-header.header-6 .top-block,
+	.boxed-layout .page-header.header-6 .top-block .container {padding-top: 15px; padding-bottom: 15px;}
+    .page-header.header-6 .panel {padding-left: 10px;}
+	#home-slider .owl-item .slide-container {top: 0; left: 5%; right: 43%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {left: 51%; top: 0%; right: 5%;}
+	#home-slider .owl-item .title {margin-bottom: 4px;}
+	#home-slider .owl-nav div.owl-prev {left: 10px;}
+	#home-slider .owl-nav div.owl-next {right: 10px;}
+	#home-slider .owl-item .slide-container-2 {top: 20px; right: 20px;}
+	.fullwidth-block .fullwidth-banner {min-height: 350px;}
+}
+@media only screen and (max-width: 767px) {
+	.wide-layout .page-header.header-6 .top-block,
+    .boxed-layout .page-header.header-6 .top-block .container {padding-top: 10px; padding-bottom: 10px;}
+    .page-header.header-6 .panel {width: 50%; text-align: center; padding-bottom: 0; right: -10px; position: relative;}
+    .page-header.header-6 .action.nav-toggle {width: calc(50% - 5px); text-align: left;}
+    .page-header.header-6 .top-block .right-block {position: relative;}
+	#home-slider .owl-item .slide-container {top: 59%; left: 0%; right: 16%;}
+	#home-slider .owl-item .slide-container.slide-skin .text {padding-left: 33%;}
+	#home-slider .owl-item .slide-container.slide-skin-2 {top: 5%; left: 29%; right: 5%; text-align: right;}
+	#home-slider .owl-item .slide-container.slide-skin-2 .text {padding-left: 25%;}
+	.fullwidth-block .fullwidth-banner {min-height: 260px; background-position: 40% 100%;}
+	#home-slider .owl-item .title {font-size: 28px; line-height: 37px;}
+}

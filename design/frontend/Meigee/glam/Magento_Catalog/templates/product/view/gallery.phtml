@@ -1,0 +1,17 @@
+<?php
+
+$product = $block->getProduct();
+$imageHelper = $this->helper('Magento\Catalog\Helper\Image');
+
+if (!$product->getImage() || $product->getImage() == 'no_selection') {
+    $image = $imageHelper->getDefaultPlaceholderUrl('image');
+} else {
+    $image = $imageHelper->init($product, 'product_page_image_medium')
+            ->constrainOnly(true)->keepAspectRatio(true)->keepFrame(false)
+            ->setImageFile($product->getImage())
+            ->getUrl();
+}
+?>
+<div class="gallery-placeholder">
+    <img src="<?php echo $image; ?>" >
+</div>

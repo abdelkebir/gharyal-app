@@ -1,0 +1,11 @@
+<!-- <h2 style="color:green;">Dear Customer Your Order Is Successfull!</h2> -->
+<!-- <h4 style="color:green;">To Track Your Order Following Is Your Order 0000123456</h4>-->
+<?php
+
+/**
+ * @var \Magento\SamplePaymentGateway\Block\Success $block
+ */
+
+ //echo $block->getCustomerOrderNumber();
+ echo '<h3 style="color:green;">'. $block->getCustomerMessage().'</h3>';
+ echo 'To Track Your Order Following Is Your Order:' . $block->getCustomerOrderNumber();
