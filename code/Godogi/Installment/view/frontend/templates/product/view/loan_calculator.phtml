@@ -1,0 +1,370 @@
+<?php
+$godogiHelper       = $this->helper('Godogi\Installment\Helper\Data');
+$discounts          = $godogiHelper->getConfig("godogi_installment/general/discounts");
+$downPaymentPercent = $godogiHelper->getConfig("godogi_installment/general/down_payment");
+
+$_product = $block->getProduct();
+$installmentEnabled = $_product->getEnableInstallment();
+if( $installmentEnabled && in_array(70, $godogiHelper->getCategoryIds())) {
+?>
+    <form method="post" id="loan-calculator-form" class="form" data-mage-init='{"validation":{}}'>
+        <fieldset class="fieldset row">
+            <legend class="legend"><span><?= $block->escapeHtmlAttr(__('Loan calculator')) ?></span></legend>
+            <div class="fields">
+                <div class="field text">
+                    <div class="text">0% FINANCING</div>
+                    <a id="elig-modal-btn">Check if you're elligible <i class="meigee-arrow-up"></i></a>
+                </div>
+                <div class="field loan down-payment">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Down payment')) ?></span></label>
+                    <div class="control">
+                        <input name="down-payment" id="down-payment" title="Down payment" value="" class="input-text" type="text" data-validate="{'required':true, 'validate-greater-than-zero':true}">
+                    </div>
+                </div>
+                <div class="field loan purchase-price">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Purchase price')) ?></span></label>
+                    <div class="control">
+                        <input name="purchase-price" id="purchase-price" title="Monthly Income" value="" class="input-text" type="text" data-validate="{'required':true, 'validate-greater-than-zero':true}">
+                    </div>
+                </div>
+                <div class="field loan funding">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Funding')) ?></span></label>
+                    <div class="control">
+                        <p>0% Financing up to max 600'000 PKR</p>
+                    </div>
+                </div>
+                <div class="field loan months">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Months')) ?></span></label>
+                    <div class="control">
+                        <select id="months" name="months" title="<?php /* @escapeNotVerified */ echo __('Months') ?>" data-validate="{'required':true}">
+                        </select>
+                    </div>
+                </div>
+                <div class="field loan discount">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Discount')) ?></span><span id="discount-percent"></span></label>
+                    <div class="control">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="field loan coupon-calc">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Coupon')) ?></span></label>
+                    <div class="control">
+                        <input name="coupon-calc" id="coupon-calc" title="Coupon" value="" class="input-text" type="text" data-validate="{}">
+                        <button id="submit-coupon" class="action">Apply coupon</button>
+                    </div>
+                </div>
+                <div class="field loan discount-coupon">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Discount')) ?></span><span id="coupon-discount-percent"></span></label>
+                    <div class="control">
+                        <input type="hidden" id="discount-coupon-percent" value="0" />
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="field loan total">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Total')) ?></span></label>
+                    <div class="control">
+                        <p>-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <div id="monthly-rate">
+                        <div class="title">Monthly rate</div>
+                        <div  class="value">-</div>
+                    </div>
+                    <button type="submit" class="action submit primary" title="Check"><span><?= $block->escapeHtmlAttr(__('0% REQUEST FUNDING')) ?></span></button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <form method="post" action="/installment/index/index" id="loan-application-form" class="form" data-mage-init='{"validation":{}}' style="display:none;" enctype='multipart/form-data'>
+        <fieldset class="fieldset row">
+            <legend class="legend"><span><?= $block->escapeHtmlAttr(__('Loan application')) ?></span></legend>
+            <div class="fields">
+                <input type="hidden" name="calc_discount" id="calc_discount" value="" />
+                <input type="hidden" name="calc_months" id="calc_months" value="" />
+                <input type="hidden" name="product_price" id="product_price" value="" />
+                <input type="hidden" name="coupon" id="coupon" value="" />
+                <div class="field rnumber">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Ref. no.')) ?></span></label>
+                    <div class="control">
+                        <input name="rnumber" id="rnumber" title="Ref. no." value="" class="input-text" type="text" data-validate="{'required':true}">
+                    </div>
+                </div>
+                <div class="field last_name">
+                    <div class="control">
+                        <input name="last_name" id="last_name" title="Last Name" value="" class="input-text" type="text" data-validate="{'required':true}" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="field first_name">
+                    <div class="control">
+                        <input name="first_name" id="first_name" title="First Name" value="" class="input-text" type="text" data-validate="{'required':true}" placeholder="First name">
+                    </div>
+                </div>
+                <div class="field cnic">
+                    <div class="control">
+                        <input name="cnic" id="cnic" title="CNIC" value="" class="input-text" type="text" data-validate="{'required':true}" placeholder="CNIC">
+                    </div>
+                </div>
+                <div class="field email">
+                    <div class="control">
+                        <input name="email" id="email" title="Email" value="" class="input-text" type="text" data-validate="{'required':true, 'validate-email':true}" placeholder="Email">
+                    </div>
+                </div>
+                <div class="field address">
+                    <div class="control">
+                        <input name="address" id="address" title="Address" value="" class="input-text" type="text" data-validate="{'required':true}" placeholder="Address">
+                    </div>
+                </div>
+                <div style="display:flex;">
+                    <div class="field zip_code gharyal-column gharyal-col-50" >
+                        <div class="control" style="width:100%; margin-right:5px;">
+                            <input name="zip_code" id="zip_code" title="ZIP CODE" value="" class="input-text" type="text" data-validate="{'required':true}" placeholder="ZIP CODE">
+                        </div>
+                    </div>
+                    <div class="field location gharyal-column gharyal-col-50">
+                        <div class="control" style="width:100%; margin-left:5px;">
+                            <input name="location" id="location" title="Location" value="" class="input-text" type="text" data-validate="{'required':true}" placeholder="Location">
+                        </div>
+                    </div>
+                </div>
+                <div class="field date_birth">
+                <label class="label" for="date_birth"><span><?= $block->escapeHtmlAttr(__('Date of birth (minimum age 21)')) ?></span></label>
+                    <div class="control">
+                        <input name="date_birth" id="date_birth" title="Date of birth" value="" class="input-text" type="text" data-validate="{'required':true}" placeholder="Date of birth">
+                    </div>
+                </div>
+                <div class="field phone_number">
+                    <div class="control">
+                        <input name="phone_number" id="phone_number" title="Phone Number" value="" class="input-text" type="text" data-validate="{'required':true, 'validate-greater-than-zero':true}" placeholder="Phone Number">
+                    </div>
+                </div>
+                <div class="field professional_situation">
+                    <label class="label" for="professional_situation"><span><?= $block->escapeHtmlAttr(__('Professional Situation')) ?></span></label>
+                    <div class="control">
+                        <select id="professional_situation" name="professional_situation" title="<?php /* @escapeNotVerified */ echo __('Professional Situation') ?>" data-validate="{'required':true}">
+                            <option value="Employed">Employed</option>
+                            <option value="Independent">Independent</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field files">
+                    <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Upload documents:')) ?><b><?= $block->escapeHtmlAttr(__('(CNIC both sides, Account maintenance certificate, Last 6 months bank statement)')) ?></b></span></label>
+                    <label class="label"><span><b><?= $block->escapeHtmlAttr(__('Format: PDF, JPEG recommended:')) ?></b></span></label>
+                    <div class="control">
+                        <input class="file" name="file_cnic" id="file_cnic" accept=".pdf, .png, .jpg, .docx, .jpeg/*"  type="file" value="" data-validate="{required:true}" data-after="CNIC"/>
+                        <input class="file" name="file_account" id="file_account" accept=".pdf, .png, .jpg, .docx, .jpeg/*"  type="file" value="" data-validate="{required:true}" data-after="Account Maintenance Certificate"/>
+                        <input class="file" name="file_bank" id="file_bank" accept=".pdf, .png, .jpg, .docx, .jpeg/*"  type="file" value="" data-validate="{required:true}" data-after="Bank Statement"/>
+                    </div>
+                </div>
+                <div class="field agree">
+                    <div class="control">
+                        <input name="agree" class="agree" id="agree" title="General terms and conditions" value="" class="input-text" type="checkbox" data-validate="{'required':true}">
+                        I agree with the <a href="/terms-and-conditions/">General terms and conditions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button type="submit" class="action submit primary" title="Check"><span><?= $block->escapeHtmlAttr(__('SEND')) ?></span></button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <div id="elig-modal-content">
+        <div class="modal-inner-content">
+            <form method="post" id="eligibility-form" class="form" data-mage-init='{"validation":{}}'>
+                <fieldset class="fieldset row">
+                <legend class="legend"><span><?= $block->escapeHtmlAttr(__('Fill Detail')) ?></span></legend>
+                    <div class="fields">
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Monthly Income')) ?></span></label>
+                            <div class="control">
+                                <input name="monthly-income" id="monthly-income" title="Monthly Income" value="" class="input-text" type="text" data-validate="{'required':true, 'validate-greater-than-zero':true}">
+                            </div>
+                        </div>
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->escapeHtmlAttr(__('Monthmy Housing Expense')) ?></span></label>
+                            <div class="control">
+                                <input name="housing-expense" id="housing-expense" title="Monthly Housing Expense" value="" class="input-text" type="text" data-validate="{'required':true, 'validate-greater-than-zero':true}">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="actions-toolbar">
+                    <div class="primary">
+                        <button type="submit" class="action submit primary" title="Check"><span><?= $block->escapeHtmlAttr(__('Check')) ?></span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="eligibility-result">
+            <img src="" />
+            <div class="elig">
+                <p>Awesome, you're <span class="important">eligible</span> for the financing option!</p>
+                <button id="elig-close" class="action">Close</button>
+            </div>
+            <div class="notelig">
+                <p>Unfortunately you're <span class="important">not eligible</span> for the financing option.</p>
+                <button id="elig-retry" class="action">Retry</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        require([
+            'jquery',
+            'Magento_Ui/js/modal/modal',
+            "mage/calendar",
+            'domReady!'
+        ], function ($, modal) {
+            let productPrice = $('.price-wrapper[data-price-type=finalPrice]').first().attr('data-price-amount');
+            let discounts = JSON.parse(<?php echo json_encode($discounts) ?>)
+            console.log('________________________');
+            console.log(discounts);
+            let selectOptions = ""
+
+            Object.entries(discounts).forEach(
+                ([key, value]) => {
+                    selectOptions += '<option value="'+ value.discount +'">'+ value.months +'</option>'
+                }
+            );
+            console.log(selectOptions);
+            document.getElementById("months").innerHTML = selectOptions;
+            var options = {
+                type: 'popup',
+                modalClass: 'eligibility-modal',
+                responsive: true,
+                innerScroll: true,
+                title: 'Check your eligibility',
+                buttons: []
+            };
+            let calc = function(){
+                console.log("CALC......");
+                let downPayment = (<?php echo $downPaymentPercent; ?> / 100 ) * productPrice;
+                
+                let discountPercent = $("#months").first().val();
+                let discountValue = productPrice * (discountPercent / 100);
+                let months = $('#months option:selected').first().text();
+                let discountCouponPercent = $("#discount-coupon-percent").first().val();
+                let discountCouponValue = productPrice  * (discountCouponPercent / 100);
+                let total = (
+                    (productPrice - downPayment) - 
+                    discountValue - 
+                    discountCouponValue
+                ).toFixed(2);
+                let monthlyRate = total / months;
+                $('#down-payment').val(downPayment).prop('disabled', true);
+                $('#purchase-price').val(productPrice).prop('disabled', true);
+                $('#product_price').val(productPrice);
+                $('#calc_discount').val(discountPercent);
+                $('#calc_months').val(months);
+                $('#discount-percent').text(' (' + discountPercent + '%)');
+                $('.field.loan.discount .control p').first().text(discountValue.toFixed(2));
+                $('#coupon-discount-percent').text(' (' + parseInt(discountCouponPercent) + '%)');
+                $('.field.loan.discount-coupon .control p').first().text(discountCouponValue.toFixed(2));
+                
+                $('.field.loan.total .control p').first().text(total);
+                $('#monthly-rate .value').first().html("<span>PKR</span> " + monthlyRate.toFixed(2));
+            }
+            modal(options, $('#elig-modal-content'));
+            $("#elig-modal-btn").on('click',function(){
+                $("#elig-modal-content").modal("openModal");
+            });
+            $('#eligibility-form').submit(function(e){
+                e.preventDefault();
+                let monthlyIncome = $('#monthly-income').val();
+                let housingExpense = $('#housing-expense').val();
+                let imgSrc = $(".product.media img").first().attr("src");
+                if ($('#eligibility-form').valid()) {
+                    $("#eligibility-result img").first().attr("src", imgSrc);
+                    if( housingExpense <= 0.6*monthlyIncome && monthlyIncome >= 0.4*productPrice ) {
+                        $("#eligibility-result").addClass("elig");
+                    } else {
+                        $("#eligibility-result").addClass("notelig");
+                    }
+                }
+            });
+            $('#submit-coupon').click(function(e){
+                e.preventDefault();
+                console.log("submitted......");
+                var customurl = "<?php echo $this->getUrl().'installment/index/applycoupon'?>";
+                $.ajax({
+                    url: customurl,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        coupon: $('#coupon-calc').val()
+                    },
+                    complete: function(response) {  
+                        let res = response.responseJSON;
+                        if(res.error){
+                            $('#coupon-calc').addClass("error");
+                            $('#discount-coupon-percent').val(0);
+                            $('#coupon').val('');
+                        }else{
+                            $('#coupon-calc').removeClass("error");
+                            $('#discount-coupon-percent').val(res.discount);
+                            $('#coupon').val($('#coupon-calc').val());
+                        }
+                        calc()
+                    },
+                    error: function (xhr, status, errorThrown) {
+                        console.log('Error happens. Try again.');
+                    }
+                });
+            })
+            $('#elig-close').click(function(){
+                $("#elig-modal-content").modal("closeModal");
+                $("#eligibility-result").removeClass("elig");
+                $("#eligibility-result").removeClass("notelig");
+            });
+            $('#elig-retry').click(function(){
+                $("#eligibility-result").removeClass("elig");
+                $("#eligibility-result").removeClass("notelig");
+            });
+            $('#loan-calculator-form').submit(function(e){
+                e.preventDefault();
+                $('#loan-application-form').show();
+                let sku = $('.product.attribute.sku .value').first().text();
+                $('#rnumber').val(sku);
+                var currentYear= new Date().getFullYear();
+                $("#date_birth").calendar({
+                    changeYear: true,
+                    changeMonth: true,
+                    yearRange: "1910:" + (currentYear-20),
+                    buttonText: "Select Date",
+                });
+                $('html, body').animate({
+                    scrollTop: $("#loan-application-form").offset().top - 60
+                }, 500);
+            });
+            
+
+            $("#loan-calculator-form .field.loan.months select#months").change(function(){
+                /*
+                let financeMonths = $('#months option:selected').first().text();
+                $('#calc_months').val(financeMonths);
+                $('#calc_discount').val($(this).val());
+                monthlyRate = ((productPrice - downPayment) - ((productPrice - downPayment) * ($(this).val() / 100))) / financeMonths;
+                $('#monthly-rate .value').first().html("<span>PKR</span> " + monthlyRate.toFixed(2));
+                $('.field.loan.discount .control p').first().text($(this).val() + '% Off');
+                let total = (
+                    (productPrice - downPayment) - 
+                    (
+                        (productPrice - downPayment) * 
+                        ($("#months").first().val() / 100)
+                    )
+                ).toFixed(2);
+                $('.field.loan.total .control p').first().text(total);
+                */
+                calc()
+            });
+            calc()
+
+            
+        });
+    </script>
+<?php
+}
+?>

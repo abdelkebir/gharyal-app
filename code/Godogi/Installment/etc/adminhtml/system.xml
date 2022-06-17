@@ -15,7 +15,16 @@
                 <field id="max_price" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Max Price</label>
                     <comment>Set the maximum price for watches.</comment>
-                    <backend_model>Godogi\Installment\Model\Config\Backend\MaxPrice</backend_model>
+                    <!--backend_model>Godogi\Installment\Model\Config\Backend\MaxPrice</backend_model-->
+                </field>
+                <field id="down_payment" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Down Payment</label>
+                    <comment>Examples: 40 (which means 40%)</comment>
+                </field>
+                <field id="discounts" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Discounts</label>
+                    <frontend_model>Godogi\Installment\Block\Adminhtml\Form\Field\Discounts</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                 </field>
             </group>
         </section>

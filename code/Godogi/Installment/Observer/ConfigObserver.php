@@ -8,6 +8,7 @@ use Psr\Log\LoggerInterface as Logger;
 use Magento\Framework\App\Config\ScopeConfigInterface as ScopeConfig;
 use Magento\Catalog\Api\CategoryLinkManagementInterface as CategoryLink;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
+use Magento\Framework\App\ResourceConnection;
 
 class ConfigObserver implements ObserverInterface
 {
@@ -30,6 +31,10 @@ class ConfigObserver implements ObserverInterface
      * @var CollectionFactory
      */
     protected $collectionFactory;
+    /**
+     * @var \Magento\Framework\App\ResourceConnection
+     */
+    protected $resourceConnection;
 
     /**
      * @param Logger $logger
@@ -38,54 +43,33 @@ class ConfigObserver implements ObserverInterface
         ScopeConfig $scopeConfig,
         CategoryLink $categoryLink,
         CollectionFactory $collectionFactory,
+        ResourceConnection $resourceConnection,
         Logger $logger
     ) {
         $this->logger = $logger;
         $this->scopeConfig = $scopeConfig;
         $this->categoryLink = $categoryLink;
         $this->collectionFactory = $collectionFactory;
+        $this->resourceConnection = $resourceConnection;
     }
 
     public function execute(EventObserver $observer)
     {
-        /*
-        $this->logger->info('____________________________________  hhh ');
-        $this->logger->info($observer->getWebsite());
-        $this->logger->info($observer->getStore());
-        */
-        /*
-        $maxPrice = $this->scopeConfig->getValue('godogi_installment/general/max_price', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-        $this->logger->info('____________________________________ 9999');
-        $this->logger->info($maxPrice);
-
-
-
-        $categoryIds = ['70'];
         $categoryId = 70;
-
+        $maxPrice = $this->scopeConfig->getValue('godogi_installment/general/max_price', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $connection = $this->resourceConnection->getConnection();
+        $table = $connection->getTableName('catalog_category_product');
+        $query = "DELETE FROM `" . $table . "` WHERE category_id = $categoryId ";
+        $connection->query($query);
         $collection = $this->collectionFactory->create();
         $collection->addAttributeToSelect('*');
-
+        $collection->addAttributeToFilter('enable_installment',['eq'=>1]);
         $collection->addFieldToFilter( 'price' , array('from' => 0, 'to' => $maxPrice) );
-        $i = 0;
         foreach($collection as $product){
-            
-            //$sku = $product->getSku();
-            //$this->categoryLink->assignProductToCategories($sku, $categoryIds);
-            
-            $categories = $product->getCategoryIds();
-            $categories[] = $categoryId;
-            $product->setCategoryIds($categories);
-            $product->save();
-            $i++;
+            $productId = $product->getId();
+            $query = "INSERT INTO `" . $table . "`(`category_id`, `product_id`) VALUES ($categoryId, $productId)";
+            $connection->query($query);
         }
-
-        $this->logger->info('____________________________________ 444');
-        $this->logger->info($collection->count());
-
-        */
-
-        
 
     }
 }

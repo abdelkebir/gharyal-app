@@ -1,0 +1,66 @@
+<?php
+    $request = $this->getRequest();
+    $requestData = $request->getData();
+    $godogiHelper       = $this->helper('Godogi\Installment\Helper\Data');
+    $downPaymentPercent = $godogiHelper->getConfig("godogi_installment/general/down_payment");
+?>
+<div class="admin__field field field-rnumber ">
+    <label class="label admin__field-label" >
+        <span>Purchase Price</span>
+    </label>
+    <div class="admin__field-control control">
+        <div class="control-value"><?= round($requestData["product_price"], 2) ?></div>                            
+    </div>
+</div>
+<div class="admin__field field field-rnumber ">
+    <label class="label admin__field-label" >
+        <span>Down Payment</span>
+    </label>
+    <div class="admin__field-control control">
+        <div class="control-value"><?= round($requestData["product_price"] * ($downPaymentPercent / 100), 2) ?></div>                            
+    </div>
+</div>
+<div class="admin__field field field-rnumber ">
+    <label class="label admin__field-label" >
+        <span>Discount</span>
+    </label>
+    <div class="admin__field-control control">
+        <div class="control-value"><?= round($requestData["product_price"] * ($requestData["calc_discount"] / 100), 2) ?></div>                            
+    </div>
+</div>
+<?php 
+if($requestData["coupon"] && $this->getDiscount($requestData["coupon"])){
+    ?>
+    <div class="admin__field field field-rnumber ">
+        <label class="label admin__field-label" >
+            <span>Discount (coupon code)</span>
+        </label>
+        <div class="admin__field-control control">
+            <div class="control-value"><?= round($requestData["product_price"] * ($this->getDiscount($requestData["coupon"]) / 100), 2) ?></div>                            
+        </div>
+    </div>
+    <?php
+}
+$total = $requestData["product_price"];
+$total = $total - $requestData["product_price"] * ($downPaymentPercent / 100);
+$total = $total - $requestData["product_price"] * ($requestData["calc_discount"] / 100);
+if($requestData["coupon"] && $this->getDiscount($requestData["coupon"])){
+    $total = $total - $requestData["product_price"] * ($this->getDiscount($requestData["coupon"]) / 100);
+}
+?>
+<div class="admin__field field field-rnumber ">
+    <label class="label admin__field-label" >
+        <span>Total</span>
+    </label>
+    <div class="admin__field-control control">
+        <div class="control-value"><?= round($total, 2) ?></div>                            
+    </div>
+</div>
+<div class="admin__field field field-rnumber ">
+    <label class="label admin__field-label" >
+        <span>Pay per month (total of <?= $requestData["calc_months"] ?> months)</span>
+    </label>
+    <div class="admin__field-control control">
+        <div class="control-value"><?= round($total / $requestData["calc_months"], 2) ?></div>                            
+    </div>
+</div>

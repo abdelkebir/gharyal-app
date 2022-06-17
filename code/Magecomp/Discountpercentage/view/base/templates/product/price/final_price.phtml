@@ -4,9 +4,17 @@ $finalPriceModel = $block->getPriceType('final_price');
 $idSuffix = $block->getIdSuffix() ? $block->getIdSuffix() : '';
 $schema = ($block->getZone() == 'item_view') ? true : false;
 $myhelper = $this->helper('Magecomp\Discountpercentage\Helper\Data');
-
+$godogiHelper = $this->helper('Godogi\Installment\Helper\Data');
+$item = $block->getSaleableItem();
 ?>
 <?php if ($myhelper->isActive()): ?>
+    <?php
+    if($item->getEnableInstallment() && $godogiHelper->getCurrentCategoryId() == 70){
+        ?>
+        <a class="loan-it" href="<?= $block->getSaleableItem()->getProductUrl() ?>" >Loan it</a>
+        <?php
+    }
+    ?>
     <?php if ($block->hasSpecialPrice()): ?>
         <span class="old-price">
         <strike><?php echo $block->renderAmount($priceModel->getAmount(), [
@@ -26,9 +34,9 @@ $myhelper = $this->helper('Magecomp\Discountpercentage\Helper\Data');
             'schema' => $schema
         ]); ?>
     </span>    
-    <span>
+    <span class="total-saved">
 	<?php
-    $item = $block->getSaleableItem();
+    
     $_savePercent = 100 - round(((float)$item->getFinalPrice() / (float)$item->getPrice()) * 100);
     $_saveValue = ($item->getPrice() - $item->getFinalPrice() );
     echo '<b style="color:red; font-weight:bold; display:block; text-align:center;">You Save PKR ' . number_format($_saveValue) . ' or ' . $_savePercent . '%</b>';   

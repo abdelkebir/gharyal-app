@@ -1,6 +1,9 @@
 <?php
 namespace Godogi\Installment\Model\Config\Backend;
 
+use Magento\Indexer\Model\IndexerFactory;
+use Magento\Indexer\Model\Indexer\Collection;
+
 class MaxPrice extends \Magento\Framework\App\Config\Value
 {
     /**
@@ -22,7 +25,8 @@ class MaxPrice extends \Magento\Framework\App\Config\Value
     /**
      * @var \Magento\Indexer\Model\IndexerFactory
      */
-    protected $indexerFactory;
+    private $indexFactory;
+    private $indexCollection;
 
     /**
      * @param \Magento\Framework\Model\Context $context
@@ -44,14 +48,16 @@ class MaxPrice extends \Magento\Framework\App\Config\Value
         \Magento\Framework\App\ResourceConnection $resourceConnection,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $collectionFactory,
-        \Magento\Indexer\Model\IndexerFactory $indexerFactory,
+        IndexerFactory $indexFactory,
+        Collection $indexCollection,
         array $data = []
     ) {
         $this->logger = $logger;
         $this->collectionFactory = $collectionFactory;
         $this->resourceConnection = $resourceConnection;
         $this->scopeConfig = $scopeConfig;
-        $this->indexerFactory = $indexerFactory;
+        $this->indexCollection = $indexCollection;
+        $this->indexFactory = $indexFactory;
         parent::__construct($context, $registry, $config, $cacheTypeList, $resource, $resourceCollection, $data);
     }
 
@@ -60,28 +66,6 @@ class MaxPrice extends \Magento\Framework\App\Config\Value
      */
     public function afterSave()
     {
-        if ($this->isValueChanged()) {
-            $categoryId = 70;
-            $maxPrice = $this->scopeConfig->getValue('godogi_installment/general/max_price', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-            $connection = $this->resourceConnection->getConnection();
-            $table = $connection->getTableName('catalog_category_product');
-            $query = "DELETE FROM `" . $table . "` WHERE category_id = $categoryId ";
-            $connection->query($query);
-            
-            $collection = $this->collectionFactory->create();
-            $collection->addAttributeToSelect('*');
-            $collection->addFieldToFilter( 'price' , array('from' => 0, 'to' => $maxPrice) );
-            foreach($collection as $product){
-                $productId = $product->getId();
-                $query = "INSERT INTO `" . $table . "`(`category_id`, `product_id`) VALUES ($categoryId, $productId)";
-                $connection->query($query);
-            }
-            foreach ($indexerIds as $indexerId) {
-                $indexer = $this->indexerFactory->create();
-                $indexer->load($indexerId);
-                $indexer->reindexAll();
-            }
-        }
-        return parent::afterSave();
+       
     }
 }
