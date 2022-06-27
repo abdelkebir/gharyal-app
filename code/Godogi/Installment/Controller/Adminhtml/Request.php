@@ -48,7 +48,12 @@ class Request extends Action
 	* @var CollectionFactory
 	*/
 	protected $_collectionFactory;
-	
+	protected $scopeConfig;
+	protected $storeManager;
+	protected $_transportBuilder;
+	protected $inlineTranslation;
+	protected $_productRepository;
+
 	/**
 	* @param Context $context
 	* @param Registry $coreRegistry
@@ -67,7 +72,12 @@ class Request extends Action
 		CollectionFactory $collectionFactory,
 		UrlRewriteFactory $urlRewriteFactory,
 		UrlRewrite $urlRewrite,
-		Filter $filter
+		Filter $filter,
+		\Magento\Store\Model\StoreManagerInterface $storeManager,
+		\Magento\Framework\Mail\Template\TransportBuilder $transportBuilder,
+		\Magento\Framework\Translate\Inline\StateInterface $inlineTranslation,
+		\Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
+		\Magento\Catalog\Model\ProductRepository $productRepository
 	) {
 		parent::__construct($context);
 		$this->_coreRegistry = $coreRegistry;
@@ -77,13 +87,18 @@ class Request extends Action
 		$this->_urlRewriteFactory = $urlRewriteFactory;
 		$this->_urlRewrite = $urlRewrite;
 		$this->_filter = $filter;
+		$this->storeManager = $storeManager;
+		$this->_transportBuilder = $transportBuilder;
+		$this->inlineTranslation = $inlineTranslation;
+		$this->scopeConfig = $scopeConfig;
+		$this->_productRepository = $productRepository;
 	}
-	
+
 	public function execute()
 	{
 		return true;
 	}
-    
+
 	/**
 	* Qa access rights checking
 	*
@@ -92,5 +107,10 @@ class Request extends Action
 	protected function _isAllowed()
 	{
 		return $this->_authorization->isAllowed('Godogi_Installment::requests');
+	}
+
+	public function getProductBySku($sku)
+	{
+		return $this->_productRepository->get($sku);
 	}
 }

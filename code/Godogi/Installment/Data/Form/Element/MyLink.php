@@ -17,7 +17,7 @@ class MyLink extends \Magento\Framework\Data\Form\Element\Link
         \Magento\Framework\Data\Form\Element\Factory $factoryElement,
         \Magento\Framework\Data\Form\Element\CollectionFactory $factoryCollection,
         Escaper $escaper,
-        StoreManagerInterface $storemanager, 
+        StoreManagerInterface $storemanager,
         $data = []
     ) {
         $this->_storeManager = $storemanager;
@@ -35,15 +35,20 @@ class MyLink extends \Magento\Framework\Data\Form\Element\Link
         $mediaDirectory = $this->_storeManager->getStore()->getBaseUrl(
             \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
         );
-        
-        $html = $this->getBeforeElementHtml() . 
-                '<a 
-                    id="' . $this->getHtmlId() . '" 
-                    href="'. $mediaDirectory . 'godogi/installment/request/' . $this->getValue() .'"'. $this->_getUiId() . '
-                    target="_blank"
-                >' . __("View") . 
-                "</a>\n" . 
-                $this->getAfterElementHtml();
+        if(!$this->getValue()){
+          $html = $this->getBeforeElementHtml() .
+                  'Empty' .
+                  $this->getAfterElementHtml();
+        }else{
+          $html = $this->getBeforeElementHtml() .
+                  '<a
+                      id="' . $this->getHtmlId() . '"
+                      href="'. $mediaDirectory . 'godogi/installment/request/' . $this->getValue() .'"'. $this->_getUiId() . '
+                      target="_blank"
+                  >' . __("View") .
+                  "</a>\n" .
+                  $this->getAfterElementHtml();
+        }
         return $html;
     }
 }

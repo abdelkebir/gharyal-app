@@ -11,6 +11,11 @@ class Edit extends Request
 	public function execute()
 	{
 		$inId = $this->getRequest()->getParam('in_id');
+		/*
+		print_r($inId);
+		echo 'Edit';
+		exit();
+		*/
 		$model = $this->_requestFactory->create();
 		if ($inId) {
 			$model->load($inId);

@@ -17,7 +17,7 @@ class Data extends AbstractHelper
     protected $scopeConfig;
 
     public function __construct(
-        \Magento\Framework\App\Helper\Context $context, 
+        \Magento\Framework\App\Helper\Context $context,
         \Magento\Framework\Registry $registry,
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
         \Psr\Log\LoggerInterface $logger)

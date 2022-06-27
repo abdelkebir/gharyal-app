@@ -15,7 +15,7 @@ class MyFile extends \Magento\Framework\Data\Form\Element\AbstractElement
         Factory $factoryElement,
         CollectionFactory $factoryCollection,
         Escaper $escaper,
-        StoreManagerInterface $storemanager, 
+        StoreManagerInterface $storemanager,
         $data = [])
     {
         $this->_storeManager = $storemanager;
@@ -32,7 +32,12 @@ class MyFile extends \Magento\Framework\Data\Form\Element\AbstractElement
             \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
         );
         $value = $this->getTitle();
-        $html = '<a href="'.$mediaDirectory . 'godogi/installment/request/'. $value . '" target="_blank">Download</a>';
+        if($value){
+          $html = '<a href="'.$mediaDirectory . 'godogi/installment/request/'. $value . '" target="_blank">Download</a>';
+        }else{
+          $html = 'Empty';
+        }
+
         return $html;
     }
     /**

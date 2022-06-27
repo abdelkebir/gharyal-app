@@ -8,6 +8,17 @@
 ?>
 <?php $_product = $block->getProduct(); ?>
 <?php $buttonTitle = __('Add to Cart'); ?>
+<?php
+$godogiHelper       = $this->helper('Godogi\Installment\Helper\Data');
+?>
+<?php $reservedForInstallment = $_product->getReservedForInstallment(); ?>
+<?php if ($reservedForInstallment){
+?>
+<div class="stock unavailable" title="Availability">
+    <span>Reserved</span>
+</div>
+<?php
+}else{?>
 <?php if ($_product->isSaleable()): ?>
 <div class="box-tocart">
     <div class="fieldset clearfix">
@@ -84,3 +95,6 @@
         }
     }
 </script>
+<?php
+}
+?>

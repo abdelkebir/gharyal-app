@@ -57,7 +57,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 	$quickview_status = $this->helper('WeltPixel\Quickview\Helper\Data')->getConfig('weltpixel_quickview/general/enable_product_listing');
 	$quickview_btn = $meigee_helper->getCustomThemeOptionCnf('glam_product_listing', 'quickview_btn');
     $front_helper = $this->helper('\Meigee\Glam\Helper\FrontHelper');
-	
+
 	$labels_type = $meigee_helper->getCustomThemeOptionCnf('glam_labels', 'label_type');
 	$label_new = $meigee_helper->getCustomThemeOptionCnf('glam_labels', 'label_new');
 	$label_sale = $meigee_helper->getCustomThemeOptionCnf('glam_labels', 'label_sale');
@@ -98,7 +98,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
     if($compare_btn) {
         $hoverItems ++;
     }
-	
+
 	$image_hover_effect = $meigee_helper->getCustomThemeOptionCnf('glam_image_hover', 'image_hover_type');
 ?>
     <div class="products wrapper <?php /* @noEscape */ echo $viewMode; ?> products-<?php /* @noEscape */ echo $viewMode .' '. $grid_columns; if($image_hover_status){echo $image_hover_effect ? ' hover-scale' : ' hover-simple';} ?> product-hover-<?php echo $hoverType ?>">
@@ -129,7 +129,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 									$position = ' style="left:' . $productImage->getWidth() . 'px;'
 										. 'top:' . $productImage->getHeight() . 'px;"';
 								} ?>
-							   <?php 
+							   <?php
 									if($front_helper->isProductNew($_product) || $front_helper->isProductSale($_product) || $front_helper->isProductOnlyLeft($_product)) {
 										echo '<div class="product-labels clearfix '.$labels_type.' '.(($front_helper->isProductNew($_product) && $front_helper->isProductSale($_product)) || ($front_helper->isProductNew($_product) && $front_helper->isProductOnlyLeft($_product)) ? ' two-items' : '').'">';
 											if($front_helper->isProductNew($_product) && $label_new) {
@@ -165,6 +165,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 										<?php if ($hoverType == 1 || $hoverType == 2) : ?>
 											<?php if ($_product->isSaleable()) : ?>
 												<?php $postParams = $block->getAddToCartPostParams($_product); ?>
+                        <?php if(!$_product->getReservedForInstallment()){?>
 												<form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?php /* @NoEscape */ echo $block->escapeUrl($postParams['action']); ?>" method="post">
 													<input type="hidden" name="product" value="<?php /* @noEscape */ echo $postParams['data']['product']; ?>">
 													<input type="hidden" name="<?php /* @noEscape */ echo Action::PARAM_NAME_URL_ENCODED; ?>" value="<?php /* @noEscape */ echo $postParams['data'][Action::PARAM_NAME_URL_ENCODED]; ?>">
@@ -176,6 +177,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 														<span><?php echo $block->escapeHtml(__('Add to Cart')) ?></span>
 													</button>
 												</form>
+                        <?php } ?>
 											<?php else: ?>
 												<a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" title="<?php echo __('Read more') ?>" class="btn btn-default"><i class="meigee-eye"></i><span><?php echo __('Read more') ?></span></a>
 											<?php endif; ?>
@@ -188,7 +190,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 								<a href="<?php echo $block->escapeUrl($_product->getProductUrl()) ?>" class="product photo product-item-photo" tabindex="-1">
 									<?php echo $productImage->toHtml(); ?>
 								</a>
-								
+
 								<?php if (!$_product->isSaleable()) : ?>
 									<div class="sold-out-label">
 										<span><?php /* @escapeNotVerified */ echo __('Sold out') ?></span>
@@ -241,6 +243,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 											<?php if ($hoverType != 1 && $hoverType != 2) : ?>
 												<?php if ($_product->isSaleable()) : ?>
 													<?php $postParams = $block->getAddToCartPostParams($_product); ?>
+                          <?php if(!$_product->getReservedForInstallment()){?>
 													<form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?php /* @NoEscape */ echo $block->escapeUrl($postParams['action']); ?>" method="post">
 														<input type="hidden" name="product" value="<?php /* @noEscape */ echo $postParams['data']['product']; ?>">
 														<input type="hidden" name="<?php /* @noEscape */ echo Action::PARAM_NAME_URL_ENCODED; ?>" value="<?php /* @noEscape */ echo $postParams['data'][Action::PARAM_NAME_URL_ENCODED]; ?>">
@@ -252,6 +255,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 															<span><?php echo $block->escapeHtml(__('Add to Cart')) ?></span>
 														</button>
 													</form>
+                        <?php } ?>
 												<?php else: ?>
 													<a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" title="<?php echo __('Read more') ?>" class="btn btn-default"><i class="meigee-eye"></i><span><?php echo __('Read more') ?></span></a>
 												<?php endif; ?>
@@ -301,7 +305,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 								<a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
 									<?php echo $productImage->toHtml(); ?>
 								</a>
-								<?php 
+								<?php
 									if($front_helper->isProductNew($_product) || $front_helper->isProductSale($_product) || $front_helper->isProductOnlyLeft($_product)) {
 										echo '<div class="product-labels clearfix '.$labels_type.' '.(($front_helper->isProductNew($_product) && $front_helper->isProductSale($_product)) || ($front_helper->isProductNew($_product) && $front_helper->isProductOnlyLeft($_product)) ? ' two-items' : '').'">';
 											if($front_helper->isProductNew($_product) && $label_new) {
@@ -337,6 +341,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 										<?php if ($hoverType == 1 || $hoverType == 2) : ?>
 											<?php if ($_product->isSaleable()) : ?>
 												<?php $postParams = $block->getAddToCartPostParams($_product); ?>
+                        <?php if(!$_product->getReservedForInstallment()){?>
 												<form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?php /* @NoEscape */ echo $block->escapeUrl($postParams['action']); ?>" method="post">
 													<input type="hidden" name="product" value="<?php /* @noEscape */ echo $postParams['data']['product']; ?>">
 													<input type="hidden" name="<?php /* @noEscape */ echo Action::PARAM_NAME_URL_ENCODED; ?>" value="<?php /* @noEscape */ echo $postParams['data'][Action::PARAM_NAME_URL_ENCODED]; ?>">
@@ -348,6 +353,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 														<span><?php echo $block->escapeHtml(__('Add to Cart')) ?></span>
 													</button>
 												</form>
+                        <?php } ?>
 											<?php else: ?>
 												<a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" title="<?php echo __('Read more') ?>" class="btn btn-default"><i class="meigee-eye"></i><span><?php echo __('Read more') ?></span></a>
 											<?php endif; ?>
@@ -405,7 +411,8 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 										<?php if ($hoverType != 1 && $hoverType != 2) : ?>
 											<?php if ($_product->isSaleable()) : ?>
 												<?php $postParams = $block->getAddToCartPostParams($_product); ?>
-												<form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?php /* @NoEscape */ echo $block->escapeUrl($postParams['action']); ?>" method="post">
+                        <?php if(!$_product->getReservedForInstallment()){?>
+                        <form data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?php /* @NoEscape */ echo $block->escapeUrl($postParams['action']); ?>" method="post">
 													<input type="hidden" name="product" value="<?php /* @noEscape */ echo $postParams['data']['product']; ?>">
 													<input type="hidden" name="<?php /* @noEscape */ echo Action::PARAM_NAME_URL_ENCODED; ?>" value="<?php /* @noEscape */ echo $postParams['data'][Action::PARAM_NAME_URL_ENCODED]; ?>">
 													<?php echo $block->getBlockHtml('formkey')?>
@@ -416,6 +423,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 														<span><?php echo $block->escapeHtml(__('Add to Cart')) ?></span>
 													</button>
 												</form>
+                      <?php } ?>
 											<?php else: ?>
 												<a href="<?php /* @escapeNotVerified */ echo $_product->getProductUrl() ?>" title="<?php echo __('Read more') ?>" class="btn btn-default"><i class="meigee-eye"></i><span><?php echo __('Read more') ?></span></a>
 											<?php endif; ?>

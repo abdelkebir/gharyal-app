@@ -14,6 +14,13 @@ class MassDelete extends Request
 			$collection = $this->_filter->getCollection($this->_collectionFactory->create());
 			$collectionSize = $collection->getSize();
 			foreach ($collection as $item) {
+				/*
+				$attributeCode = "reserved_for_installment";
+				$attributeValue = 0;
+				$product = $this->getProductBySku($item->getRnumber());
+				$product->setData($attributeCode, $attributeValue);
+				$this->_productRepository->save($product);
+				*/
 				$item->delete();
 			}
 			$this->messageManager->addSuccess(

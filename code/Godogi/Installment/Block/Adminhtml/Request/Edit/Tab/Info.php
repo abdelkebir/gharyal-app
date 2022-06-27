@@ -18,7 +18,7 @@ class Info extends Generic implements TabInterface
 	*/
 	protected $_wysiwygConfig;
 	protected $_storeManager;
-	
+
 	/**
 	* @param Context $context
 	* @param Registry $registry
@@ -32,7 +32,7 @@ class Info extends Generic implements TabInterface
 		FormFactory $formFactory,
 		Config $wysiwygConfig,
 		InstallmentData $installmentHelper,
-		StoreManagerInterface $storemanager, 
+		StoreManagerInterface $storemanager,
 		array $data = []
 	) {
 		$this->_installmentHelper = $installmentHelper;
@@ -65,6 +65,21 @@ class Info extends Generic implements TabInterface
 			);
 		}
 		$fieldset->addField(
+        'status',
+        'select',
+        [
+            'name' => 'status',
+            'label' => __('Status'),
+            'title' => __('Status'),
+            'values' => [
+                ['label' => __('Submitted'), 'value' => 'submitted'],
+                ['label' => __('Under Review'), 'value' => 'under_review'],
+                ['label' => __('Approved'), 'value' => 'approved'],
+								['label' => __('Rejected'), 'value' => 'rejected']
+            ]
+        ]
+    );
+		$fieldset->addField(
 			'rnumber',
 			'label',
 			[
@@ -94,6 +109,22 @@ class Info extends Generic implements TabInterface
 			[
 				'name' => 'first_name',
 				'label' => __('First Name')
+			]
+		);
+		$fieldset->addField(
+			'gender',
+			'label',
+			[
+				'name' => 'gender',
+				'label' => __('Gender')
+			]
+		);
+		$fieldset->addField(
+			'monthly_income',
+			'label',
+			[
+				'name' => 'monthly_income',
+				'label' => __('Monthly Income')
 			]
 		);
 		$fieldset->addField(
@@ -160,7 +191,7 @@ class Info extends Generic implements TabInterface
 				'label' => __('Professional Situation')
 			]
 		);
-		
+
 		$fieldset->addType('custom_link','Godogi\Installment\Data\Form\Element\MyLink');
 		$fieldset->addField(
 			'file_cnic',

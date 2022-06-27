@@ -37,10 +37,13 @@ class Edit extends Container
 		$this->_controller = 'adminhtml_request';
 		$this->_blockGroup = 'Godogi_Installment';
 		parent::_construct();
-		$this->removeButton('save');
-		$this->removeButton('reset');
 		/*
+		$this->removeButton('save');
+
+		*/
+		$this->removeButton('reset');
 		$this->buttonList->update('save', 'label', __('Save'));
+		/*
 		$this->buttonList->add(
 			'saveandcontinue',
 			[
@@ -57,9 +60,10 @@ class Edit extends Container
 			],
 		-100
 		);
-		$this->buttonList->update('delete', 'label', __('Delete'));
 		*/
+		$this->buttonList->update('delete', 'label', __('Delete'));
+
 	}
 
-	
+
 }
