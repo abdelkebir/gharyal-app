@@ -1,12 +1,13 @@
 <?php
 $godogiHelper       = $this->helper('Godogi\Installment\Helper\Data');
+$moduleActive          = $godogiHelper->getConfig("godogi_installment/general/enable");
 $discounts          = $godogiHelper->getConfig("godogi_installment/general/discounts");
 $downPaymentPercent = $godogiHelper->getConfig("godogi_installment/general/down_payment");
 
 $_product = $block->getProduct();
 $installmentEnabled = $_product->getEnableInstallment();
 $reservedForInstallment = $_product->getReservedForInstallment();
-if( !$reservedForInstallment && $installmentEnabled && in_array(70, $godogiHelper->getCategoryIds())) {
+if( $moduleActive && !$reservedForInstallment && $installmentEnabled && in_array(70, $godogiHelper->getCategoryIds())) {
 ?>
     <form method="post" id="loan-calculator-form" class="form" data-mage-init='{"validation":{}}'>
         <fieldset class="fieldset row">

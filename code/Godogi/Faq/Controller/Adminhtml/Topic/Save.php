@@ -11,6 +11,10 @@ class Save extends Topic
 	public function execute()
 	{
 		$isPost = $this->getRequest()->getPost();
+		echo '<pre>';
+		print_r($isPost);
+		echo '</pre>';
+		exit();
 		if ($isPost) {
 			$topicModel = $this->_topicFactory->create();
 			$topicId = $this->getRequest()->getParam('topic_id');

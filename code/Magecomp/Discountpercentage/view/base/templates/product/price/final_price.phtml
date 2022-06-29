@@ -5,11 +5,12 @@ $idSuffix = $block->getIdSuffix() ? $block->getIdSuffix() : '';
 $schema = ($block->getZone() == 'item_view') ? true : false;
 $myhelper = $this->helper('Magecomp\Discountpercentage\Helper\Data');
 $godogiHelper = $this->helper('Godogi\Installment\Helper\Data');
+$moduleActive = $godogiHelper->getConfig("godogi_installment/general/enable");
 $item = $block->getSaleableItem();
 ?>
 <?php if ($myhelper->isActive()): ?>
     <?php
-    if(!$item->getReservedForInstallment() && $item->getEnableInstallment() && $godogiHelper->getCurrentCategoryId() == 70){
+    if($moduleActive && !$item->getReservedForInstallment() && $item->getEnableInstallment() && $godogiHelper->getCurrentCategoryId() == 70){
         ?>
         <a class="loan-it" href="<?= $block->getSaleableItem()->getProductUrl() ?>" >Loan it</a>
         <?php
